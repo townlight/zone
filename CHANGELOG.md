@@ -1,5 +1,35 @@
 # Changelog
 
+## Unreleased — Townlight Zoning Z3
+
+- Persist explicit permitted Meetings source links as append-only question events.
+- Create immutable source snapshots with parcel/Code/Meetings provenance and
+  explicit human-answer history, excluding private review notes.
+- Add permission/hash-checked source selection and managed attachment in Records.
+- Preserve existing response approval/publication behavior; no automatic release,
+  legal determination, Code amendment or new public version is introduced.
+
+## Unreleased — Townlight Zoning Z2
+
+- Add version-bound structured use/dimensional rules and honest conflict/stale
+  handling using authoritative Code identities.
+- Persist questions, staff queue, append-only human corrections and draft outline
+  references in the existing canonical PostgreSQL schema.
+- Add separate typed desktop client/component and native transport only.
+- Preserve resident/staff boundaries and original answer provenance.
+- No public version, Meetings/Records source integration or installed acceptance
+  is claimed by this local increment.
+
+## Unreleased — Townlight Zoning Z1
+
+- Align the working dependency with hash-pinned Core 1.2.1.
+- Add canonical-table PostGIS geometry and offline GeoJSON import provenance.
+- Preserve previous import payloads; archive missing parcels without deletion.
+- Add authenticated native import/lookup through the shared runtime, with
+  actual authoritative Code citations and no sample application mount.
+- Preserve v0.2.2 and the historical corrective demotion below. No new release
+  version, public readiness claim, UI or installer acceptance is implied.
+
 ## [0.2.2] - 2026-05-23
 
 - Narrow truth-repair release. No functional upgrade.
