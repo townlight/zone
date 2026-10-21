@@ -14,7 +14,7 @@ Milestone 0 compares this new repository against the CivicSuite unified spec and
 | missing | `docs/index.html` absent | Add honest landing page. | Professional product docs requirement |
 | missing | `USER-MANUAL.md` absent | Add non-technical and IT/user manual. | Professional product docs requirement |
 | missing | `.github/workflows/verify.yml` absent | Add CI gate for tests, docs, placeholder imports, and ruff. | Suite CI convention |
-| missing | `LICENSE-CODE` absent | Add Apache 2.0 code license. | Suite licensing decision |
+| missing | `LICENSE-CODE` absent | Add AGPL-3.0-only code license. | Suite licensing decision |
 | missing | `LICENSE-DOCS` absent | Add CC BY 4.0 docs license. | Suite licensing decision |
 
 ## ADR Queue

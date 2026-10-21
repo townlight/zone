@@ -4,7 +4,7 @@
 
 Acceptance criteria:
 - Professional repository docs exist.
-- Apache 2.0 code and CC BY 4.0 docs licenses exist.
+- AGPL-3.0-only code and CC BY 4.0 docs licenses exist.
 - Unified spec section 10 requirements are captured.
 - Documentation and CI gates exist.
 

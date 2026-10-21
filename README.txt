@@ -50,7 +50,7 @@ python -m pip install -e ".[dev]"
 python -m pytest -q
 bash scripts/verify-release.sh
 
-Code license: Apache 2.0.
+Code license: AGPL-3.0-only, with the TownLight Public Institution Exception for qualifying deployments. See LICENSE and LICENSE-EXCEPTION.md.
 Documentation license: CC BY 4.0.
 ## Unreleased connected Zoning Z2
 

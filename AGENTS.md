@@ -14,7 +14,7 @@
 - Staff-only precedent and interpretation notes must never leak to residents.
 - Out-of-jurisdiction, low-confidence, and determination requests must escalate to planner review.
 - CivicZone depends on CivicCore and CivicCode; CivicCore must never depend on CivicZone.
-- Code is Apache 2.0. Docs are CC BY 4.0.
+- Code is AGPL-3.0-only, with the TownLight Public Institution Exception for qualifying deployments. Docs are CC BY 4.0.
 
 ## Placeholder Package Warning
 
