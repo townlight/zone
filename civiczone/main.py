@@ -1,4 +1,4 @@
-"""FastAPI runtime foundation for CivicZone."""
+"""FastAPI runtime foundation for Townlight Zoning."""
 
 import os
 from dataclasses import dataclass
@@ -45,7 +45,7 @@ async def validation_exception_handler(_request: Request, exc: RequestValidation
         status_code=422,
         content={
             "detail": {
-                "message": "CivicZone could not process the request because required fields are missing or invalid.",
+                "message": "Townlight Zoning could not process the request because required fields are missing or invalid.",
                 "fix": (
                     "Send valid JSON with required fields. For resident Q&A, include "
                     "zone_code like 'R-2' and question like 'Can I build an ADU?'."
@@ -78,7 +78,7 @@ def root() -> dict[str, str]:
         "version": __version__,
         "status": "v1 parcel-aware zoning Q&A runtime",
         "message": (
-            "CivicZone v0.2.2 provides deterministic parcel lookup, cited use-rule lookup, cited dimensional prechecks, "
+            "Townlight Zoning v0.2.2 provides deterministic parcel lookup, cited use-rule lookup, cited dimensional prechecks, "
             "resident zoning Q&A with refusal and escalation rules, staff workflow APIs, optional database-backed parcel/rule and question-ledger records, "
             "canonical zoning schema migrations, adversarial local integration mocks, an accessible resident UI, and a staff workflow UI shell. "
             "It does not make zoning determinations, give legal advice, replace planner review, or call live external systems by default."
@@ -178,14 +178,14 @@ def _require_staff_access(request: Request) -> StaffPrincipal:
     config = _staff_trusted_header_config()
     enforce_trusted_proxy_source(
         request.client.host if request.client else None,
-        service_name="CivicZone",
+        service_name='Townlight Zoning',
         feature_name="staff workflow access",
         config=config,
         trusted_proxy_env_var="CIVICZONE_STAFF_TRUSTED_PROXY_CIDRS",
     )
     principal = authorize_trusted_header_roles(
         request.headers,
-        service_name="CivicZone",
+        service_name='Townlight Zoning',
         feature_name="staff workflow access",
         principal_header_name=config.principal_header_name,
         roles_header_name=config.roles_header_name,

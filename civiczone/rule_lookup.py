@@ -195,7 +195,7 @@ class RuleLookupRepository:
                 disclaimer=data["disclaimer"],
             )
         return RuleLookupError(
-            message="Use rule not found in the CivicZone configured rule dataset.",
+            message="Use rule not found in the Townlight Zoning configured rule dataset.",
             fix="Load use rules into CIVICZONE_PARCEL_RULE_DB_URL or try the sample R-2 ADU rule.",
         )
 
@@ -219,7 +219,7 @@ class RuleLookupRepository:
                 disclaimer=data["disclaimer"],
             )
         return RuleLookupError(
-            message="Dimensional rule not found in the CivicZone configured rule dataset.",
+            message="Dimensional rule not found in the Townlight Zoning configured rule dataset.",
             fix="Load dimensional rules into CIVICZONE_PARCEL_RULE_DB_URL or try the sample R-2 height rule.",
         )
 
@@ -230,7 +230,7 @@ def lookup_use_rule(*, zone_code: str, use: str) -> UseRuleResult | RuleLookupEr
     if result:
         return result
     return RuleLookupError(
-        message="Use rule not found in the CivicZone sample dataset.",
+        message="Use rule not found in the Townlight Zoning sample dataset.",
         fix="Try zone_code 'R-2' with use 'ADU', 'single-family dwelling', or 'restaurant'.",
     )
 
@@ -241,6 +241,6 @@ def lookup_dimensional_rule(*, zone_code: str, rule_type: str) -> DimensionalRul
     if result:
         return result
     return RuleLookupError(
-        message="Dimensional rule not found in the CivicZone sample dataset.",
+        message="Dimensional rule not found in the Townlight Zoning sample dataset.",
         fix="Try zone_code 'R-2' with rule_type 'front_setback' or 'height'.",
     )

@@ -123,7 +123,7 @@ class ParcelLookupRepository:
         if row is not None:
             return _row_to_parcel(row)
         return ParcelLookupError(
-            message="Parcel not found in the CivicZone configured parcel dataset.",
+            message="Parcel not found in the Townlight Zoning configured parcel dataset.",
             fix="Load parcel data into the configured CIVICZONE_PARCEL_RULE_DB_URL store or use the sample parcel '100-200-300'.",
         )
 
@@ -142,7 +142,7 @@ def lookup_parcel(*, parcel_number: str | None = None, address: str | None = Non
             return SAMPLE_PARCELS[key]
 
     return ParcelLookupError(
-        message="Parcel not found in the CivicZone sample dataset.",
+        message="Parcel not found in the Townlight Zoning sample dataset.",
         fix=(
             "Use parcel_number '100-200-300' or address '123 Main St', or load local parcel records "
             "into the configured CIVICZONE_PARCEL_RULE_DB_URL store."

@@ -1,10 +1,10 @@
-"""Public resident UI for CivicZone."""
+"""Public resident UI for Townlight Zoning."""
 
 from __future__ import annotations
 
 
 def render_public_lookup_page() -> str:
-    """Render the browser-usable public CivicZone lookup page."""
+    """Render the browser-usable public Townlight Zoning lookup page."""
 
     return """<!DOCTYPE html>
 <html lang="en">

@@ -1,4 +1,4 @@
-"""Staff workflow UI shell for CivicZone."""
+"""Staff workflow UI shell for Townlight Zoning."""
 
 from __future__ import annotations
 
