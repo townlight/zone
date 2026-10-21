@@ -1,13 +1,17 @@
 # GitHub Discussion Seed Posts
 
-## Welcome To CivicZone
+<a id="welcome-to-civiczone"></a>
 
-CivicZone is the planned CivicSuite zoning and land-use module. It is being built as open-source municipal software for resident zoning questions and planner support.
+## Welcome To Townlight Zoning
 
-## What CivicZone Will Not Do
+Townlight Zoning is the planned Townlight zoning and land-use module. It is being built as open-source municipal software for resident zoning questions and planner support.
 
-CivicZone will not make zoning determinations, replace planners, provide legal advice, or expose staff-only precedent notes to residents.
+<a id="what-civiczone-will-not-do"></a>
+
+## What Townlight Zoning Will Not Do
+
+Townlight Zoning will not make zoning determinations, replace planners, provide legal advice, or expose staff-only precedent notes to residents.
 
 ## Data Sources We Need To Support
 
-We expect Esri ArcGIS REST services, GeoJSON fallback files, county assessor exports, and CivicCode citations to be the first source integrations.
+We expect Esri ArcGIS REST services, GeoJSON fallback files, county assessor exports, and Townlight Code citations to be the first source integrations.

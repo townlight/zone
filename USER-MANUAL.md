@@ -1,4 +1,20 @@
-# CivicZone User Manual
+<a id="civiczone-user-manual"></a>
+
+# Townlight Zoning User Manual
+
+## Published connected desktop: 1.4.0-beta.1
+
+This module participates in the signed Townlight Records + Meetings + Code +
+Zoning desktop beta published October 21, 2026. Select zoning-beta for all four
+products; Records-only remains default and city-core excludes Zoning.
+[Download and release limits](https://github.com/townlight/townlight/releases/tag/townlight-records-meetings-code-zoning-v1.4.0-beta.1) ·
+[Current operator manual](https://github.com/townlight/townlight/blob/main/USER-MANUAL.md) ·
+[Signed acceptance](https://github.com/townlight/townlight/blob/main/docs/installer/townlight-zoning-beta1-signed-acceptance.md).
+
+This is a connected desktop release, not a new standalone package version.
+Package/import/API names remain compatibility identifiers. Historical development
+checkpoints below retain their original scope; they are superseded for current
+desktop publication status. No signed installer or historical evidence is changed.
 
 ## Unreleased connected Z4 installer
 
@@ -38,15 +54,15 @@ mounted by the connected runtime. See [Z1 import and access details](docs/Z1-OFF
 The sections below describe the published v0.2.2 standalone/sample baseline,
 not the unreleased connected Z1 runtime described above.
 
-CivicZone answers routine parcel-aware zoning questions with citations. It is not a zoning determination tool, not legal advice, and not a replacement for planner review.
+Townlight Zoning answers routine parcel-aware zoning questions with citations. It is not a zoning determination tool, not legal advice, and not a replacement for planner review.
 
-Current state: CivicZone v0.2.2 corrective demotion state. This narrow truth-repair release is no functional upgrade; it exists solely to supersede the false v1.0.0 release from 2026-05-21 in GitHub's Latest impression, with the CivicCore pin unchanged. The package, health endpoints, canonical zoning schema, Alembic migrations, parcel/zone lookup API, use and dimensional rule APIs, optional database-backed parcel/rule lookup records, resident question ledger records, staff workflow records, citation-grounded resident Q&A, staff-only precedent protection, local adversarial integration mocks, a browser-usable resident UI at `/civiczone`, a staff workflow shell at `/civiczone/staff`, trusted-proxy staff access validation, and CivicCore v1.1.0 release-wheel dependency alignment exist. CivicZone does not call live external systems by default, does not provide legal advice, and does not make official zoning determinations. See `docs/release-recovery-status.md` for historical recovery context and current release evidence.
+Current state: Townlight Zoning v0.2.2 corrective demotion state. This narrow truth-repair release is no functional upgrade; it exists solely to supersede the false v1.0.0 release from 2026-05-21 in GitHub's Latest impression, with the Townlight Core pin unchanged. The package, health endpoints, canonical zoning schema, Alembic migrations, parcel/zone lookup API, use and dimensional rule APIs, optional database-backed parcel/rule lookup records, resident question ledger records, staff workflow records, citation-grounded resident Q&A, staff-only precedent protection, local adversarial integration mocks, a browser-usable resident UI at `/civiczone`, a staff workflow shell at `/civiczone/staff`, trusted-proxy staff access validation, and Townlight Core v1.1.0 release-wheel dependency alignment exist. Townlight Zoning does not call live external systems by default, does not provide legal advice, and does not make official zoning determinations. See `docs/release-recovery-status.md` for historical recovery context and current release evidence.
 
 The resident UI shows a pre-filled parcel lookup for `123 Main St`, zone context, use and dimensional-rule cards, citation-grounded Q&A, visible loading/success/empty/error/partial state guidance, and planner-escalation guidance. It is informational only: it is not legal advice, not a zoning determination, and not a replacement for municipal planning staff.
 
 ## For IT And Technical Staff
 
-CivicZone is a FastAPI Python package pinned to the published CivicCore v1.1.0 release wheel. The current runtime exposes:
+Townlight Zoning is a FastAPI Python package pinned to the published Townlight Core v1.1.0 release wheel. The current runtime exposes:
 
 - `GET /`
 - `GET /health`
@@ -70,7 +86,7 @@ CivicZone is a FastAPI Python package pinned to the published CivicCore v1.1.0 r
 
 Set `CIVICZONE_PARCEL_RULE_DB_URL` to persist parcel, use-rule, dimensional-rule, resident-question ledger, and staff workflow data. Leave it unset for deterministic in-memory sample data during local development and documentation examples.
 
-Staff workflow endpoints require trusted municipal access headers from a configured trusted proxy/source. Local development accepts loopback by default. Shared deployments should set `CIVICZONE_STAFF_TRUSTED_PROXY_CIDRS` and strip client-supplied staff headers before requests reach CivicZone.
+Staff workflow endpoints require trusted municipal access headers from a configured trusted proxy/source. Local development accepts loopback by default. Shared deployments should set `CIVICZONE_STAFF_TRUSTED_PROXY_CIDRS` and strip client-supplied staff headers before requests reach Townlight Zoning.
 
 - `X-CivicZone-Principal`
 - `X-CivicZone-Role: planner`, `staff`, or `zoning_admin`
@@ -96,7 +112,7 @@ CivicZone --> LocalMocks["Adversarial local integration mocks"]
 CivicZone -. configured .-> GIS["Local GIS / assessor datasets"]
 ```
 
-CivicZone depends on CivicCore and CivicCode. CivicCore does not depend on CivicZone.
+Townlight Zoning depends on Townlight Core and Townlight Code. Townlight Core does not depend on Townlight Zoning.
 ## Unreleased connected Zoning Z2
 
 The local development branch adds parcel-scoped allowed/conditional/prohibited-use

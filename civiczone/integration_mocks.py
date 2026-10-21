@@ -76,7 +76,7 @@ class CivicZoneIntegrationMockLayer:
         if provider not in SUPPORTED_PROVIDERS or provider not in self.adapters:
             return IntegrationError(
                 provider=provider,
-                message="Unsupported CivicZone mock integration provider.",
+                message="Unsupported Townlight Zoning mock integration provider.",
                 fix="Use one of the supported local mock provider identifiers for v1 validation.",
                 code="unsupported_provider",
             )
@@ -168,7 +168,7 @@ class CivicCodeSectionResolutionMockAdapter(LocalIntegrationAdapter):
             return _malformed(self.provider, "Provide section_id and a sections map containing that section.")
         section = sections[section_id]
         if not isinstance(section, dict) or not section.get("citation") or not section.get("text"):
-            return _malformed(self.provider, "Resolved CivicCode sections need citation and text.")
+            return _malformed(self.provider, "Resolved Townlight Code sections need citation and text.")
         return IntegrationResult(
             provider=self.provider,
             records=({"citation": section["citation"], "text": section["text"]},),
@@ -280,7 +280,7 @@ def _reject_live_endpoint(provider: str, payload: dict[str, Any]) -> Integration
         if isinstance(value, str) and value.startswith(NETWORK_PREFIXES):
             return IntegrationError(
                 provider=provider,
-                message="Live external calls are disabled for CivicZone v1 integration mocks.",
+                message="Live external calls are disabled for Townlight Zoning v1 integration mocks.",
                 fix="Use local fixture data and omit http/https endpoints when running adversarial validation.",
                 code="air_gap_violation",
             )

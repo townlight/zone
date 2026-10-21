@@ -507,7 +507,7 @@ def _cross_references_from_answer(answer: ZoneAnswer) -> tuple[CodeCrossReferenc
     return tuple(
         CodeCrossReference(
             citation=citation,
-            source="CivicCode section reference",
+            source="Townlight Code section reference",
             relevance="Supports the planner-facing informational answer.",
         )
         for citation in answer.citations

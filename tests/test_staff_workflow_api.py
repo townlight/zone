@@ -61,7 +61,7 @@ def test_planner_question_answer_returns_code_cross_references() -> None:
     assert payload["visibility"] == "staff_only"
     assert payload["citations"] == ["CMC 18.20.050(A)"]
     assert payload["code_cross_references"][0]["citation"] == "CMC 18.20.050(A)"
-    assert payload["code_cross_references"][0]["source"] == "CivicCode section reference"
+    assert payload["code_cross_references"][0]["source"] == "Townlight Code section reference"
 
 
 def test_staff_only_workflow_data_does_not_leak_to_resident_answer() -> None:

@@ -54,7 +54,7 @@ def test_staff_ui_route_returns_browser_shell_without_embedded_staff_data() -> N
     text = response.text
 
     assert response.status_code == 200
-    assert "CivicZone staff workspace" in text
+    assert "Townlight Zoning staff workspace" in text
     assert "X-CivicZone-Principal" in text
     assert "X-CivicZone-Role" in text
     assert "/api/v1/civiczone/staff/questions/answer" in text

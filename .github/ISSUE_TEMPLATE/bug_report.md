@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report a CivicZone defect
+about: Report a Townlight Zoning defect
 title: "[Bug]: "
 labels: bug
 assignees: ""
@@ -12,12 +12,12 @@ Describe the issue.
 
 ## Expected behavior
 
-What should CivicZone have done instead?
+What should Townlight Zoning have done instead?
 
 ## Environment
 
-- CivicZone version:
-- CivicCore version:
+- Townlight Zoning version:
+- Townlight Core version:
 - Operating system:
 
 ## Evidence

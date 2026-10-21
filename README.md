@@ -1,6 +1,22 @@
-# CivicZone
+<a id="civiczone"></a>
 
-## Z4 local installer candidate (unreleased)
+# Townlight Zoning
+
+## Published connected desktop: 1.4.0-beta.1
+
+This module participates in the signed Townlight Records + Meetings + Code +
+Zoning desktop beta published October 21, 2026. Select zoning-beta for all four
+products; Records-only remains default and city-core excludes Zoning.
+[Download and release limits](https://github.com/townlight/townlight/releases/tag/townlight-records-meetings-code-zoning-v1.4.0-beta.1) ·
+[Current operator manual](https://github.com/townlight/townlight/blob/main/USER-MANUAL.md) ·
+[Signed acceptance](https://github.com/townlight/townlight/blob/main/docs/installer/townlight-zoning-beta1-signed-acceptance.md).
+
+This is a connected desktop release, not a new standalone package version.
+Package/import/API names remain compatibility identifiers. Historical development
+checkpoints below retain their original scope; they are superseded for current
+desktop publication status. No signed installer or historical evidence is changed.
+
+## Historical integration checkpoint — Z4 local installer candidate (unreleased)
 
 The desktop1.4.0-1 candidate exposes the opt-in `zoning-beta` connected profile.
 Records remains the default and the public1.3release is unchanged. Installer
@@ -17,7 +33,7 @@ Private notes remain staff-only; public source snapshots require explicit human
 selection. See `docs/Z3-CONNECTED-SOURCES.md` for history and Records attachment.
 
 
-## Unreleased Townlight Zoning Z1 integration
+## Historical integration checkpoint — Unreleased Townlight Zoning Z1 integration
 
 The working branch now targets the released Core 1.2.1 dependency and the
 existing Townlight Python/PostgreSQL runtime. Z1 adds offline GeoJSON imports,
@@ -40,10 +56,10 @@ Current state: **v0.2.2 corrective demotion state - scaffold with partial persis
 
 ## Product Boundaries
 
-- CivicZone gives informational zoning context with citations.
-- CivicZone refuses or escalates zoning-determination, legal-advice, out-of-jurisdiction, stale-data, low-confidence, and uncited-answer requests.
-- CivicZone does not make zoning determinations, approve permits, replace planner review, or call live external vendor systems by default.
-- CivicZone integration behavior is validated with local adversarial mocks for Esri ArcGIS REST, GeoJSON fallback, CivicCode, CivicClerk, CivicPlan, CivicAccess, county assessor, and CKAN boundaries.
+- Townlight Zoning gives informational zoning context with citations.
+- Townlight Zoning refuses or escalates zoning-determination, legal-advice, out-of-jurisdiction, stale-data, low-confidence, and uncited-answer requests.
+- Townlight Zoning does not make zoning determinations, approve permits, replace planner review, or call live external vendor systems by default.
+- Townlight Zoning integration behavior is validated with local adversarial mocks for Esri ArcGIS REST, GeoJSON fallback, Townlight Code, Townlight Meetings, Townlight Planning, Townlight Access, county assessor, and CKAN boundaries.
 
 ## Developer Quickstart
 
@@ -58,7 +74,7 @@ bash scripts/verify-release.sh
 ## API Foundation
 
 - `GET /` returns current module status and operator next step.
-- `GET /health` returns package and CivicCore version information.
+- `GET /health` returns package and Townlight Core version information.
 - `GET /civiczone` returns the accessible resident lookup UI.
 - `GET /civiczone/staff` returns the staff workflow shell; staff API actions require trusted municipal access headers from an approved proxy/source.
 - `POST /api/v1/civiczone/parcels/lookup` returns sample parcel zone context for `100-200-300` / `123 Main St`.
@@ -75,9 +91,9 @@ bash scripts/verify-release.sh
 
 Resident question text is stored only when `CIVICZONE_PARCEL_RULE_DB_URL` is configured. Cities should treat those rows as operational records, avoid entering sensitive personal details into sample Q&A, and apply local retention/privacy policy before exposing the ledger outside staff operations.
 
-Set `CIVICZONE_PARCEL_RULE_DB_URL` to enable persistent parcel, use-rule, dimensional-rule, resident-question ledger, and staff workflow records. When unset, CivicZone uses deterministic in-memory sample data and does not persist question or staff workflow rows.
+Set `CIVICZONE_PARCEL_RULE_DB_URL` to enable persistent parcel, use-rule, dimensional-rule, resident-question ledger, and staff workflow records. When unset, Townlight Zoning uses deterministic in-memory sample data and does not persist question or staff workflow rows.
 
-Staff workflow endpoints require trusted municipal access headers from a configured trusted proxy/source. Local development accepts loopback by default. Shared deployments should set `CIVICZONE_STAFF_TRUSTED_PROXY_CIDRS` and strip client-supplied staff headers before requests reach CivicZone.
+Staff workflow endpoints require trusted municipal access headers from a configured trusted proxy/source. Local development accepts loopback by default. Shared deployments should set `CIVICZONE_STAFF_TRUSTED_PROXY_CIDRS` and strip client-supplied staff headers before requests reach Townlight Zoning.
 
 - `X-CivicZone-Principal`
 - `X-CivicZone-Role: planner`, `staff`, or `zoning_admin`
