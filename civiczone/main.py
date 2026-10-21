@@ -32,9 +32,9 @@ from civiczone.staff_ui import render_staff_workspace_page
 from civiczone.staff_workflows import StaffWorkflowStore
 
 app = FastAPI(
-    title="CivicZone",
+    title='Townlight Zoning',
     version=__version__,
-    description="Parcel-aware zoning and land-use Q&A for CivicSuite.",
+    description='Parcel-aware zoning and land-use Q&A for Townlight.',
 )
 
 

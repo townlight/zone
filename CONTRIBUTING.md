@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping CivicZone become useful municipal software.
+Thank you for helping Townlight Zoning become useful municipal software.
 
 ## Development Loop
 
@@ -11,7 +11,7 @@ Thank you for helping CivicZone become useful municipal software.
 
 ## Boundaries
 
-- CivicZone gives cited zoning information, not zoning determinations.
+- Townlight Zoning gives cited zoning information, not zoning determinations.
 - Do not expose staff-only precedent or interpretation notes to residents.
-- Do not import CivicCore placeholder packages.
+- Do not import Townlight Core placeholder packages.
 - Do not claim planned behavior is shipped.

@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "civiczone"
 version = "0.2.2"
-description = "CivicZone runtime foundation for parcel-aware zoning and land-use Q&A."
+description = "Townlight Zoning runtime foundation for parcel-aware zoning and land-use Q&A."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "AGPL-3.0-only" }

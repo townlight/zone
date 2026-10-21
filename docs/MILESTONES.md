@@ -1,4 +1,6 @@
-# CivicZone Milestones
+<a id="civiczone-milestones"></a>
+
+# Townlight Zoning Milestones
 
 ## Milestone 0 - Reconciliation And Repo Scaffold
 
@@ -14,7 +16,7 @@ Acceptance criteria:
 - Python package imports.
 - FastAPI app starts.
 - `/` and `/health` endpoints report current state without overstating behavior.
-- Historical v0.1.0 foundation pinned the then-current CivicCore release; current compatibility is tracked in `pyproject.toml`, `/health`, README, and the release gate.
+- Historical v0.1.0 foundation pinned the then-current Townlight Core release; current compatibility is tracked in `pyproject.toml`, `/health`, README, and the release gate.
 
 ## Milestone 2 - Canonical Zoning Schema And Migrations
 
@@ -67,12 +69,12 @@ Acceptance criteria:
 
 Acceptance criteria:
 - Version surfaces match `1.0.0`.
-- CivicCore compatibility is aligned to the published CivicCore v1.1.0 wheel.
+- Townlight Core compatibility is aligned to the published Townlight Core v1.1.0 wheel.
 - Resident UI runs live parcel lookup, cited Q&A, empty, error, and
   planner-review states.
 - Staff UI shell supports planner Q&A, ambiguity review, analytics, and
   staff-report outline actions through trusted municipal access headers.
 - Staff APIs validate headers through the trusted proxy/source allowlist.
 - Full tests, docs gate, Ruff, release gate, browser QA, adversarial validation,
-  release-gate audit, CI, tag/release, and CivicSuite installer/module-selection
+  release-gate audit, CI, tag/release, and Townlight installer/module-selection
   truth pass.

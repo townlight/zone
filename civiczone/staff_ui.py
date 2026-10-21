@@ -12,7 +12,7 @@ def render_staff_workspace_page() -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:,">
-<title>CivicZone Staff Workspace</title>
+<title>Townlight Zoning Staff Workspace</title>
 <style>
   :root {
     --bg: #f4f6f8;
@@ -118,7 +118,7 @@ def render_staff_workspace_page() -> str:
 </head>
 <body>
 <header>
-  <h1>CivicZone staff workspace</h1>
+  <h1>Townlight Zoning staff workspace</h1>
   <p class="muted">Planner Q&amp;A, ambiguity review queue, analytics, report outlines, and flagged-answer improvement. Staff API calls require trusted municipal access headers from an approved proxy.</p>
 </header>
 <main>
@@ -159,7 +159,7 @@ def render_staff_workspace_page() -> str:
   </section>
 </main>
 <footer>
-  <p>CivicZone staff outputs are review support only. Planning staff remain responsible for official determinations.</p>
+  <p>Townlight Zoning staff outputs are review support only. Planning staff remain responsible for official determinations.</p>
 </footer>
 <script>
 const form = document.querySelector("#staff-form");

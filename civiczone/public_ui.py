@@ -12,7 +12,7 @@ def render_public_lookup_page() -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:,">
-<title>CivicZone Resident Lookup</title>
+<title>Townlight Zoning Resident Lookup</title>
 <style>
   :root {
     --bg: #f6f7f2;
@@ -205,8 +205,8 @@ def render_public_lookup_page() -> str:
 <a class="skip-link" href="#main">Skip to main content</a>
 <header>
   <div>
-    <h1>CivicZone resident lookup</h1>
-    <p class="lede">Parcel zoning context, cited use rules, dimensional standards, and escalation paths for residents. CivicZone provides information only; planning staff make official determinations.</p>
+    <h1>Townlight Zoning resident lookup</h1>
+    <p class="lede">Parcel zoning context, cited use rules, dimensional standards, and escalation paths for residents. Townlight Zoning provides information only; planning staff make official determinations.</p>
   </div>
   <span class="badge">v0.2.2 corrective demotion state</span>
 </header>
@@ -242,20 +242,20 @@ def render_public_lookup_page() -> str:
   <aside class="panel" aria-labelledby="states-title">
     <h2 id="states-title">Resident states</h2>
     <div class="state-grid">
-      <div class="state-tile"><strong>Loading</strong>Lookup actions disable while CivicZone checks the parcel and rules.</div>
+      <div class="state-tile"><strong>Loading</strong>Lookup actions disable while Townlight Zoning checks the parcel and rules.</div>
       <div class="state-tile"><strong>Success</strong>Context appears with citations and official-decision boundaries.</div>
       <div class="state-tile"><strong>Empty</strong>Missing parcels explain which sample or local records to load.</div>
       <div class="state-tile"><strong>Error or partial</strong>Invalid input, stale data, missing citations, and determinations route to planning staff.</div>
     </div>
     <div class="boundary">
       <h3>Important boundary</h3>
-      <p>CivicZone does not provide legal advice, does not make a zoning determination, and does not replace your planning department.</p>
+      <p>Townlight Zoning does not provide legal advice, does not make a zoning determination, and does not replace your planning department.</p>
     </div>
     <p><a href="/civiczone/staff">Staff workspace</a> requires the trusted municipal staff access layer for API actions.</p>
   </aside>
 </main>
 <footer>
-  <p>CivicZone is part of CivicSuite. Configure local parcel and zoning-rule data before relying on city-specific answers.</p>
+  <p>Townlight Zoning is part of Townlight. Configure local parcel and zoning-rule data before relying on city-specific answers.</p>
 </footer>
 <script>
 const form = document.querySelector("#zone-form");

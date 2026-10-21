@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest a CivicZone capability
+about: Suggest a Townlight Zoning capability
 title: "[Feature]: "
 labels: enhancement
 assignees: ""
