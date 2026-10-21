@@ -1,0 +1,72 @@
+{
+  "source_id": "fictional-file-drop",
+  "version": "1",
+  "source_date": "2026-10-20",
+  "crs": "EPSG:4326",
+  "jurisdiction": "Z1-Fictional",
+  "boundary": {
+    "type": "Polygon",
+    "coordinates": [
+      [[-105.001, 39.999], [-104.999, 39.999], [-104.999, 40.001], [-105.001, 40.001], [-105.001, 39.999]]
+    ]
+  },
+  "zones": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "R2",
+        "properties": {"code": "R2", "name": "Residential", "section_number": "6.12.040"},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [[-105.0008, 39.9994], [-104.9996, 39.9994], [-104.9996, 40.0004], [-105.0008, 40.0004], [-105.0008, 39.9994]]
+          ]
+        }
+      }
+    ]
+  },
+  "parcels": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "P1",
+        "properties": {"parcel_number": "P1", "address": "1 Fictional Way"},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [[-105.0006, 39.9997], [-105.0002, 39.9997], [-105.0002, 40.0001], [-105.0006, 40.0001], [-105.0006, 39.9997]]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": "P2",
+        "properties": {"parcel_number": "P2", "address": "2 Fictional Way"},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [[-105.0002, 39.9997], [-104.9998, 39.9997], [-104.9998, 40.0001], [-105.0002, 40.0001], [-105.0002, 39.9997]]
+          ]
+        }
+      }
+    ]
+  },
+  "overlays": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "HIST",
+        "properties": {"code": "HIST", "name": "Historic", "section_number": "6.12.040"},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [[-105.0006, 39.9996], [-105.0002, 39.9996], [-105.0002, 40.0002], [-105.0006, 40.0002], [-105.0006, 39.9996]]
+          ]
+        }
+      }
+    ]
+  }
+}

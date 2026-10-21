@@ -7,12 +7,11 @@ import civiczone.main as main_module
 from civiczone.main import app
 from civiczone.question_ledger import ZoneQuestionLedgerRepository
 from civiczone.rule_lookup import (
-    dimensional_rule_lookup_records,
     RuleLookupRepository,
     UseRuleResult,
+    dimensional_rule_lookup_records,
     use_rule_lookup_records,
 )
-
 
 client = TestClient(app)
 
@@ -104,7 +103,8 @@ def test_question_ledger_migration_declares_runtime_table() -> None:
     migration_path = (
         "civiczone/migrations/versions/civiczone_0003_question_ledger.py"
     )
-    text = open(migration_path, encoding="utf-8").read()
+    with open(migration_path, encoding="utf-8") as handle:
+        text = handle.read()
 
     assert 'revision = "civiczone_0003_question_ledger"' in text
     assert 'down_revision = "civiczone_0002_parcel_rules"' in text

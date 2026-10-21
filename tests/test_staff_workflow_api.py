@@ -4,7 +4,6 @@ from fastapi.testclient import TestClient
 import civiczone.main as main_module
 from civiczone.main import app
 
-
 client = TestClient(app, client=("127.0.0.1", 50000))
 untrusted_client = TestClient(app, client=("203.0.113.10", 50000))
 STAFF_HEADERS = {"X-CivicZone-Principal": "planner@example.gov", "X-CivicZone-Role": "staff"}

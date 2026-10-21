@@ -8,7 +8,6 @@ from uuid import uuid4
 import sqlalchemy as sa
 from sqlalchemy import Engine, create_engine
 
-
 metadata = sa.MetaData()
 
 zone_question_ledger_records = sa.Table(

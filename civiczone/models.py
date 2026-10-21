@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import uuid
+from typing import ClassVar
 
 from civiccore.db import Base
 from sqlalchemy import Boolean, DateTime, ForeignKey, String, Text, func, text
@@ -25,7 +26,7 @@ class IdMixin:
 
 class Zone(IdMixin, TimestampMixin, Base):
     __tablename__ = "zones"
-    __table_args__ = {"schema": "civiczone"}
+    __table_args__: ClassVar[dict] = {"schema": "civiczone"}
 
     code: Mapped[str] = mapped_column(String(80), nullable=False)
     name: Mapped[str] = mapped_column(String(255), nullable=False)
@@ -37,7 +38,7 @@ class Zone(IdMixin, TimestampMixin, Base):
 
 class Overlay(IdMixin, TimestampMixin, Base):
     __tablename__ = "overlays"
-    __table_args__ = {"schema": "civiczone"}
+    __table_args__: ClassVar[dict] = {"schema": "civiczone"}
 
     code: Mapped[str] = mapped_column(String(80), nullable=False)
     name: Mapped[str] = mapped_column(String(255), nullable=False)
@@ -48,7 +49,7 @@ class Overlay(IdMixin, TimestampMixin, Base):
 
 class Parcel(IdMixin, TimestampMixin, Base):
     __tablename__ = "parcels"
-    __table_args__ = {"schema": "civiczone"}
+    __table_args__: ClassVar[dict] = {"schema": "civiczone"}
 
     parcel_number: Mapped[str] = mapped_column(String(120), nullable=False)
     address: Mapped[str] = mapped_column(String(500), nullable=False)
@@ -60,7 +61,7 @@ class Parcel(IdMixin, TimestampMixin, Base):
 
 class UseCategory(IdMixin, TimestampMixin, Base):
     __tablename__ = "use_categories"
-    __table_args__ = {"schema": "civiczone"}
+    __table_args__: ClassVar[dict] = {"schema": "civiczone"}
 
     code: Mapped[str] = mapped_column(String(120), nullable=False)
     label: Mapped[str] = mapped_column(String(255), nullable=False)
@@ -69,7 +70,7 @@ class UseCategory(IdMixin, TimestampMixin, Base):
 
 class UseRule(IdMixin, TimestampMixin, Base):
     __tablename__ = "use_rules"
-    __table_args__ = {"schema": "civiczone"}
+    __table_args__: ClassVar[dict] = {"schema": "civiczone"}
 
     zone_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("civiczone.zones.id"), nullable=False)
     use_category_id: Mapped[uuid.UUID] = mapped_column(
@@ -83,7 +84,7 @@ class UseRule(IdMixin, TimestampMixin, Base):
 
 class DimensionalRule(IdMixin, TimestampMixin, Base):
     __tablename__ = "dimensional_rules"
-    __table_args__ = {"schema": "civiczone"}
+    __table_args__: ClassVar[dict] = {"schema": "civiczone"}
 
     zone_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("civiczone.zones.id"), nullable=False)
     rule_type: Mapped[str] = mapped_column(String(120), nullable=False)
@@ -94,7 +95,7 @@ class DimensionalRule(IdMixin, TimestampMixin, Base):
 
 class Citation(IdMixin, TimestampMixin, Base):
     __tablename__ = "citations"
-    __table_args__ = {"schema": "civiczone"}
+    __table_args__: ClassVar[dict] = {"schema": "civiczone"}
 
     source_section_ref: Mapped[str] = mapped_column(String(255), nullable=False)
     citation_text: Mapped[str] = mapped_column(String(500), nullable=False)
@@ -104,7 +105,7 @@ class Citation(IdMixin, TimestampMixin, Base):
 
 class Precedent(IdMixin, TimestampMixin, Base):
     __tablename__ = "precedents"
-    __table_args__ = {"schema": "civiczone"}
+    __table_args__: ClassVar[dict] = {"schema": "civiczone"}
 
     title: Mapped[str] = mapped_column(String(500), nullable=False)
     body: Mapped[str] = mapped_column(Text, nullable=False)
@@ -115,7 +116,7 @@ class Precedent(IdMixin, TimestampMixin, Base):
 
 class InterpretationNote(IdMixin, TimestampMixin, Base):
     __tablename__ = "interpretation_notes"
-    __table_args__ = {"schema": "civiczone"}
+    __table_args__: ClassVar[dict] = {"schema": "civiczone"}
 
     zone_id: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("civiczone.zones.id"))
     note_text: Mapped[str] = mapped_column(Text, nullable=False)
@@ -125,7 +126,7 @@ class InterpretationNote(IdMixin, TimestampMixin, Base):
 
 class ZoneQuestion(IdMixin, TimestampMixin, Base):
     __tablename__ = "zone_questions"
-    __table_args__ = {"schema": "civiczone"}
+    __table_args__: ClassVar[dict] = {"schema": "civiczone"}
 
     question_text: Mapped[str] = mapped_column(Text, nullable=False)
     audience: Mapped[str] = mapped_column(String(80), nullable=False)

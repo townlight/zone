@@ -3,7 +3,6 @@ from fastapi.testclient import TestClient
 from civiczone.main import app
 from civiczone.qa import answer_zoning_question
 
-
 client = TestClient(app)
 
 

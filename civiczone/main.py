@@ -1,7 +1,8 @@
 """FastAPI runtime foundation for CivicZone."""
 
-from dataclasses import dataclass
 import os
+from dataclasses import dataclass
+from typing import Annotated
 
 from civiccore import __version__ as CIVICCORE_VERSION
 from civiccore.auth import (
@@ -18,13 +19,17 @@ from pydantic import BaseModel, Field
 from civiczone import __version__
 from civiczone.parcel_lookup import ParcelLookupError, ParcelLookupRepository, lookup_parcel
 from civiczone.public_ui import render_public_lookup_page
-from civiczone.question_ledger import ZoneQuestionLedgerRepository
 from civiczone.qa import answer_zoning_question
-from civiczone.rule_lookup import RuleLookupError, RuleLookupRepository, lookup_dimensional_rule, lookup_use_rule
-from civiczone.staff_ui import render_staff_workspace_page
+from civiczone.question_ledger import ZoneQuestionLedgerRepository
+from civiczone.rule_lookup import (
+    RuleLookupError,
+    RuleLookupRepository,
+    lookup_dimensional_rule,
+    lookup_use_rule,
+)
 from civiczone.staff_context import classify_for_planner_review, get_staff_precedent
+from civiczone.staff_ui import render_staff_workspace_page
 from civiczone.staff_workflows import StaffWorkflowStore
-
 
 app = FastAPI(
     title="CivicZone",
@@ -299,7 +304,7 @@ def planner_review_classify(request: PlannerReviewRequest) -> dict[str, str]:
 @app.get("/api/v1/civiczone/staff/precedents/{precedent_id}")
 def staff_precedent(
     precedent_id: str,
-    _principal: StaffPrincipal = Depends(_require_staff_access),
+    _principal: Annotated[StaffPrincipal, Depends(_require_staff_access)],
 ) -> dict[str, str]:
     precedent = get_staff_precedent(precedent_id)
     if precedent is None:
@@ -317,7 +322,7 @@ def staff_precedent(
 @app.post("/api/v1/civiczone/staff/questions/answer")
 def staff_question_answer(
     request: StaffQuestionAnswerRequest,
-    principal: StaffPrincipal = Depends(_require_staff_access),
+    principal: Annotated[StaffPrincipal, Depends(_require_staff_access)],
 ) -> dict[str, object]:
     record = _get_staff_workflow_store().answer_planner_question(
         zone_code=request.zone_code,
@@ -330,7 +335,7 @@ def staff_question_answer(
 @app.post("/api/v1/civiczone/staff/ambiguity-reviews")
 def create_ambiguity_review(
     request: AmbiguityReviewCreateRequest,
-    principal: StaffPrincipal = Depends(_require_staff_access),
+    principal: Annotated[StaffPrincipal, Depends(_require_staff_access)],
 ) -> dict[str, object]:
     item = _get_staff_workflow_store().create_queue_item(
         zone_code=request.zone_code,
@@ -343,8 +348,8 @@ def create_ambiguity_review(
 
 @app.get("/api/v1/civiczone/staff/ambiguity-reviews")
 def list_ambiguity_reviews(
+    _principal: Annotated[StaffPrincipal, Depends(_require_staff_access)],
     status: str | None = None,
-    _principal: StaffPrincipal = Depends(_require_staff_access),
 ) -> dict[str, object]:
     return {
         "items": [
@@ -359,7 +364,7 @@ def list_ambiguity_reviews(
 def update_ambiguity_review(
     item_id: str,
     request: AmbiguityReviewUpdateRequest,
-    _principal: StaffPrincipal = Depends(_require_staff_access),
+    _principal: Annotated[StaffPrincipal, Depends(_require_staff_access)],
 ) -> dict[str, object]:
     try:
         item = _get_staff_workflow_store().update_queue_item(
@@ -386,8 +391,8 @@ def update_ambiguity_review(
 
 @app.get("/api/v1/civiczone/staff/questions/analytics")
 def staff_question_analytics(
+    _principal: Annotated[StaffPrincipal, Depends(_require_staff_access)],
     high_volume_threshold: int = 2,
-    _principal: StaffPrincipal = Depends(_require_staff_access),
 ) -> dict[str, object]:
     analytics = _get_staff_workflow_store().analytics(high_volume_threshold=high_volume_threshold)
     return {
@@ -411,7 +416,7 @@ def staff_question_analytics(
 @app.post("/api/v1/civiczone/staff/reports/outline")
 def staff_report_outline(
     request: StaffReportOutlineRequest,
-    principal: StaffPrincipal = Depends(_require_staff_access),
+    principal: Annotated[StaffPrincipal, Depends(_require_staff_access)],
 ) -> dict[str, object]:
     outline = _get_staff_workflow_store().draft_report_outline(
         title=request.title,
@@ -435,7 +440,7 @@ def staff_report_outline(
 @app.post("/api/v1/civiczone/staff/flagged-answers")
 def create_flagged_answer_review(
     request: FlaggedAnswerCreateRequest,
-    principal: StaffPrincipal = Depends(_require_staff_access),
+    principal: Annotated[StaffPrincipal, Depends(_require_staff_access)],
 ) -> dict[str, object]:
     review = _get_staff_workflow_store().flag_answer(
         zone_code=request.zone_code,
@@ -452,7 +457,7 @@ def create_flagged_answer_review(
 def improve_flagged_answer_review(
     review_id: str,
     request: FlaggedAnswerImproveRequest,
-    principal: StaffPrincipal = Depends(_require_staff_access),
+    principal: Annotated[StaffPrincipal, Depends(_require_staff_access)],
 ) -> dict[str, object]:
     review = _get_staff_workflow_store().improve_flagged_answer(
         review_id=review_id,
@@ -550,9 +555,7 @@ def _record_zone_question(*, zone_code: str, question: str, result):
     if _parcel_rule_database_url() is None:
         return None
     escalation_reason = None
-    if result.status == "escalate":
-        escalation_reason = result.next_step
-    elif result.status == "refused":
+    if result.status == "escalate" or result.status == "refused":
         escalation_reason = result.next_step
     return _get_question_ledger_repository().record_answer(
         zone_code=zone_code,

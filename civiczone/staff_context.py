@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-
 ESCALATION_TRIGGERS = ("variance", "cup", "conditional use permit", "nonconforming", "appeal")
 
 

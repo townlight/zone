@@ -9,7 +9,6 @@ from civiczone.rule_lookup import (
     lookup_use_rule,
 )
 
-
 client = TestClient(app)
 
 
