@@ -12,7 +12,6 @@ from sqlalchemy import Engine, create_engine
 from civiczone.qa import ZoneAnswer, answer_zoning_question
 from civiczone.rule_lookup import DISCLAIMER
 
-
 STAFF_VISIBILITY = "staff_only"
 OPEN_QUEUE_STATUSES = {"open", "in_review"}
 RESOLVED_QUEUE_STATUSES = {"resolved", "closed"}

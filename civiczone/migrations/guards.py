@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from typing import Any
 
-import alembic.op as op
 import sqlalchemy as sa
+from alembic import op
 from sqlalchemy.engine import Inspector
 
 

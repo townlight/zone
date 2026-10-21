@@ -3,7 +3,6 @@ from fastapi.testclient import TestClient
 from civiczone.main import app
 from civiczone.parcel_lookup import ParcelLookupError, ParcelLookupResult, lookup_parcel
 
-
 client = TestClient(app)
 
 

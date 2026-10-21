@@ -1,5 +1,39 @@
 # CivicZone
 
+## Z4 local installer candidate (unreleased)
+
+The desktop1.4.0-1 candidate exposes the opt-in `zoning-beta` connected profile.
+Records remains the default and the public1.3release is unchanged. Installer
+verification is in progress; this is not a published or signed Zoning release.
+
+In the staff Zoning screen, choose a JSON file with **Import parcel dataset**.
+Use the complete GeoJSON envelope described in `docs/Z1-OFFLINE-IMPORT.md`:
+source identity/date/version, EPSG:4326 boundary, zones, parcels and optional
+ overlays. No invented municipality is loaded automatically. Code must contain
+an active, official, public source for the cited sections. Lookup reports actual
+source identity/hash/date; unsupported or ambiguous answers remain informational
+and can be corrected by authorized staff without a new workflow approval gate.
+Private notes remain staff-only; public source snapshots require explicit human
+selection. See `docs/Z3-CONNECTED-SOURCES.md` for history and Records attachment.
+
+
+## Unreleased Townlight Zoning Z1 integration
+
+The working branch now targets the released Core 1.2.1 dependency and the
+existing Townlight Python/PostgreSQL runtime. Z1 adds offline GeoJSON imports,
+PostGIS-backed parcel/zone/overlay matching, immutable import provenance,
+archival rather than deletion of missing parcels, and native-session-protected
+import/lookup endpoints. It resolves citations through Townlight Code rather
+than generating a second codifier. No sample records are seeded by this path.
+
+This is not a new public release or a finished Zoning product. The existing
+standalone sample UI described below is not the connected Z1 desktop surface.
+Z2 extends this foundation with the structured cited workflows documented below.
+Meetings/Records documents and installer acceptance remain later milestones. See
+[the Z1 operator contract](docs/Z1-OFFLINE-IMPORT.md).
+
+## Published v0.2.2 baseline (historical)
+
 CivicZone is CivicSuite's parcel-aware zoning and land-use Q&A module.
 
 Current state: **v0.2.2 corrective demotion state - scaffold with partial persistence/workflow plumbing; no real AI layer, full frontend, real municipal data/search, or public-use gate. This narrow truth-repair release is no functional upgrade; it exists solely to supersede the false v1.0.0 release from 2026-05-21 in GitHub's Latest impression. The CivicCore pin is unchanged.**. This repo contains a FastAPI service, health/root endpoints, documentation gates, canonical zoning schema models, Alembic migrations, deterministic parcel/zone lookup, cited use-rule lookup, cited dimensional-rule prechecks, resident Q&A with refusal and escalation rules, optional database-backed parcel/rule, resident-question ledger, and staff-workflow records through `CIVICZONE_PARCEL_RULE_DB_URL`, staff-only precedent protection, a browser-usable resident UI at `/civiczone`, a staff workflow shell at `/civiczone/staff`, adversarial local integration mocks, trusted-proxy staff access validation, and CivicCore v1.1.0 release-wheel dependency alignment. See [docs/release-recovery-status.md](docs/release-recovery-status.md) for historical recovery context and current release evidence.
@@ -51,3 +85,39 @@ Staff workflow endpoints require trusted municipal access headers from a configu
 ## License
 
 Code is Apache 2.0. Documentation is CC BY 4.0.
+## Unreleased connected Zoning Z2
+
+The local development branch adds parcel-scoped allowed/conditional/prohibited-use
+and dimensional answers bound to actual Townlight Code section, version, effective
+date and source identities. Unsupported, conflicting or stale bindings are shown
+as needing planner attention, not invented determinations. This is structured
+staff-configured lookup, not AI interpretation or legal advice.
+
+The separate Zoning desktop component has resident lookup/question controls and
+an authenticated staff workspace: cited rule registration, persisted question
+history, planner queue, corrections, basic counts/repeated questions and draft
+report outlines. Human corrections do not require an earlier automated flag,
+nonempty justification or an extra approval. Original answers and audit history
+remain intact. Staff notes/reviews are not included in resident responses.
+
+This is not a released or installed Zoning candidate. The published
+Records–Meetings–Code 1.3.0-beta.1 is unchanged. The Z2 operator guide is
+zone/docs/Z2-CITED-WORKFLOWS.md.
+
+## Unreleased connected Zoning Z3
+
+Authorized staff can explicitly link a permitted public Meetings archive document
+to a Zoning question as hearing context, context or precedent. This is historical
+context, not a Code amendment or binding determination. Links retain source IDs,
+archive/version identities, content hashes and actor history.
+
+Staff can create a separate immutable Zoning source snapshot and select eligible
+snapshots from Records. Staff-only snapshots and private review notes are not
+offered as public Records sources. Permissions and content hashes are rechecked
+when retrieving or attaching sources; a saved link does not bypass later access
+restrictions. Existing stored evidence is preserved rather than rewritten.
+
+Creating or attaching a snapshot does not approve a response or publish anything.
+Human corrections remain available without an automatic flag or mandatory
+justification. Packaged/installed acceptance and opt-in profile delivery remain
+Z4. See zone/docs/Z3-CONNECTED-SOURCES.md. No new public release is claimed.
