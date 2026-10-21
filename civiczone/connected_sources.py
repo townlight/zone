@@ -17,7 +17,7 @@ def _loads(v):
         return v
     try:
         return json.loads(v)
-    except Exception:
+    except (TypeError, ValueError):
         return v
 
 
@@ -93,12 +93,12 @@ def _permitted(provider, source_id, sha):
         raise ValueError("source must resolve exactly once")
     doc = docs[0]
     if not isinstance(doc, dict):
-        raise ValueError("invalid source")
+        raise ValueError("invalid source")  # noqa: TRY004 - existing adapter error contract
     if doc.get("visibility") != "public":
         raise ValueError("source not public")
     text_value = doc.get("text")
     if not isinstance(text_value, str):
-        raise ValueError("source text missing")
+        raise ValueError("source text missing")  # noqa: TRY004 - existing adapter error contract
     actual = _sha(text_value)
     if actual != sha:
         raise ValueError("source hash mismatch")
@@ -300,7 +300,7 @@ def public_documents(engine, provider, query="", source_id=None):
         for ms in payload.get("meeting_sources") or []:
             try:
                 _permitted(provider, ms["source_id"], ms["sha256"])
-            except Exception:
+            except Exception:  # noqa: BLE001 - fail-closed provider boundary
                 revoked = True
                 break
         if revoked:

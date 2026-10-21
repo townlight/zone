@@ -1,6 +1,7 @@
 import hashlib
 import json
 import uuid
+
 from sqlalchemy import text
 
 DISCLAIMER = "Informational only; not a zoning determination, permit approval or legal advice."
@@ -23,15 +24,14 @@ def register_rule(engine, p, actor, resolve):
         ("section_number", section_number, 255),
     ):
         if not isinstance(val, str) or not val.strip() or len(val) > limit:
-            raise ValueError("invalid %s" % name)
+            raise ValueError(f"invalid {name}")
     if kind == "use":
         if value not in ("allowed", "conditional", "prohibited"):
             raise ValueError("invalid use status")
     elif kind != "dimension":
         raise ValueError("invalid kind")
-    if overlay is not None:
-        if not isinstance(overlay, str) or not overlay.strip() or len(overlay) > 255:
-            raise ValueError("invalid overlay_code")
+    if overlay is not None and (not isinstance(overlay, str) or not overlay.strip() or len(overlay) > 255):
+        raise ValueError("invalid overlay_code")
     resolved = resolve(section_number)
     if not resolved or resolved.get("status") != "ok":
         raise ValueError("section resolution failed")
@@ -61,7 +61,7 @@ def register_rule(engine, p, actor, resolve):
             if not ov:
                 raise ValueError("overlay not found")
         if kind == "use":
-            uc_id = uuid.uuid5(uuid.NAMESPACE_URL, "civiczone:use_category:%s" % key)
+            uc_id = uuid.uuid5(uuid.NAMESPACE_URL, f"civiczone:use_category:{key}")
             conn.execute(
                 text(
                     "INSERT INTO civiczone.use_categories (id, code, label) VALUES (:i, :c, :l) ON CONFLICT (id) DO NOTHING"

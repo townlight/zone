@@ -6,7 +6,6 @@ from fastapi.testclient import TestClient
 import civiczone
 from civiczone.main import app
 
-
 client = TestClient(app)
 ROOT = Path(__file__).resolve().parents[1]
 

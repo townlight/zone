@@ -10,7 +10,6 @@ import sqlalchemy as sa
 from alembic import op
 from sqlalchemy.dialects.postgresql import JSONB, UUID
 
-
 revision = "civiczone_0005_geo_import"
 down_revision = "civiczone_0004_staff_workflows"
 branch_labels = None

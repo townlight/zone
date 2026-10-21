@@ -2,15 +2,14 @@ from __future__ import annotations
 
 import importlib
 import os
-from pathlib import Path
 import subprocess
 import time
 import uuid
+from pathlib import Path
 
 from alembic import command
 from alembic.config import Config
 from sqlalchemy import create_engine, text
-
 
 ROOT = Path(__file__).resolve().parents[1]
 

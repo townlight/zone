@@ -7,7 +7,6 @@ from datetime import UTC, datetime
 import sqlalchemy as sa
 from sqlalchemy import Engine, create_engine
 
-
 DISCLAIMER = "Informational only; this is not a zoning determination."
 
 

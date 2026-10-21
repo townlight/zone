@@ -9,7 +9,6 @@ from sqlalchemy.exc import SQLAlchemyError
 from .geo_spatial import validate_spatial
 from .geo_validate import DISCLAIMER, GeoImportError, prepare
 
-
 SCHEMA = "civiczone"
 GEOM = "ST_Multi(ST_GeomFromGeoJSON(:geom))::geography"
 

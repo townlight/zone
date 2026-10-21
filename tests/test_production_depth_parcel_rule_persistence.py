@@ -5,8 +5,7 @@ from fastapi.testclient import TestClient
 import civiczone.main as main_module
 from civiczone.main import app
 from civiczone.parcel_lookup import ParcelLookupRepository
-from civiczone.rule_lookup import DIMENSIONAL_RULES, RuleLookupRepository, USE_RULES
-
+from civiczone.rule_lookup import DIMENSIONAL_RULES, USE_RULES, RuleLookupRepository
 
 client = TestClient(app)
 

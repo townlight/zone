@@ -8,7 +8,6 @@ from sqlalchemy.dialects import postgresql
 
 from civiczone.migrations.guards import idempotent_create_table
 
-
 revision = "civiczone_0004_staff_workflows"
 down_revision = "civiczone_0003_question_ledger"
 branch_labels = None

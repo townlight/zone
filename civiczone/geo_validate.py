@@ -21,16 +21,16 @@ def _fail(message):
 def _str(obj, key, max_len=None, required=True):
     if key not in obj or obj[key] is None:
         if required:
-            _fail("%s is required" % key)
+            _fail(f"{key} is required")
         return ""
     value = obj[key]
     if not isinstance(value, str):
-        _fail("%s must be a string" % key)
+        _fail(f"{key} must be a string")
     value = value.strip()
     if required and not value:
-        _fail("%s must be non-empty" % key)
+        _fail(f"{key} must be non-empty")
     if max_len is not None and len(value) > max_len:
-        _fail("%s exceeds %s characters" % (key, max_len))
+        _fail(f"{key} exceeds {max_len} characters")
     return value
 
 
@@ -102,27 +102,27 @@ def _parcel_props(props, layer_name):
 def _layer(payload, name, require_features, build_props, duplicate_key):
     layer = payload.get(name)
     if not isinstance(layer, dict):
-        _fail("%s must be an object" % name)
+        _fail(f"{name} must be an object")
     if layer.get("type") != "FeatureCollection":
-        _fail("%s must be a FeatureCollection" % name)
+        _fail(f"{name} must be a FeatureCollection")
     features = layer.get("features")
     if not isinstance(features, list):
-        _fail("%s.features must be a list" % name)
+        _fail(f"{name}.features must be a list")
     if require_features and not features:
-        _fail("%s must not be empty" % name)
+        _fail(f"{name} must not be empty")
     if len(features) > MAX_FEATURES:
-        _fail("%s exceeds %s features" % (name, MAX_FEATURES))
+        _fail(f"{name} exceeds {MAX_FEATURES} features")
     result = []
     ids = set()
     duplicates = set()
     for feature in features:
         if not isinstance(feature, dict):
-            _fail("%s feature must be an object" % name)
+            _fail(f"{name} feature must be an object")
         if feature.get("type") != "Feature":
-            _fail("%s feature type must be Feature" % name)
+            _fail(f"{name} feature type must be Feature")
         feature_id = _str(feature, "id")
         if feature_id in ids:
-            _fail("duplicate feature id in %s" % name)
+            _fail(f"duplicate feature id in {name}")
         ids.add(feature_id)
         props = feature.get("properties")
         if not isinstance(props, dict):
@@ -130,7 +130,7 @@ def _layer(payload, name, require_features, build_props, duplicate_key):
         normalized_props = build_props(props, name)
         duplicate_value = normalized_props[duplicate_key]
         if duplicate_value in duplicates:
-            _fail("duplicate %s in %s" % (duplicate_key, name))
+            _fail(f"duplicate {duplicate_key} in {name}")
         duplicates.add(duplicate_value)
         geometry = _geometry(feature.get("geometry"))
         result.append({

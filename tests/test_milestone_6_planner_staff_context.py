@@ -4,7 +4,6 @@ from civiczone.main import app
 from civiczone.qa import answer_zoning_question
 from civiczone.staff_context import classify_for_planner_review, get_staff_precedent
 
-
 client = TestClient(app, client=("127.0.0.1", 50000))
 
 

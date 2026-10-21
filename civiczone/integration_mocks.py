@@ -4,7 +4,6 @@ from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 from typing import Any
 
-
 SUPPORTED_PROVIDERS = frozenset(
     {
         "esri_arcgis_rest",
@@ -299,7 +298,7 @@ def _is_stale(value: object, *, now: datetime) -> bool:
 
 def _parse_datetime(value: str) -> datetime | None:
     try:
-        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        parsed = datetime.fromisoformat(value)
     except ValueError:
         return None
     if parsed.tzinfo is None:

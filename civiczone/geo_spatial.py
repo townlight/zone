@@ -5,7 +5,6 @@ from sqlalchemy.exc import DataError
 
 from .geo_validate import GeoImportError
 
-
 _ERR = "Invalid spatial data"
 
 
