@@ -1,3 +1,28 @@
+# Townlight Zoning
+
+**Parcel context and cited rules, with planner judgment intact.**
+
+Zoning supports parcel-aware informational work. It preserves dataset identity, source rules and human corrections, while refusing to turn an answer into a zoning determination or permit approval.
+
+## Use this product
+
+- [Current user manual](USER-MANUAL.md): installed workflow, roles, sources, review, export, recovery and limits.
+- [Product landing page](https://townlight.github.io/products/zoning/).
+- [Overall eight-product manual](https://github.com/townlight/townlight/blob/main/USER-MANUAL.md) and [feature/integration assessment](https://github.com/townlight/townlight/blob/main/docs/assessment/feature-and-integration-review.md).
+- [Signed composition and acceptance](https://github.com/townlight/townlight/releases/tag/townlight-records-meetings-code-zoning-v1.4.0-beta.1): Connected Zoning in signed desktop 1.4.0-beta.1 and later compositions.
+
+Zoning consumes Code and permitted Meetings evidence; Planning and Permitting select its public source documents. Records receives its public snapshots.
+
+## Release scope
+
+The accepted installed path uses local GeoJSON/PostGIS. It does not certify every ArcGIS service, assessor import, CKAN publication, question analytics or public-internet deployment in the broader specification.
+
+Documentation reviewed 2026-10-26. Installed acceptance, source/API implementation and future requirements are different evidence. Code is AGPL-3.0-only with the repository’s public institution exception where applicable; documentation is CC BY 4.0. See the repository license files.
+
+## Historical repository reference
+
+The earlier README below is retained for package history and contributor commands. Older maturity/version statements describe that historical reference and are superseded by the current operating guide and linked release evidence.
+
 <a id="civiczone"></a>
 
 # Townlight Zoning
