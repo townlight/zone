@@ -92,7 +92,7 @@
       "path": "LICENSE",
       "sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e",
       "status": "same",
-      "publication_sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e"
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
     },
     {
       "archive": "products/zoning/LICENSE-CODE",
@@ -100,7 +100,7 @@
       "path": "LICENSE-CODE",
       "sha256": "ea964e0c07db63b534e87a519343dd4d9a8a94a634950a2f36b2922d7aeaca41",
       "status": "changed",
-      "publication_sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e"
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
     },
     {
       "archive": "products/zoning/LICENSE-DOCS",
@@ -108,7 +108,7 @@
       "path": "LICENSE-DOCS",
       "sha256": "d07988f4be47912f75a73b44da8a9c0b602bf6c8ced69de858b848f379ecd973",
       "status": "same",
-      "publication_sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e"
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
     },
     {
       "archive": "products/zoning/MILESTONE_0_DONE.md",
@@ -204,7 +204,7 @@
       "path": "README.md",
       "sha256": "9a92c8c7d390db671e5c476f3bb081d0beca42b4851c1e10d33f690b6e7a7352",
       "status": "changed",
-      "publication_sha256": "3ae575587caf1e7667afe8d53d70027830c72bb1ca7371c8b19219c248fa2058"
+      "publication_sha256": "23748ac6c1ee31d68e4c4150962ad5efb1afe1d8ff55158d3b506ee1e14f6eef"
     },
     {
       "archive": "products/zoning/README.txt",
@@ -212,7 +212,7 @@
       "path": "README.txt",
       "sha256": "9a92c8c7d390db671e5c476f3bb081d0beca42b4851c1e10d33f690b6e7a7352",
       "status": "changed",
-      "publication_sha256": "3ae575587caf1e7667afe8d53d70027830c72bb1ca7371c8b19219c248fa2058"
+      "publication_sha256": "23748ac6c1ee31d68e4c4150962ad5efb1afe1d8ff55158d3b506ee1e14f6eef"
     },
     {
       "archive": "products/zoning/SECURITY.md",
@@ -604,7 +604,7 @@
       "path": "docs/index.html",
       "sha256": "f25f3a0c635e77aa1570fe7ead9c2bc57b8be18270b912fff835b466846d986a",
       "status": "changed",
-      "publication_sha256": "75fa4044dd289c2f8d904cc00625dd044511c2f7060c983e84ce8c34980873af"
+      "publication_sha256": "41a323c2cb0967e789ef31eb10775e40ea151e6c9f69cd86ba7ea0897332bf19"
     },
     {
       "archive": "products/zoning/docs/licensing/README.md",
