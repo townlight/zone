@@ -16,7 +16,7 @@
 - Staff-only precedent and interpretation notes must never leak to residents.
 - Out-of-jurisdiction, low-confidence, and determination requests must escalate to planner review.
 - Townlight Zoning depends on Townlight Core and Townlight Code; Townlight Core must never depend on Townlight Zoning.
-- Code is AGPL-3.0-only, with the TownLight Public Institution Exception for qualifying deployments. Docs are CC BY 4.0.
+- Code is AGPL-3.0-only, with no additional permission for this candidate (historical grants under docs/licensing/history/). Docs are CC BY 4.0.
 
 ## Placeholder Package Warning
 

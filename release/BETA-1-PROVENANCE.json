@@ -1,0 +1,1124 @@
+{
+  "edition": "Townlight Beta 1",
+  "base_commit": "f7e20b5b68ee787bbb339a0e00f71d72fb7b4d15",
+  "installer_sha256": "98bcdef11ebdf5c767f620c904ff49f85115fde3b5c23f62703b111e645aaf86",
+  "owned_source_sha256": "84a23e1297e42d17b16cfc9e51b2dd78bc46414c0de8ad7ebd2466c1a409d06b",
+  "documentation_sha256": "a928bb1c40fec7ef6f223c7b77bc9fe7837e4cfffcebf35bb3309cc5549284e6",
+  "release": "https://github.com/townlight/townlight/releases/tag/townlight-beta-1",
+  "archive_files": [
+    {
+      "archive": "products/zoning/.github/ISSUE_TEMPLATE/bug_report.md",
+      "repo": "zone",
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "sha256": "6967ae4f5ad4e2a4a176cea1f047d801d1570bca874d2280bfbba2e590e415e0",
+      "status": "same",
+      "publication_sha256": "6967ae4f5ad4e2a4a176cea1f047d801d1570bca874d2280bfbba2e590e415e0"
+    },
+    {
+      "archive": "products/zoning/.github/ISSUE_TEMPLATE/config.yml",
+      "repo": "zone",
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "sha256": "060cde1bbeac775b97eac4ae33ae8f8d92b26914dfa1fd0b80ddbeb5b3a8d8d0",
+      "status": "same",
+      "publication_sha256": "dcf8af74510e690694a580c8040a60b7eaa5414c7677c72dd8a6e867ff826966"
+    },
+    {
+      "archive": "products/zoning/.github/ISSUE_TEMPLATE/feature_request.md",
+      "repo": "zone",
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "sha256": "71654af64cfa21ed8a1057eb598cbc8d8605637f5005f9b3e64a105022e5a648",
+      "status": "same",
+      "publication_sha256": "71654af64cfa21ed8a1057eb598cbc8d8605637f5005f9b3e64a105022e5a648"
+    },
+    {
+      "archive": "products/zoning/.github/PULL_REQUEST_TEMPLATE.md",
+      "repo": "zone",
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "sha256": "93b5d49b82972801d83e22b07f545b2249dd96f3d71fd5ad53e4e92a40846415",
+      "status": "same",
+      "publication_sha256": "93b5d49b82972801d83e22b07f545b2249dd96f3d71fd5ad53e4e92a40846415"
+    },
+    {
+      "archive": "products/zoning/.github/workflows/release.yml",
+      "repo": "zone",
+      "path": ".github/workflows/release.yml",
+      "sha256": "f490541ce801a01df7f4714dfe5a29c815c45b4d5760fdbbd16f75126405a91f",
+      "status": "same",
+      "publication_sha256": "d7f6317d5b07b0b57f6cbb727847ba282de39a9c47b3925ca534fbfd396624b3"
+    },
+    {
+      "archive": "products/zoning/.github/workflows/verify.yml",
+      "repo": "zone",
+      "path": ".github/workflows/verify.yml",
+      "sha256": "098052aa0f09e3803bf8f2504b42c021240c69e34c359185fe3195e9a768f75e",
+      "status": "same",
+      "publication_sha256": "f16bc94d88537c4918f3c84d31a90be10760c21e87c02c83322645670fff63a4"
+    },
+    {
+      "archive": "products/zoning/AGENTS.md",
+      "repo": "zone",
+      "path": "AGENTS.md",
+      "sha256": "daf6a067293c4f3b7a26a6add9561c25fc42a1895012a5070aa849927a223496",
+      "status": "changed",
+      "publication_sha256": "53b9f2e0eabddc47c6f70453f76b3a49ac87d297de1edb15d21dd2dd73492954"
+    },
+    {
+      "archive": "products/zoning/CHANGELOG.md",
+      "repo": "zone",
+      "path": "CHANGELOG.md",
+      "sha256": "17c0bc5f9635b641053667805f6ee37127b7ffffdea3cd5426c601db33d64c16",
+      "status": "same",
+      "publication_sha256": "17c0bc5f9635b641053667805f6ee37127b7ffffdea3cd5426c601db33d64c16"
+    },
+    {
+      "archive": "products/zoning/CODE_OF_CONDUCT.md",
+      "repo": "zone",
+      "path": "CODE_OF_CONDUCT.md",
+      "sha256": "fdcde204204b683b641b7c41a70d19812a8eb3d0299e2af2b30e8fd105f72057",
+      "status": "same",
+      "publication_sha256": "fdcde204204b683b641b7c41a70d19812a8eb3d0299e2af2b30e8fd105f72057"
+    },
+    {
+      "archive": "products/zoning/CONTRIBUTING.md",
+      "repo": "zone",
+      "path": "CONTRIBUTING.md",
+      "sha256": "58940a01a2d1babe95605964f5ad80336f7d30a43ba5ed3b254da189937db6c0",
+      "status": "same",
+      "publication_sha256": "58940a01a2d1babe95605964f5ad80336f7d30a43ba5ed3b254da189937db6c0"
+    },
+    {
+      "archive": "products/zoning/LICENSE",
+      "repo": "zone",
+      "path": "LICENSE",
+      "sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e",
+      "status": "same",
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "archive": "products/zoning/LICENSE-CODE",
+      "repo": "zone",
+      "path": "LICENSE-CODE",
+      "sha256": "ea964e0c07db63b534e87a519343dd4d9a8a94a634950a2f36b2922d7aeaca41",
+      "status": "changed",
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "archive": "products/zoning/LICENSE-DOCS",
+      "repo": "zone",
+      "path": "LICENSE-DOCS",
+      "sha256": "d07988f4be47912f75a73b44da8a9c0b602bf6c8ced69de858b848f379ecd973",
+      "status": "same",
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "archive": "products/zoning/MILESTONE_0_DONE.md",
+      "repo": "zone",
+      "path": "MILESTONE_0_DONE.md",
+      "sha256": "cf44103616c681ea74f9fa08b5584dbb3839436496d90d2bbb738bfdac94abb1",
+      "status": "same",
+      "publication_sha256": "cf44103616c681ea74f9fa08b5584dbb3839436496d90d2bbb738bfdac94abb1"
+    },
+    {
+      "archive": "products/zoning/MILESTONE_1_DONE.md",
+      "repo": "zone",
+      "path": "MILESTONE_1_DONE.md",
+      "sha256": "eef8ad80da850c6508bc03dd6aa15a365ac9f90ba4e9e7f325791ac8249249c6",
+      "status": "same",
+      "publication_sha256": "eef8ad80da850c6508bc03dd6aa15a365ac9f90ba4e9e7f325791ac8249249c6"
+    },
+    {
+      "archive": "products/zoning/MILESTONE_2_DONE.md",
+      "repo": "zone",
+      "path": "MILESTONE_2_DONE.md",
+      "sha256": "c0389a697c2680359a766f9f188d31ab511f12d7e597b88a480a2ac6cc4d9c2f",
+      "status": "same",
+      "publication_sha256": "c0389a697c2680359a766f9f188d31ab511f12d7e597b88a480a2ac6cc4d9c2f"
+    },
+    {
+      "archive": "products/zoning/MILESTONE_3_DONE.md",
+      "repo": "zone",
+      "path": "MILESTONE_3_DONE.md",
+      "sha256": "6c94ebaddbec7d3edba170a739741651fb905cea2a41d31a7e51f61a6a944776",
+      "status": "same",
+      "publication_sha256": "6c94ebaddbec7d3edba170a739741651fb905cea2a41d31a7e51f61a6a944776"
+    },
+    {
+      "archive": "products/zoning/MILESTONE_4_DONE.md",
+      "repo": "zone",
+      "path": "MILESTONE_4_DONE.md",
+      "sha256": "70d51cdbb6bf86baa0bb05b94a633fec3a5b6eec2d198353869de42163bf3a00",
+      "status": "same",
+      "publication_sha256": "70d51cdbb6bf86baa0bb05b94a633fec3a5b6eec2d198353869de42163bf3a00"
+    },
+    {
+      "archive": "products/zoning/MILESTONE_5_DONE.md",
+      "repo": "zone",
+      "path": "MILESTONE_5_DONE.md",
+      "sha256": "1892a94504a0c3eee9378b4f0f21d2a022961e465cae37e39e9827c7bdf67989",
+      "status": "same",
+      "publication_sha256": "1892a94504a0c3eee9378b4f0f21d2a022961e465cae37e39e9827c7bdf67989"
+    },
+    {
+      "archive": "products/zoning/MILESTONE_6_DONE.md",
+      "repo": "zone",
+      "path": "MILESTONE_6_DONE.md",
+      "sha256": "c34961080722da78902ad09b725108288e103530264d6f61bdb582bc0ce23634",
+      "status": "same",
+      "publication_sha256": "c34961080722da78902ad09b725108288e103530264d6f61bdb582bc0ce23634"
+    },
+    {
+      "archive": "products/zoning/MILESTONE_7_DONE.md",
+      "repo": "zone",
+      "path": "MILESTONE_7_DONE.md",
+      "sha256": "84b97a2173eae17d20b3725738011f6e2638bd17516aec81bcc4962e821ef5c7",
+      "status": "same",
+      "publication_sha256": "84b97a2173eae17d20b3725738011f6e2638bd17516aec81bcc4962e821ef5c7"
+    },
+    {
+      "archive": "products/zoning/MILESTONE_8_DONE.md",
+      "repo": "zone",
+      "path": "MILESTONE_8_DONE.md",
+      "sha256": "8e783febf7c169e8d8d04ec05fd995a9879b7570c45d38cb7fe7f5fcb13af745",
+      "status": "same",
+      "publication_sha256": "8e783febf7c169e8d8d04ec05fd995a9879b7570c45d38cb7fe7f5fcb13af745"
+    },
+    {
+      "archive": "products/zoning/PRODUCTION_DEPTH_PARCEL_RULE_PERSISTENCE_DONE.md",
+      "repo": "zone",
+      "path": "PRODUCTION_DEPTH_PARCEL_RULE_PERSISTENCE_DONE.md",
+      "sha256": "819479f264c2b7fc01dd86c8d341dd4f2cf84653f15e635e43efd4e8c0963c8a",
+      "status": "same",
+      "publication_sha256": "819479f264c2b7fc01dd86c8d341dd4f2cf84653f15e635e43efd4e8c0963c8a"
+    },
+    {
+      "archive": "products/zoning/PRODUCTION_DEPTH_QUESTION_LEDGER_DONE.md",
+      "repo": "zone",
+      "path": "PRODUCTION_DEPTH_QUESTION_LEDGER_DONE.md",
+      "sha256": "0ae09f6160b88f0c76c99aaab6ccac839a39545b889b915f2a56296fa76f2621",
+      "status": "same",
+      "publication_sha256": "0ae09f6160b88f0c76c99aaab6ccac839a39545b889b915f2a56296fa76f2621"
+    },
+    {
+      "archive": "products/zoning/README.md",
+      "repo": "zone",
+      "path": "README.md",
+      "sha256": "9a92c8c7d390db671e5c476f3bb081d0beca42b4851c1e10d33f690b6e7a7352",
+      "status": "changed",
+      "publication_sha256": "23748ac6c1ee31d68e4c4150962ad5efb1afe1d8ff55158d3b506ee1e14f6eef"
+    },
+    {
+      "archive": "products/zoning/README.txt",
+      "repo": "zone",
+      "path": "README.txt",
+      "sha256": "9a92c8c7d390db671e5c476f3bb081d0beca42b4851c1e10d33f690b6e7a7352",
+      "status": "changed",
+      "publication_sha256": "23748ac6c1ee31d68e4c4150962ad5efb1afe1d8ff55158d3b506ee1e14f6eef"
+    },
+    {
+      "archive": "products/zoning/SECURITY.md",
+      "repo": "zone",
+      "path": "SECURITY.md",
+      "sha256": "5f4d00382d626ccc1d80961b030c8dc1bc23f59b58c9ef70fc48b5bdbebbb703",
+      "status": "same",
+      "publication_sha256": "5f4d00382d626ccc1d80961b030c8dc1bc23f59b58c9ef70fc48b5bdbebbb703"
+    },
+    {
+      "archive": "products/zoning/SUPPORT.md",
+      "repo": "zone",
+      "path": "SUPPORT.md",
+      "sha256": "e96f8c69bd794063efad890adb86f01355bc032ba978a471e085de1f1b875e98",
+      "status": "same",
+      "publication_sha256": "e96f8c69bd794063efad890adb86f01355bc032ba978a471e085de1f1b875e98"
+    },
+    {
+      "archive": "products/zoning/USER-MANUAL.md",
+      "repo": "zone",
+      "path": "USER-MANUAL.md",
+      "sha256": "cbd9cd203dc7eab915291d6b5f86cdca7569796104919cbfad0d4ca3c1954a7b",
+      "status": "same",
+      "publication_sha256": "4476140f9ddc0b1f14a3522d77497b11689d930e40b0c5266dc0e0621edecb74"
+    },
+    {
+      "archive": "products/zoning/USER-MANUAL.txt",
+      "repo": "zone",
+      "path": "USER-MANUAL.txt",
+      "sha256": "cbd9cd203dc7eab915291d6b5f86cdca7569796104919cbfad0d4ca3c1954a7b",
+      "status": "same",
+      "publication_sha256": "4476140f9ddc0b1f14a3522d77497b11689d930e40b0c5266dc0e0621edecb74"
+    },
+    {
+      "archive": "products/zoning/apply_discretionary.py",
+      "repo": "zone",
+      "path": "apply_discretionary.py",
+      "sha256": "96a5741fda626b95dbde6eeac7f3a42cf61365f8ba2257f24af771245d587c91",
+      "status": "new",
+      "publication_sha256": "71788de762f7fcf4c6d53c5bc4ce82ad0752525e77a21b8bc993e5bc9bb51e78"
+    },
+    {
+      "archive": "products/zoning/apply_public_panel.py",
+      "repo": "zone",
+      "path": "apply_public_panel.py",
+      "sha256": "8af947b5904d4c997abad36f8a8e64ad690721e87b463920a8aabe0c26fa9dda",
+      "status": "new",
+      "publication_sha256": "8af947b5904d4c997abad36f8a8e64ad690721e87b463920a8aabe0c26fa9dda"
+    },
+    {
+      "archive": "products/zoning/civiczone/__init__.py",
+      "repo": "zone",
+      "path": "civiczone/__init__.py",
+      "sha256": "528eaa60c6814c1cf2b3ceb5a510c059380c37670f48928c27a02d765a2d4d15",
+      "status": "same",
+      "publication_sha256": "528eaa60c6814c1cf2b3ceb5a510c059380c37670f48928c27a02d765a2d4d15"
+    },
+    {
+      "archive": "products/zoning/civiczone/cited_questions.py",
+      "repo": "zone",
+      "path": "civiczone/cited_questions.py",
+      "sha256": "7a154dd540eae464090b4c12e6e0c1ca263670525df6a7328d317b0dd1e79a43",
+      "status": "same",
+      "publication_sha256": "7a154dd540eae464090b4c12e6e0c1ca263670525df6a7328d317b0dd1e79a43"
+    },
+    {
+      "archive": "products/zoning/civiczone/cited_rules.py",
+      "repo": "zone",
+      "path": "civiczone/cited_rules.py",
+      "sha256": "4fb421ff3cd9e27be7689de75711bba8d1cd3ede304547868c204cf7a0daa43a",
+      "status": "same",
+      "publication_sha256": "4fb421ff3cd9e27be7689de75711bba8d1cd3ede304547868c204cf7a0daa43a"
+    },
+    {
+      "archive": "products/zoning/civiczone/connected_sources.py",
+      "repo": "zone",
+      "path": "civiczone/connected_sources.py",
+      "sha256": "68ad55c71b897eca689a6d028f4aee115dc5ca4b5ef005613385f9588387715b",
+      "status": "same",
+      "publication_sha256": "68ad55c71b897eca689a6d028f4aee115dc5ca4b5ef005613385f9588387715b"
+    },
+    {
+      "archive": "products/zoning/civiczone/discretionary.py",
+      "repo": "zone",
+      "path": "civiczone/discretionary.py",
+      "sha256": "919a5a573109fc76840290b4656e8fc63be91cdd10a6b3ff21fd106b52218ca5",
+      "status": "new",
+      "publication_sha256": "d560ff28e39e90549132c10f0efa5f85497f125b1faefc0b909b1ca304a5ea43"
+    },
+    {
+      "archive": "products/zoning/civiczone/geo_import.py",
+      "repo": "zone",
+      "path": "civiczone/geo_import.py",
+      "sha256": "e49824301593f8c06dd6bc64832542721d7b1763d745deb7ba531f7b894cc4a0",
+      "status": "same",
+      "publication_sha256": "e49824301593f8c06dd6bc64832542721d7b1763d745deb7ba531f7b894cc4a0"
+    },
+    {
+      "archive": "products/zoning/civiczone/geo_spatial.py",
+      "repo": "zone",
+      "path": "civiczone/geo_spatial.py",
+      "sha256": "dfe4c88a940a20825c5c493babacb0cb0a96a70cb31a831c3ff1ecb4b77ebc13",
+      "status": "same",
+      "publication_sha256": "dfe4c88a940a20825c5c493babacb0cb0a96a70cb31a831c3ff1ecb4b77ebc13"
+    },
+    {
+      "archive": "products/zoning/civiczone/geo_validate.py",
+      "repo": "zone",
+      "path": "civiczone/geo_validate.py",
+      "sha256": "65b4a2b84722be8c25decfaeb80c6177ff30588259379927e853f7727d767178",
+      "status": "same",
+      "publication_sha256": "65b4a2b84722be8c25decfaeb80c6177ff30588259379927e853f7727d767178"
+    },
+    {
+      "archive": "products/zoning/civiczone/integration_mocks.py",
+      "repo": "zone",
+      "path": "civiczone/integration_mocks.py",
+      "sha256": "ed14fba1a58020377ebee28c20ef042f5b50126ca2351efb73e46d7a2d80982c",
+      "status": "same",
+      "publication_sha256": "ed14fba1a58020377ebee28c20ef042f5b50126ca2351efb73e46d7a2d80982c"
+    },
+    {
+      "archive": "products/zoning/civiczone/main.py",
+      "repo": "zone",
+      "path": "civiczone/main.py",
+      "sha256": "cdbc4bd6f20650c08ca4a81c7e9d2fc7c85e0896bbd3d1c4e982dfe178c7bb93",
+      "status": "changed",
+      "publication_sha256": "e81b51bcd17d47049ec37bac436154e375c1fb301d3e29d757b90956f252057c"
+    },
+    {
+      "archive": "products/zoning/civiczone/migrations/__init__.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/__init__.py",
+      "sha256": "38cbccb2471a214eac40f174b618d28d0367c43a0e66d3eb5807dad737142765",
+      "status": "same",
+      "publication_sha256": "38cbccb2471a214eac40f174b618d28d0367c43a0e66d3eb5807dad737142765"
+    },
+    {
+      "archive": "products/zoning/civiczone/migrations/alembic.ini",
+      "repo": "zone",
+      "path": "civiczone/migrations/alembic.ini",
+      "sha256": "3eabf01aa8585b6996d354daae41c3932f4cab1f6d753fae913986bf67b093a6",
+      "status": "same",
+      "publication_sha256": "324888a8eac69c06dcaba65ea232433b5110dd601718f0cda3c390bd57508ff3"
+    },
+    {
+      "archive": "products/zoning/civiczone/migrations/env.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/env.py",
+      "sha256": "3baae8fbf8726f8811647eb75d257e310d2d9660b0150833f17220dd8fa431ba",
+      "status": "same",
+      "publication_sha256": "3baae8fbf8726f8811647eb75d257e310d2d9660b0150833f17220dd8fa431ba"
+    },
+    {
+      "archive": "products/zoning/civiczone/migrations/guards.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/guards.py",
+      "sha256": "9346e9812f238cfee1bdd21f5487fb5c51ee4cabeda45da9aaed6ac2db9b5f7c",
+      "status": "same",
+      "publication_sha256": "9346e9812f238cfee1bdd21f5487fb5c51ee4cabeda45da9aaed6ac2db9b5f7c"
+    },
+    {
+      "archive": "products/zoning/civiczone/migrations/versions/__init__.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/versions/__init__.py",
+      "sha256": "a1087a2a3cedf40641ab02c8e97838630305726600105ad59e30727b61a2f95d",
+      "status": "same",
+      "publication_sha256": "a1087a2a3cedf40641ab02c8e97838630305726600105ad59e30727b61a2f95d"
+    },
+    {
+      "archive": "products/zoning/civiczone/migrations/versions/civiczone_0001_schema.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/versions/civiczone_0001_schema.py",
+      "sha256": "0a6985e6fda034f4e654e63f2cb47610bf2af75dd028fc8f43473604550a2a18",
+      "status": "same",
+      "publication_sha256": "0a6985e6fda034f4e654e63f2cb47610bf2af75dd028fc8f43473604550a2a18"
+    },
+    {
+      "archive": "products/zoning/civiczone/migrations/versions/civiczone_0002_parcel_rule_lookup_records.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/versions/civiczone_0002_parcel_rule_lookup_records.py",
+      "sha256": "8a473e69469f9fdbca5adefcdb7e9a41d50850f1a7460381691da5a4f137314d",
+      "status": "same",
+      "publication_sha256": "8a473e69469f9fdbca5adefcdb7e9a41d50850f1a7460381691da5a4f137314d"
+    },
+    {
+      "archive": "products/zoning/civiczone/migrations/versions/civiczone_0003_question_ledger.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/versions/civiczone_0003_question_ledger.py",
+      "sha256": "fd654ca0d15832acb727b88ece26acce25cb45da1ff8b438152ad7c766df0abc",
+      "status": "same",
+      "publication_sha256": "fd654ca0d15832acb727b88ece26acce25cb45da1ff8b438152ad7c766df0abc"
+    },
+    {
+      "archive": "products/zoning/civiczone/migrations/versions/civiczone_0004_staff_workflows.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/versions/civiczone_0004_staff_workflows.py",
+      "sha256": "3c0a145ff691077453b65413f2f08a6b7107a55f3ff21c072a8bc3788028b952",
+      "status": "same",
+      "publication_sha256": "3c0a145ff691077453b65413f2f08a6b7107a55f3ff21c072a8bc3788028b952"
+    },
+    {
+      "archive": "products/zoning/civiczone/migrations/versions/civiczone_0005_geo_import.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/versions/civiczone_0005_geo_import.py",
+      "sha256": "8d4c34c15197ddc856c712d7fb8f9005cb553a2befd38a093a2c952a321d20ce",
+      "status": "same",
+      "publication_sha256": "8d4c34c15197ddc856c712d7fb8f9005cb553a2befd38a093a2c952a321d20ce"
+    },
+    {
+      "archive": "products/zoning/civiczone/migrations/versions/civiczone_0006_cited_questions.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/versions/civiczone_0006_cited_questions.py",
+      "sha256": "65b8c591b5adf3f0022720a2c4e780c818f0f4b5b51db83b81cab78edb2a1f9d",
+      "status": "same",
+      "publication_sha256": "65b8c591b5adf3f0022720a2c4e780c818f0f4b5b51db83b81cab78edb2a1f9d"
+    },
+    {
+      "archive": "products/zoning/civiczone/models.py",
+      "repo": "zone",
+      "path": "civiczone/models.py",
+      "sha256": "206d16a1b4aa343eceee7bb25bdf39411f2b57e947a98a8be45607664635aba9",
+      "status": "same",
+      "publication_sha256": "206d16a1b4aa343eceee7bb25bdf39411f2b57e947a98a8be45607664635aba9"
+    },
+    {
+      "archive": "products/zoning/civiczone/parcel_lookup.py",
+      "repo": "zone",
+      "path": "civiczone/parcel_lookup.py",
+      "sha256": "3629424d9af4d5ac514f285835f9b8179c1cf6ceb22d586576603a270edb5671",
+      "status": "same",
+      "publication_sha256": "3629424d9af4d5ac514f285835f9b8179c1cf6ceb22d586576603a270edb5671"
+    },
+    {
+      "archive": "products/zoning/civiczone/public_ui.py",
+      "repo": "zone",
+      "path": "civiczone/public_ui.py",
+      "sha256": "75d1542af38b920b5a4527da79af374ade3abf03d7a78f5d9ad2b075790681a5",
+      "status": "changed",
+      "publication_sha256": "f9c9d30458062d5cc61924eaac0430371ff7084929bb2b826989cc2cd49f25d6"
+    },
+    {
+      "archive": "products/zoning/civiczone/qa.py",
+      "repo": "zone",
+      "path": "civiczone/qa.py",
+      "sha256": "374b232775a482a3a02ce283d047652e0c188f7f856e0046e465d663ef863315",
+      "status": "same",
+      "publication_sha256": "374b232775a482a3a02ce283d047652e0c188f7f856e0046e465d663ef863315"
+    },
+    {
+      "archive": "products/zoning/civiczone/question_ledger.py",
+      "repo": "zone",
+      "path": "civiczone/question_ledger.py",
+      "sha256": "0fca91aa0a7338771f760fe9032da442023c3407584d0ee0c621ce0290a65e7b",
+      "status": "same",
+      "publication_sha256": "0fca91aa0a7338771f760fe9032da442023c3407584d0ee0c621ce0290a65e7b"
+    },
+    {
+      "archive": "products/zoning/civiczone/rule_lookup.py",
+      "repo": "zone",
+      "path": "civiczone/rule_lookup.py",
+      "sha256": "5c53135c7a413e0eecf663061593945c56330eae6a96808d61d69bd4e6d996a2",
+      "status": "same",
+      "publication_sha256": "5c53135c7a413e0eecf663061593945c56330eae6a96808d61d69bd4e6d996a2"
+    },
+    {
+      "archive": "products/zoning/civiczone/staff_context.py",
+      "repo": "zone",
+      "path": "civiczone/staff_context.py",
+      "sha256": "50784c2b595741098e2de9d9ad90a7957607ae09839afe6167af13e38037c91c",
+      "status": "same",
+      "publication_sha256": "50784c2b595741098e2de9d9ad90a7957607ae09839afe6167af13e38037c91c"
+    },
+    {
+      "archive": "products/zoning/civiczone/staff_ui.py",
+      "repo": "zone",
+      "path": "civiczone/staff_ui.py",
+      "sha256": "69448abc334931b5f19168fdffbef81497e250dd61f1912811d4ebdb28ee0b25",
+      "status": "same",
+      "publication_sha256": "69448abc334931b5f19168fdffbef81497e250dd61f1912811d4ebdb28ee0b25"
+    },
+    {
+      "archive": "products/zoning/civiczone/staff_workflows.py",
+      "repo": "zone",
+      "path": "civiczone/staff_workflows.py",
+      "sha256": "27cf6da89c7a1472b23cbcace93adb63a0384be443b95228c882eb3bfb0ed642",
+      "status": "same",
+      "publication_sha256": "27cf6da89c7a1472b23cbcace93adb63a0384be443b95228c882eb3bfb0ed642"
+    },
+    {
+      "archive": "products/zoning/docs/IMPLEMENTATION_PLAN.md",
+      "repo": "zone",
+      "path": "docs/IMPLEMENTATION_PLAN.md",
+      "sha256": "fe50acc51047e4a1837f794cc8e6702bb2b3552e267b7ee54e3da7b3642ca282",
+      "status": "same",
+      "publication_sha256": "fe50acc51047e4a1837f794cc8e6702bb2b3552e267b7ee54e3da7b3642ca282"
+    },
+    {
+      "archive": "products/zoning/docs/MILESTONES.md",
+      "repo": "zone",
+      "path": "docs/MILESTONES.md",
+      "sha256": "7969036db7c27ce789f811fce3ce8bf7db831f24d6bf0b39570a908c35b4c4d7",
+      "status": "same",
+      "publication_sha256": "7969036db7c27ce789f811fce3ce8bf7db831f24d6bf0b39570a908c35b4c4d7"
+    },
+    {
+      "archive": "products/zoning/docs/RECONCILIATION.md",
+      "repo": "zone",
+      "path": "docs/RECONCILIATION.md",
+      "sha256": "92259b8163821598b763e9a6b35c1c63365dfe74898b35d95c21c80d841c6a90",
+      "status": "same",
+      "publication_sha256": "92259b8163821598b763e9a6b35c1c63365dfe74898b35d95c21c80d841c6a90"
+    },
+    {
+      "archive": "products/zoning/docs/Z1-OFFLINE-IMPORT.md",
+      "repo": "zone",
+      "path": "docs/Z1-OFFLINE-IMPORT.md",
+      "sha256": "ca5a362f55923dedbe896ad6456a94d07daa23ee0d1cd7b1e2ed6d894777a9c3",
+      "status": "same",
+      "publication_sha256": "ca5a362f55923dedbe896ad6456a94d07daa23ee0d1cd7b1e2ed6d894777a9c3"
+    },
+    {
+      "archive": "products/zoning/docs/Z2-CITED-WORKFLOWS.md",
+      "repo": "zone",
+      "path": "docs/Z2-CITED-WORKFLOWS.md",
+      "sha256": "b26108e72c8b4996337c633093e2d17cc1690a3a3dd1174e6174b90451189ae8",
+      "status": "same",
+      "publication_sha256": "b26108e72c8b4996337c633093e2d17cc1690a3a3dd1174e6174b90451189ae8"
+    },
+    {
+      "archive": "products/zoning/docs/Z3-CONNECTED-SOURCES.md",
+      "repo": "zone",
+      "path": "docs/Z3-CONNECTED-SOURCES.md",
+      "sha256": "fe369edbaffbc0d043e1ffe5b192aa4bafb4d2b5f2e866fdbfcb4899042d4ceb",
+      "status": "same",
+      "publication_sha256": "fe369edbaffbc0d043e1ffe5b192aa4bafb4d2b5f2e866fdbfcb4899042d4ceb"
+    },
+    {
+      "archive": "products/zoning/docs/audits/civiczone-audit-full-2026-05-07.md",
+      "repo": "zone",
+      "path": "docs/audits/civiczone-audit-full-2026-05-07.md",
+      "sha256": "8f9d8dfbf9c2efaea2d23ece08cb5c714244fb9945dc644323878448e453c6a4",
+      "status": "same",
+      "publication_sha256": "8f9d8dfbf9c2efaea2d23ece08cb5c714244fb9945dc644323878448e453c6a4"
+    },
+    {
+      "archive": "products/zoning/docs/browser-qa-civiczone-release-recovery-summary.md",
+      "repo": "zone",
+      "path": "docs/browser-qa-civiczone-release-recovery-summary.md",
+      "sha256": "b5c2d40f455a343cdd56e46004ea5286e8797b15a93417f67bee1754f6a488bf",
+      "status": "same",
+      "publication_sha256": "b5c2d40f455a343cdd56e46004ea5286e8797b15a93417f67bee1754f6a488bf"
+    },
+    {
+      "archive": "products/zoning/docs/browser-qa-civiczone-v0.1.1-alignment-summary.md",
+      "repo": "zone",
+      "path": "docs/browser-qa-civiczone-v0.1.1-alignment-summary.md",
+      "sha256": "baed5eea3ad67837b0f7c39512449f033996f75c40101406de9a709a9471a2e8",
+      "status": "same",
+      "publication_sha256": "baed5eea3ad67837b0f7c39512449f033996f75c40101406de9a709a9471a2e8"
+    },
+    {
+      "archive": "products/zoning/docs/browser-qa-civiczone-v0.1.2-question-ledger-summary.md",
+      "repo": "zone",
+      "path": "docs/browser-qa-civiczone-v0.1.2-question-ledger-summary.md",
+      "sha256": "23b6f4a700bddfcbdca665c8de08a54add1f78e5d7cff8720282e8e84ee9ebf5",
+      "status": "same",
+      "publication_sha256": "23b6f4a700bddfcbdca665c8de08a54add1f78e5d7cff8720282e8e84ee9ebf5"
+    },
+    {
+      "archive": "products/zoning/docs/browser-qa-production-depth-parcel-rule-persistence-summary.md",
+      "repo": "zone",
+      "path": "docs/browser-qa-production-depth-parcel-rule-persistence-summary.md",
+      "sha256": "4f602671c2b4b3b6e7415517bca57785f84d53f07c578e0ca5bb41ee6da999fa",
+      "status": "same",
+      "publication_sha256": "4f602671c2b4b3b6e7415517bca57785f84d53f07c578e0ca5bb41ee6da999fa"
+    },
+    {
+      "archive": "products/zoning/docs/github-discussions-seed.md",
+      "repo": "zone",
+      "path": "docs/github-discussions-seed.md",
+      "sha256": "58c00c961cc4e0bbce8ee6674362e0c87343f9414fa24383364f00dd2cca9299",
+      "status": "same",
+      "publication_sha256": "58c00c961cc4e0bbce8ee6674362e0c87343f9414fa24383364f00dd2cca9299"
+    },
+    {
+      "archive": "products/zoning/docs/index.html",
+      "repo": "zone",
+      "path": "docs/index.html",
+      "sha256": "f25f3a0c635e77aa1570fe7ead9c2bc57b8be18270b912fff835b466846d986a",
+      "status": "changed",
+      "publication_sha256": "41a323c2cb0967e789ef31eb10775e40ea151e6c9f69cd86ba7ea0897332bf19"
+    },
+    {
+      "archive": "products/zoning/docs/licensing/README.md",
+      "repo": "zone",
+      "path": "docs/licensing/README.md",
+      "sha256": "31f03641dce7f8ac15ae03715dd93f5f5357543204232d0beefe0f73fcc678ba",
+      "status": "new",
+      "publication_sha256": "df2b5eb76d649fbe3792ccbfa3ea7615f2c417294793a399f6e76fd98e2bd295"
+    },
+    {
+      "archive": "products/zoning/docs/licensing/history/Public-Institution-Exception-1.0.md",
+      "repo": "zone",
+      "path": "docs/licensing/history/Public-Institution-Exception-1.0.md",
+      "sha256": "8af2a3f7cbc186b31e10fecee3522854d524277c460646ba5544cc8e9acecfef",
+      "status": "new",
+      "publication_sha256": "8af2a3f7cbc186b31e10fecee3522854d524277c460646ba5544cc8e9acecfef"
+    },
+    {
+      "archive": "products/zoning/docs/qa/civiczone-v1-browser-qa.md",
+      "repo": "zone",
+      "path": "docs/qa/civiczone-v1-browser-qa.md",
+      "sha256": "997060b357556cf9bd2f91a2a3999b4e820e6e5c5d15c18c2f11f035c1c1fca3",
+      "status": "same",
+      "publication_sha256": "997060b357556cf9bd2f91a2a3999b4e820e6e5c5d15c18c2f11f035c1c1fca3"
+    },
+    {
+      "archive": "products/zoning/docs/qa/civiczone-v1-browser-recheck-console.json",
+      "repo": "zone",
+      "path": "docs/qa/civiczone-v1-browser-recheck-console.json",
+      "sha256": "67c55988ba8d860c39f1a8899f329982a9a8776d7f95f56c5af1fcdf690186ba",
+      "status": "same",
+      "publication_sha256": "e778b682e0b9f1a45fcdf2f8dc4a9364e12e45a43cddeccd4b908b69a7ab3e19"
+    },
+    {
+      "archive": "products/zoning/docs/qa/civiczone-v1-careful-coding.md",
+      "repo": "zone",
+      "path": "docs/qa/civiczone-v1-careful-coding.md",
+      "sha256": "ff3b1c49c3032b18e0b1b9ea8863ac220b1fa3d1ed4860cf37c9e46400b0f137",
+      "status": "same",
+      "publication_sha256": "ff3b1c49c3032b18e0b1b9ea8863ac220b1fa3d1ed4860cf37c9e46400b0f137"
+    },
+    {
+      "archive": "products/zoning/docs/qa/civiczone-v1-keyboard-focus-layout.json",
+      "repo": "zone",
+      "path": "docs/qa/civiczone-v1-keyboard-focus-layout.json",
+      "sha256": "bd4d1e14d5e682fbd79b32d152e9a8a87d885cbfa7f672cc701c0b630e198c57",
+      "status": "same",
+      "publication_sha256": "9df84a590e03ca3b1d977f5416fd3c4954a83056b156e975c9c6154c8584a3ea"
+    },
+    {
+      "archive": "products/zoning/docs/qa/civiczone-v1-mobile-console.json",
+      "repo": "zone",
+      "path": "docs/qa/civiczone-v1-mobile-console.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "status": "same",
+      "publication_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "archive": "products/zoning/docs/qa/civiczone-v1-public-desktop-console.json",
+      "repo": "zone",
+      "path": "docs/qa/civiczone-v1-public-desktop-console.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "status": "same",
+      "publication_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "archive": "products/zoning/docs/qa/civiczone-v1-release-gate-audit.md",
+      "repo": "zone",
+      "path": "docs/qa/civiczone-v1-release-gate-audit.md",
+      "sha256": "fb7ebfe7814b9a69f537080aefe1b568c92fddcc6b5b52b70ba8a91c65f373ee",
+      "status": "same",
+      "publication_sha256": "fb7ebfe7814b9a69f537080aefe1b568c92fddcc6b5b52b70ba8a91c65f373ee"
+    },
+    {
+      "archive": "products/zoning/docs/qa/civiczone-v1-staff-desktop-console.json",
+      "repo": "zone",
+      "path": "docs/qa/civiczone-v1-staff-desktop-console.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "status": "same",
+      "publication_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "archive": "products/zoning/docs/qa/current-civiczone-release-qa.md",
+      "repo": "zone",
+      "path": "docs/qa/current-civiczone-release-qa.md",
+      "sha256": "dbccfa7cfb169aa39584f5c3ec3df06496fb2db35cef3506a7e38ed237a77b69",
+      "status": "same",
+      "publication_sha256": "dbccfa7cfb169aa39584f5c3ec3df06496fb2db35cef3506a7e38ed237a77b69"
+    },
+    {
+      "archive": "products/zoning/docs/qa/current-civiczone-release-qa/summary.json",
+      "repo": "zone",
+      "path": "docs/qa/current-civiczone-release-qa/summary.json",
+      "sha256": "32ef4bda4f01ed0f7726f82518d83c16c92aaf64a3c88e7824ceb37e9909cc3c",
+      "status": "same",
+      "publication_sha256": "18bfedb175c959278048f8eb7de3b3f4d1a78c930a6e39b116d5773bd31e0995"
+    },
+    {
+      "archive": "products/zoning/docs/qa/demotion-browser-qa-2026-05-10/desktop-console.txt",
+      "repo": "zone",
+      "path": "docs/qa/demotion-browser-qa-2026-05-10/desktop-console.txt",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "same",
+      "publication_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "archive": "products/zoning/docs/qa/demotion-browser-qa-2026-05-10/mobile-console.txt",
+      "repo": "zone",
+      "path": "docs/qa/demotion-browser-qa-2026-05-10/mobile-console.txt",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "same",
+      "publication_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "archive": "products/zoning/docs/qa/demotion-browser-qa-2026-05-10/summary.md",
+      "repo": "zone",
+      "path": "docs/qa/demotion-browser-qa-2026-05-10/summary.md",
+      "sha256": "7c72479107ea9c4e2c0ac7f817799c8e76e9b9715e174b1e0ebc7601ed6bb35e",
+      "status": "same",
+      "publication_sha256": "7c72479107ea9c4e2c0ac7f817799c8e76e9b9715e174b1e0ebc7601ed6bb35e"
+    },
+    {
+      "archive": "products/zoning/docs/release-integrity-correction-2026-05-21.md",
+      "repo": "zone",
+      "path": "docs/release-integrity-correction-2026-05-21.md",
+      "sha256": "4306c797b2551edeb2f1927d9db84706e366f5d7a76681f00447a03a2226552a",
+      "status": "same",
+      "publication_sha256": "4306c797b2551edeb2f1927d9db84706e366f5d7a76681f00447a03a2226552a"
+    },
+    {
+      "archive": "products/zoning/docs/release-recovery-status.md",
+      "repo": "zone",
+      "path": "docs/release-recovery-status.md",
+      "sha256": "73f476c286ebe6840facb5ed9137a93c6039d5b7bb636a249c1bd2ccb03b9da0",
+      "status": "same",
+      "publication_sha256": "73f476c286ebe6840facb5ed9137a93c6039d5b7bb636a249c1bd2ccb03b9da0"
+    },
+    {
+      "archive": "products/zoning/patch_fixture_seed.py",
+      "repo": "zone",
+      "path": "patch_fixture_seed.py",
+      "sha256": "bce9c13872a86f251ce7a4ae89898cbef1f0aa94f653dcd2607136499c1f74a6",
+      "status": "new",
+      "publication_sha256": "bce9c13872a86f251ce7a4ae89898cbef1f0aa94f653dcd2607136499c1f74a6"
+    },
+    {
+      "archive": "products/zoning/pyproject.toml",
+      "repo": "zone",
+      "path": "pyproject.toml",
+      "sha256": "dc6ca51eaaaabfbe70c56c8081e7ee5715c66cd5d1fe7c2c805b9251593d8de3",
+      "status": "same",
+      "publication_sha256": "a8cc81ee1e9b87b70215f7852e8ff0daf91c54320923b2a10c6361c779f4bdc4"
+    },
+    {
+      "archive": "products/zoning/scripts/check-civiccore-placeholder-imports.py",
+      "repo": "zone",
+      "path": "scripts/check-civiccore-placeholder-imports.py",
+      "sha256": "e300a1543926d71341e1a68609064d487b504f60be0197221704c2c0fdb38c1d",
+      "status": "same",
+      "publication_sha256": "e300a1543926d71341e1a68609064d487b504f60be0197221704c2c0fdb38c1d"
+    },
+    {
+      "archive": "products/zoning/tests/fixtures/z1-town.json",
+      "repo": "zone",
+      "path": "tests/fixtures/z1-town.json",
+      "sha256": "2321eb56402860e32aba92beacc4753c90df7ea578fd85e08438dfd12f173412",
+      "status": "same",
+      "publication_sha256": "3042e720781244d95899d0ece9427d83aecd042af8199a23d140965135377691"
+    },
+    {
+      "archive": "products/zoning/tests/test_discretionary.py",
+      "repo": "zone",
+      "path": "tests/test_discretionary.py",
+      "sha256": "a46992e918bd0b8556f6c1ea15df03ef3f0e1a0df9debcd503e2a7fec6bcb73b",
+      "status": "new",
+      "publication_sha256": "3b7c0d2c17af2b1e7a0cd374abf8a7205808cf7ad82fc5ca19ad5c3c42f09df2"
+    },
+    {
+      "archive": "products/zoning/tests/test_geo_import.py",
+      "repo": "zone",
+      "path": "tests/test_geo_import.py",
+      "sha256": "d1f6b00d0df425e961388f1f56314220bb496534decdfc5075cdfff9c2cc75be",
+      "status": "same",
+      "publication_sha256": "d1f6b00d0df425e961388f1f56314220bb496534decdfc5075cdfff9c2cc75be"
+    },
+    {
+      "archive": "products/zoning/tests/test_integration_adversarial_mocks.py",
+      "repo": "zone",
+      "path": "tests/test_integration_adversarial_mocks.py",
+      "sha256": "aea74328db43d69d600537088f9f9ae8c4cfaf436fd5110b7dbf0cee6c6edb71",
+      "status": "same",
+      "publication_sha256": "aea74328db43d69d600537088f9f9ae8c4cfaf436fd5110b7dbf0cee6c6edb71"
+    },
+    {
+      "archive": "products/zoning/tests/test_milestone_2_schema_and_migrations.py",
+      "repo": "zone",
+      "path": "tests/test_milestone_2_schema_and_migrations.py",
+      "sha256": "023cd683b73be102613112a3b7c2b5748768fd309d88695e0a62f4a57f0ec94d",
+      "status": "same",
+      "publication_sha256": "023cd683b73be102613112a3b7c2b5748768fd309d88695e0a62f4a57f0ec94d"
+    },
+    {
+      "archive": "products/zoning/tests/test_milestone_3_parcel_lookup.py",
+      "repo": "zone",
+      "path": "tests/test_milestone_3_parcel_lookup.py",
+      "sha256": "26ed4f0320be4d9e0bb94e56a41cbcd306ba1c55dd02ffdc8813fa04c610e674",
+      "status": "same",
+      "publication_sha256": "26ed4f0320be4d9e0bb94e56a41cbcd306ba1c55dd02ffdc8813fa04c610e674"
+    },
+    {
+      "archive": "products/zoning/tests/test_milestone_4_use_dimensional_rules.py",
+      "repo": "zone",
+      "path": "tests/test_milestone_4_use_dimensional_rules.py",
+      "sha256": "b9cf72fdc451a1eaa59b4ec8223817ed7e461a0da5877cb73c17052ca892dbb6",
+      "status": "same",
+      "publication_sha256": "b9cf72fdc451a1eaa59b4ec8223817ed7e461a0da5877cb73c17052ca892dbb6"
+    },
+    {
+      "archive": "products/zoning/tests/test_milestone_5_citation_grounded_qa.py",
+      "repo": "zone",
+      "path": "tests/test_milestone_5_citation_grounded_qa.py",
+      "sha256": "80881f35397902980f2bb03cdae4d14cd65650e092599bd3282f4661268b6928",
+      "status": "same",
+      "publication_sha256": "80881f35397902980f2bb03cdae4d14cd65650e092599bd3282f4661268b6928"
+    },
+    {
+      "archive": "products/zoning/tests/test_milestone_6_planner_staff_context.py",
+      "repo": "zone",
+      "path": "tests/test_milestone_6_planner_staff_context.py",
+      "sha256": "af9f1b2f880e835e88e8596af0647a44e57a2d5d2bdd56fa774c41db054beca0",
+      "status": "same",
+      "publication_sha256": "af9f1b2f880e835e88e8596af0647a44e57a2d5d2bdd56fa774c41db054beca0"
+    },
+    {
+      "archive": "products/zoning/tests/test_milestone_7_public_ui_accessibility.py",
+      "repo": "zone",
+      "path": "tests/test_milestone_7_public_ui_accessibility.py",
+      "sha256": "7046c36dfebe50f2342d29e182c210dad082265201cbe03cf20dbb57686f8b00",
+      "status": "same",
+      "publication_sha256": "7046c36dfebe50f2342d29e182c210dad082265201cbe03cf20dbb57686f8b00"
+    },
+    {
+      "archive": "products/zoning/tests/test_production_depth_parcel_rule_persistence.py",
+      "repo": "zone",
+      "path": "tests/test_production_depth_parcel_rule_persistence.py",
+      "sha256": "9310ecfa4b89fa1d4bb36bd62dc5b27976e63f2590102c331ed93d1c8e78e15a",
+      "status": "same",
+      "publication_sha256": "9310ecfa4b89fa1d4bb36bd62dc5b27976e63f2590102c331ed93d1c8e78e15a"
+    },
+    {
+      "archive": "products/zoning/tests/test_production_depth_question_ledger.py",
+      "repo": "zone",
+      "path": "tests/test_production_depth_question_ledger.py",
+      "sha256": "f0e0331b3d1cd5f3413bd2a17dbaa1441c80e56dcc966c48774c3a0741a704fb",
+      "status": "same",
+      "publication_sha256": "f0e0331b3d1cd5f3413bd2a17dbaa1441c80e56dcc966c48774c3a0741a704fb"
+    },
+    {
+      "archive": "products/zoning/tests/test_runtime_foundation.py",
+      "repo": "zone",
+      "path": "tests/test_runtime_foundation.py",
+      "sha256": "3ab361e79c6e7f6d73a94a01a54b2801977f100dbb571dac8a866f5243c7f0a2",
+      "status": "changed",
+      "publication_sha256": "20f696a083495d574df64f1f33c8953561494b21dbec764a12f137ef00d4ec18"
+    },
+    {
+      "archive": "products/zoning/tests/test_staff_workflow_api.py",
+      "repo": "zone",
+      "path": "tests/test_staff_workflow_api.py",
+      "sha256": "e8c253e8ac31e90e835d1038d66c7f81700796f22514d0c6d04dd02778f7ec6b",
+      "status": "same",
+      "publication_sha256": "e8c253e8ac31e90e835d1038d66c7f81700796f22514d0c6d04dd02778f7ec6b"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/__init__.py",
+      "repo": "zone",
+      "path": "civiczone/__init__.py",
+      "sha256": "528eaa60c6814c1cf2b3ceb5a510c059380c37670f48928c27a02d765a2d4d15",
+      "status": "same",
+      "publication_sha256": "528eaa60c6814c1cf2b3ceb5a510c059380c37670f48928c27a02d765a2d4d15"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/cited_questions.py",
+      "repo": "zone",
+      "path": "civiczone/cited_questions.py",
+      "sha256": "7a154dd540eae464090b4c12e6e0c1ca263670525df6a7328d317b0dd1e79a43",
+      "status": "same",
+      "publication_sha256": "7a154dd540eae464090b4c12e6e0c1ca263670525df6a7328d317b0dd1e79a43"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/cited_rules.py",
+      "repo": "zone",
+      "path": "civiczone/cited_rules.py",
+      "sha256": "4fb421ff3cd9e27be7689de75711bba8d1cd3ede304547868c204cf7a0daa43a",
+      "status": "same",
+      "publication_sha256": "4fb421ff3cd9e27be7689de75711bba8d1cd3ede304547868c204cf7a0daa43a"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/connected_sources.py",
+      "repo": "zone",
+      "path": "civiczone/connected_sources.py",
+      "sha256": "68ad55c71b897eca689a6d028f4aee115dc5ca4b5ef005613385f9588387715b",
+      "status": "same",
+      "publication_sha256": "68ad55c71b897eca689a6d028f4aee115dc5ca4b5ef005613385f9588387715b"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/discretionary.py",
+      "repo": "zone",
+      "path": "civiczone/discretionary.py",
+      "sha256": "919a5a573109fc76840290b4656e8fc63be91cdd10a6b3ff21fd106b52218ca5",
+      "status": "new",
+      "publication_sha256": "d560ff28e39e90549132c10f0efa5f85497f125b1faefc0b909b1ca304a5ea43"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/geo_import.py",
+      "repo": "zone",
+      "path": "civiczone/geo_import.py",
+      "sha256": "e49824301593f8c06dd6bc64832542721d7b1763d745deb7ba531f7b894cc4a0",
+      "status": "same",
+      "publication_sha256": "e49824301593f8c06dd6bc64832542721d7b1763d745deb7ba531f7b894cc4a0"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/geo_spatial.py",
+      "repo": "zone",
+      "path": "civiczone/geo_spatial.py",
+      "sha256": "dfe4c88a940a20825c5c493babacb0cb0a96a70cb31a831c3ff1ecb4b77ebc13",
+      "status": "same",
+      "publication_sha256": "dfe4c88a940a20825c5c493babacb0cb0a96a70cb31a831c3ff1ecb4b77ebc13"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/geo_validate.py",
+      "repo": "zone",
+      "path": "civiczone/geo_validate.py",
+      "sha256": "65b4a2b84722be8c25decfaeb80c6177ff30588259379927e853f7727d767178",
+      "status": "same",
+      "publication_sha256": "65b4a2b84722be8c25decfaeb80c6177ff30588259379927e853f7727d767178"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/integration_mocks.py",
+      "repo": "zone",
+      "path": "civiczone/integration_mocks.py",
+      "sha256": "ed14fba1a58020377ebee28c20ef042f5b50126ca2351efb73e46d7a2d80982c",
+      "status": "same",
+      "publication_sha256": "ed14fba1a58020377ebee28c20ef042f5b50126ca2351efb73e46d7a2d80982c"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/main.py",
+      "repo": "zone",
+      "path": "civiczone/main.py",
+      "sha256": "cdbc4bd6f20650c08ca4a81c7e9d2fc7c85e0896bbd3d1c4e982dfe178c7bb93",
+      "status": "changed",
+      "publication_sha256": "e81b51bcd17d47049ec37bac436154e375c1fb301d3e29d757b90956f252057c"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/migrations/__init__.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/__init__.py",
+      "sha256": "38cbccb2471a214eac40f174b618d28d0367c43a0e66d3eb5807dad737142765",
+      "status": "same",
+      "publication_sha256": "38cbccb2471a214eac40f174b618d28d0367c43a0e66d3eb5807dad737142765"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/migrations/alembic.ini",
+      "repo": "zone",
+      "path": "civiczone/migrations/alembic.ini",
+      "sha256": "3eabf01aa8585b6996d354daae41c3932f4cab1f6d753fae913986bf67b093a6",
+      "status": "same",
+      "publication_sha256": "324888a8eac69c06dcaba65ea232433b5110dd601718f0cda3c390bd57508ff3"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/migrations/env.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/env.py",
+      "sha256": "3baae8fbf8726f8811647eb75d257e310d2d9660b0150833f17220dd8fa431ba",
+      "status": "same",
+      "publication_sha256": "3baae8fbf8726f8811647eb75d257e310d2d9660b0150833f17220dd8fa431ba"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/migrations/guards.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/guards.py",
+      "sha256": "9346e9812f238cfee1bdd21f5487fb5c51ee4cabeda45da9aaed6ac2db9b5f7c",
+      "status": "same",
+      "publication_sha256": "9346e9812f238cfee1bdd21f5487fb5c51ee4cabeda45da9aaed6ac2db9b5f7c"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/migrations/versions/__init__.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/versions/__init__.py",
+      "sha256": "a1087a2a3cedf40641ab02c8e97838630305726600105ad59e30727b61a2f95d",
+      "status": "same",
+      "publication_sha256": "a1087a2a3cedf40641ab02c8e97838630305726600105ad59e30727b61a2f95d"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/migrations/versions/civiczone_0001_schema.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/versions/civiczone_0001_schema.py",
+      "sha256": "0a6985e6fda034f4e654e63f2cb47610bf2af75dd028fc8f43473604550a2a18",
+      "status": "same",
+      "publication_sha256": "0a6985e6fda034f4e654e63f2cb47610bf2af75dd028fc8f43473604550a2a18"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/migrations/versions/civiczone_0002_parcel_rule_lookup_records.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/versions/civiczone_0002_parcel_rule_lookup_records.py",
+      "sha256": "8a473e69469f9fdbca5adefcdb7e9a41d50850f1a7460381691da5a4f137314d",
+      "status": "same",
+      "publication_sha256": "8a473e69469f9fdbca5adefcdb7e9a41d50850f1a7460381691da5a4f137314d"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/migrations/versions/civiczone_0003_question_ledger.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/versions/civiczone_0003_question_ledger.py",
+      "sha256": "fd654ca0d15832acb727b88ece26acce25cb45da1ff8b438152ad7c766df0abc",
+      "status": "same",
+      "publication_sha256": "fd654ca0d15832acb727b88ece26acce25cb45da1ff8b438152ad7c766df0abc"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/migrations/versions/civiczone_0004_staff_workflows.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/versions/civiczone_0004_staff_workflows.py",
+      "sha256": "3c0a145ff691077453b65413f2f08a6b7107a55f3ff21c072a8bc3788028b952",
+      "status": "same",
+      "publication_sha256": "3c0a145ff691077453b65413f2f08a6b7107a55f3ff21c072a8bc3788028b952"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/migrations/versions/civiczone_0005_geo_import.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/versions/civiczone_0005_geo_import.py",
+      "sha256": "8d4c34c15197ddc856c712d7fb8f9005cb553a2befd38a093a2c952a321d20ce",
+      "status": "same",
+      "publication_sha256": "8d4c34c15197ddc856c712d7fb8f9005cb553a2befd38a093a2c952a321d20ce"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/migrations/versions/civiczone_0006_cited_questions.py",
+      "repo": "zone",
+      "path": "civiczone/migrations/versions/civiczone_0006_cited_questions.py",
+      "sha256": "65b8c591b5adf3f0022720a2c4e780c818f0f4b5b51db83b81cab78edb2a1f9d",
+      "status": "same",
+      "publication_sha256": "65b8c591b5adf3f0022720a2c4e780c818f0f4b5b51db83b81cab78edb2a1f9d"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/models.py",
+      "repo": "zone",
+      "path": "civiczone/models.py",
+      "sha256": "206d16a1b4aa343eceee7bb25bdf39411f2b57e947a98a8be45607664635aba9",
+      "status": "same",
+      "publication_sha256": "206d16a1b4aa343eceee7bb25bdf39411f2b57e947a98a8be45607664635aba9"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/parcel_lookup.py",
+      "repo": "zone",
+      "path": "civiczone/parcel_lookup.py",
+      "sha256": "3629424d9af4d5ac514f285835f9b8179c1cf6ceb22d586576603a270edb5671",
+      "status": "same",
+      "publication_sha256": "3629424d9af4d5ac514f285835f9b8179c1cf6ceb22d586576603a270edb5671"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/public_ui.py",
+      "repo": "zone",
+      "path": "civiczone/public_ui.py",
+      "sha256": "75d1542af38b920b5a4527da79af374ade3abf03d7a78f5d9ad2b075790681a5",
+      "status": "changed",
+      "publication_sha256": "f9c9d30458062d5cc61924eaac0430371ff7084929bb2b826989cc2cd49f25d6"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/qa.py",
+      "repo": "zone",
+      "path": "civiczone/qa.py",
+      "sha256": "374b232775a482a3a02ce283d047652e0c188f7f856e0046e465d663ef863315",
+      "status": "same",
+      "publication_sha256": "374b232775a482a3a02ce283d047652e0c188f7f856e0046e465d663ef863315"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/question_ledger.py",
+      "repo": "zone",
+      "path": "civiczone/question_ledger.py",
+      "sha256": "0fca91aa0a7338771f760fe9032da442023c3407584d0ee0c621ce0290a65e7b",
+      "status": "same",
+      "publication_sha256": "0fca91aa0a7338771f760fe9032da442023c3407584d0ee0c621ce0290a65e7b"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/rule_lookup.py",
+      "repo": "zone",
+      "path": "civiczone/rule_lookup.py",
+      "sha256": "5c53135c7a413e0eecf663061593945c56330eae6a96808d61d69bd4e6d996a2",
+      "status": "same",
+      "publication_sha256": "5c53135c7a413e0eecf663061593945c56330eae6a96808d61d69bd4e6d996a2"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/staff_context.py",
+      "repo": "zone",
+      "path": "civiczone/staff_context.py",
+      "sha256": "50784c2b595741098e2de9d9ad90a7957607ae09839afe6167af13e38037c91c",
+      "status": "same",
+      "publication_sha256": "50784c2b595741098e2de9d9ad90a7957607ae09839afe6167af13e38037c91c"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/staff_ui.py",
+      "repo": "zone",
+      "path": "civiczone/staff_ui.py",
+      "sha256": "69448abc334931b5f19168fdffbef81497e250dd61f1912811d4ebdb28ee0b25",
+      "status": "same",
+      "publication_sha256": "69448abc334931b5f19168fdffbef81497e250dd61f1912811d4ebdb28ee0b25"
+    },
+    {
+      "archive": "installed-owned-source/civiczone/staff_workflows.py",
+      "repo": "zone",
+      "path": "civiczone/staff_workflows.py",
+      "sha256": "27cf6da89c7a1472b23cbcace93adb63a0384be443b95228c882eb3bfb0ed642",
+      "status": "same",
+      "publication_sha256": "27cf6da89c7a1472b23cbcace93adb63a0384be443b95228c882eb3bfb0ed642"
+    }
+  ],
+  "identity_note": "Publication commit integrates the already-built candidate; it is not claimed to be the original signing/build commit. Archive paths retain original byte hashes. Documentation entrypoints have a distribution addendum.",
+  "publication_note": "Original accepted bytes remain in the immutable source companion. Canonical sources normalize line endings. Release integration fixes remove a shadowed duplicate class, position imports for lint, format regression/acceptance tools and resolve the paired Core source dependency. Current audited manuals supersede build-time README copies. Each mapped file records both original and publication byte hashes."
+}

@@ -27,6 +27,7 @@ from civiczone.rule_lookup import (
     lookup_dimensional_rule,
     lookup_use_rule,
 )
+from civiczone.discretionary import (Unavailable, explain, nonconformity_review_note)
 from civiczone.staff_context import classify_for_planner_review, get_staff_precedent
 from civiczone.staff_ui import render_staff_workspace_page
 from civiczone.staff_workflows import StaffWorkflowStore
@@ -268,6 +269,84 @@ def dimensional_rule_lookup(request: DimensionalRuleLookupRequest) -> dict[str, 
         "citation": result.citation,
         "disclaimer": result.disclaimer,
     }
+
+
+class DiscretionaryExplanationRequest(BaseModel):
+    process_section: str = Field(default="", max_length=255)
+    question: str = Field(min_length=1, max_length=1000)
+    zone_code: str = Field(default="", max_length=20)
+    rule_types: list[str] = Field(default_factory=list, max_length=12)
+    observed: dict[str, str] = Field(default_factory=dict)
+
+
+@app.post("/api/v1/civiczone/standards/process-explanation")
+def discretionary_explanation(request: DiscretionaryExplanationRequest) -> dict[str, object]:
+    """Explain the variance/CUP process a question is about, with citations.
+
+    Returns an explicit ``unavailable`` payload when the loaded rule dataset cannot
+    support an answer; never a guessed standard, and never a determination.
+    """
+    result = explain(
+        request.question,
+        repository=_rules_for_explanation(),
+        process_source=_process_source(request.process_section),
+        zone_code=request.zone_code,
+        rule_types=request.rule_types,
+        observed=request.observed,
+    )
+    note = nonconformity_review_note(request.question)
+    if isinstance(result, Unavailable):
+        return {
+            "status": "unavailable",
+            "reason": result.reason,
+            "fix": result.fix,
+            "review_required": True,
+            "disclaimer": result.disclaimer,
+            "nonconformity_note": note,
+        }
+    return {
+        "status": "explained",
+        "process": result.process,
+        "label": result.label,
+        "what": result.what,
+        "standard_citation": result.standard_citation,
+        "needs": result.needs,
+        "review": result.review,
+        "standards": result.standards,
+        "flags": [flag.__dict__ for flag in result.flags],
+        "nonconformity_note": note,
+        "review_required": True,
+        "determination_made": False,
+        "disclaimer": result.disclaimer,
+    }
+
+
+def _process_source(section):
+    if not section:
+        return None
+    import civiccode.main as code
+    from datetime import date
+    try:
+        lookup = code.SECTION_STORE.lookup_section(section, as_of=date.today())
+        source = code._get_source_store().get(lookup["version"]["source_id"])
+        if source.public_visible and source.is_official and source.status == "active":
+            return code._build_citation_for_section(section, date.today())
+    except (code.SectionLifecycleError, code.SourceRegistryError):
+        return None
+    return None
+
+
+def _rules_for_explanation():
+    """The same rule source the dimensional lookup uses (no new data source)."""
+
+    class _Adapter:
+        """Adapt the module-level lookup to the repository shape ``explain`` wants."""
+
+        @staticmethod
+        def lookup_dimensional_rule(*, zone_code: str, rule_type: str):
+            return _lookup_dimensional_rule(zone_code=zone_code, rule_type=rule_type)
+
+    return _Adapter()
 
 
 @app.post("/api/v1/civiczone/questions/answer")
