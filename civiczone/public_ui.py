@@ -239,6 +239,21 @@ def render_public_lookup_page() -> str:
       <p>Submit the sample lookup to see parcel context, citations, and the non-determination boundary.</p>
     </div>
   </section>
+  <section class="panel" aria-labelledby="process-title">
+    <h2 id="process-title">Variance, conditional use and nonconformity</h2>
+    <p>A <strong>variance</strong> asks to depart from one specific standard (for example a
+    setback), because applying it here is unusually burdensome. A <strong>conditional use
+    permit</strong> reviews a use the code already allows, subject to conditions. Both are
+    discretionary: a body named in the code decides after review, and neither is granted or
+    denied by this page.</p>
+    <p>Dimensional standards and their code citations come from the loaded rule dataset.
+    Where a stated condition does not meet a cited standard, this product raises a
+    <strong>possible nonconformity review flag</strong>. It never declares a condition
+    legally nonconforming: only staff can determine that from the parcel record and the
+    code in effect when the condition was established.</p>
+    <p class="boundary">If the loaded rules do not cover a standard, the answer is
+    &ldquo;unavailable&rdquo; with the reason. No standard is estimated.</p>
+  </section>
   <aside class="panel" aria-labelledby="states-title">
     <h2 id="states-title">Resident states</h2>
     <div class="state-grid">

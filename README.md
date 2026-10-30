@@ -1,166 +1,214 @@
-# Townlight Zoning
-
-**Parcel context and cited rules, with planner judgment intact.**
-
-Zoning supports parcel-aware informational work. It preserves dataset identity, source rules and human corrections, while refusing to turn an answer into a zoning determination or permit approval.
-
-## Use this product
-
-- [Current user manual](USER-MANUAL.md): installed workflow, roles, sources, review, export, recovery and limits.
-- [Product landing page](https://townlight.github.io/products/zoning/).
-- [Overall eight-product manual](https://github.com/townlight/townlight/blob/main/USER-MANUAL.md) and [feature/integration assessment](https://github.com/townlight/townlight/blob/main/docs/assessment/feature-and-integration-review.md).
-- [Signed composition and acceptance](https://github.com/townlight/townlight/releases/tag/townlight-records-meetings-code-zoning-v1.4.0-beta.1): Connected Zoning in signed desktop 1.4.0-beta.1 and later compositions.
-
-Zoning consumes Code and permitted Meetings evidence; Planning and Permitting select its public source documents. Records receives its public snapshots.
-
-## Release scope
-
-The accepted installed path uses local GeoJSON/PostGIS. It does not certify every ArcGIS service, assessor import, CKAN publication, question analytics or public-internet deployment in the broader specification.
-
-Documentation reviewed 2026-10-26. Installed acceptance, source/API implementation and future requirements are different evidence. Code is AGPL-3.0-only with the repository’s public institution exception where applicable; documentation is CC BY 4.0. See the repository license files.
-
-## Historical repository reference
-
-The earlier README below is retained for package history and contributor commands. Older maturity/version statements describe that historical reference and are superseded by the current operating guide and linked release evidence.
-
-<a id="civiczone"></a>
+> **Townlight Beta 1 release:** [signed Windows installer, exact owned source, documentation and acceptance](https://github.com/townlight/townlight/releases/tag/townlight-beta-1). [Online manual](https://townlight.github.io/manuals/zoning.html). This retained manual edition describes the accepted candidate before publication; distribution has changed, component versions and signed bytes have not.
 
 # Townlight Zoning
 
-## Published connected desktop: 1.4.0-beta.1
+**Townlight Beta 1** · Existing component versions retained · AGPL-3.0-only
 
-This module participates in the signed Townlight Records + Meetings + Code +
-Zoning desktop beta published October 21, 2026. Select zoning-beta for all four
-products; Records-only remains default and city-core excludes Zoning.
-[Download and release limits](https://github.com/townlight/townlight/releases/tag/townlight-records-meetings-code-zoning-v1.4.0-beta.1) ·
-[Current operator manual](https://github.com/townlight/townlight/blob/main/USER-MANUAL.md) ·
-[Signed acceptance](https://github.com/townlight/townlight/blob/main/docs/installer/townlight-zoning-beta1-signed-acceptance.md).
+Zoning combines local parcel geometry, cited zoning rules and staff review. It retains questions, corrections and snapshots with provenance so downstream staff can identify the precise evidence used.
 
-This is a connected desktop release, not a new standalone package version.
-Package/import/API names remain compatibility identifiers. Historical development
-checkpoints below retain their original scope; they are superseded for current
-desktop publication status. No signed installer or historical evidence is changed.
+## Start here
 
-## Historical integration checkpoint — Z4 local installer candidate (unreleased)
+Staff should use the operating manual. Administrators should read first-run, configuration and recovery before changing a deployment. Developers should read the exact API/schema reference and matching source companion. This edition accompanies Townlight Beta 1; use the release link above for the signed candidate and exact source/documentation archives.
 
-The desktop1.4.0-1 candidate exposes the opt-in `zoning-beta` connected profile.
-Records remains the default and the public1.3release is unchanged. Installer
-verification is in progress; this is not a published or signed Zoning release.
+- [Operating manual](docs/beta-1/manuals/zoning.html) · [Printable PDF](docs/beta-1/pdf/Townlight-Zoning-Manual-Beta-1.pdf) · [Editable Word manual](docs/beta-1/docx/Townlight-Zoning-Manual-Beta-1.docx)
+- [API and data dictionary](docs/beta-1/api/zoning.html) · [OpenAPI JSON](docs/beta-1/api/zoning-openapi.json)
+- [Product and suite directory](docs/beta-1/index.html) · [Terms and full license](docs/beta-1/terms.html)
 
-In the staff Zoning screen, choose a JSON file with **Import parcel dataset**.
-Use the complete GeoJSON envelope described in `docs/Z1-OFFLINE-IMPORT.md`:
-source identity/date/version, EPSG:4326 boundary, zones, parcels and optional
- overlays. No invented municipality is loaded automatically. Code must contain
-an active, official, public source for the cited sections. Lookup reports actual
-source identity/hash/date; unsupported or ambiguous answers remain informational
-and can be corrected by authorized staff without a new workflow approval gate.
-Private notes remain staff-only; public source snapshots require explicit human
-selection. See `docs/Z3-CONNECTED-SOURCES.md` for history and Records attachment.
+## Exact version and candidate
+
+| Identity | Value |
+| --- | --- |
+| Public documentation identity | Townlight Beta 1 |
+| Installer version | 1.6.0.1 |
+| Product component | civiczone 0.2.2 |
+| Native desktop source version | 1.6.0-1 |
+| Candidate MSI SHA256 | `98bcdef11ebdf5c767f620c904ff49f85115fde3b5c23f62703b111e645aaf86` |
+| Corresponding-source SHA256 | `84a23e1297e42d17b16cfc9e51b2dd78bc46414c0de8ad7ebd2466c1a409d06b` |
+| Current owned software license | AGPL-3.0-only |
+| Supported acceptance profile | Windows x64 fresh install; inspections-preview; separate Station configuration |
 
 
-## Historical integration checkpoint — Unreleased Townlight Zoning Z1 integration
+“Townlight Beta 1” identifies this coordinated beta delivery. It does not renumber the installer, native binary, Python packages or historical receipts. Component versions may differ. This documentation is a later companion to unchanged signed bytes, not a rebuilt installer. Historical release pages and manuals describe their own versions and are not the download instructions for this private candidate.
 
-The working branch now targets the released Core 1.2.1 dependency and the
-existing Townlight Python/PostgreSQL runtime. Z1 adds offline GeoJSON imports,
-PostGIS-backed parcel/zone/overlay matching, immutable import provenance,
-archival rather than deletion of missing parcels, and native-session-protected
-import/lookup endpoints. It resolves citations through Townlight Code rather
-than generating a second codifier. No sample records are seeded by this path.
+## What staff can do
 
-This is not a new public release or a finished Zoning product. The existing
-standalone sample UI described below is not the connected Z1 desktop surface.
-Z2 extends this foundation with the structured cited workflows documented below.
-Meetings/Records documents and installer acceptance remain later milestones. See
-[the Z1 operator contract](docs/Z1-OFFLINE-IMPORT.md).
+- **Prepare parcel data:** Use the complete supported bundle, including jurisdiction, dataset metadata and original hashes. The coordinates must be EPSG:4326. A loose geometry file is not the full source envelope.
+- **Import and inspect:** Check the complete source envelope before selecting Import parcel dataset. That control submits directly; inspect the saved validation/provenance result afterward. Correct a refused source bundle and preserve the evidence. Do not force acceptance by editing SQL.
+- **Register cited rules:** Associate the zone, rule kind/key and value with the relevant public Code section. Inspect overlays and effective context. Leave missing authority visible for planner review.
+- **Ask a parcel question:** Look up the intended parcel and ask the supported question. Read the returned citation, applicability and disclaimer. Do not present an uncertain answer as an official decision.
+- **Record review and context:** Record a correction and its reason when needed. Select permitted Meetings history explicitly. Preserve the question/review history and distinguish staff-only precedent from public material.
+- **Create a snapshot:** Review the audience and exact content before creating the immutable snapshot. A public snapshot must satisfy its permitted-source contract; choosing a public label does not sanitize private notes.
+- **Use it downstream:** Select the exact snapshot for Records or the permitted provider path. The receiving workflow rechecks visibility, source identity and hash before retaining or exporting it.
 
-## Published v0.2.2 baseline (historical)
+## Operating procedures and examples
 
-CivicZone is CivicSuite's parcel-aware zoning and land-use Q&A module.
+The operating manual now includes these existing procedures, with synthetic inputs, readback and limits. Follow the actual app boundary identified there; a standalone source capability is not automatically a desktop screen.
 
-Current state: **v0.2.2 corrective demotion state - scaffold with partial persistence/workflow plumbing; no real AI layer, full frontend, real municipal data/search, or public-use gate. This narrow truth-repair release is no functional upgrade; it exists solely to supersede the false v1.0.0 release from 2026-05-21 in GitHub's Latest impression. The CivicCore pin is unchanged.**. This repo contains a FastAPI service, health/root endpoints, documentation gates, canonical zoning schema models, Alembic migrations, deterministic parcel/zone lookup, cited use-rule lookup, cited dimensional-rule prechecks, resident Q&A with refusal and escalation rules, optional database-backed parcel/rule, resident-question ledger, and staff-workflow records through `CIVICZONE_PARCEL_RULE_DB_URL`, staff-only precedent protection, a browser-usable resident UI at `/civiczone`, a staff workflow shell at `/civiczone/staff`, adversarial local integration mocks, trusted-proxy staff access validation, and CivicCore v1.1.0 release-wheel dependency alignment. See [docs/release-recovery-status.md](docs/release-recovery-status.md) for historical recovery context and current release evidence.
+- [Discretionary processes and staff review](docs/beta-1/manuals/zoning.html#discretionary-processes-and-staff-review).
+- [Explain the cited process](docs/beta-1/manuals/zoning.html#explain-the-cited-process).
+- [Keep parcel import and inspection in the right order](docs/beta-1/manuals/zoning.html#keep-parcel-import-and-inspection-in-the-right-order).
+- [Use the existing specialist review contracts](docs/beta-1/manuals/zoning.html#use-the-existing-specialist-review-contracts).
 
-## Product Boundaries
+## Architecture and data
 
-- Townlight Zoning gives informational zoning context with citations.
-- Townlight Zoning refuses or escalates zoning-determination, legal-advice, out-of-jurisdiction, stale-data, low-confidence, and uncited-answer requests.
-- Townlight Zoning does not make zoning determinations, approve permits, replace planner review, or call live external vendor systems by default.
-- Townlight Zoning integration behavior is validated with local adversarial mocks for Esri ArcGIS REST, GeoJSON fallback, Townlight Code, Townlight Meetings, Townlight Planning, Townlight Access, county assessor, and CKAN boundaries.
+### Runtime and storage
 
-## Developer Quickstart
+The accepted package targets **Windows x64 fresh installation**. Its native shell uses **Rust 2021, Tauri 2 and Microsoft WebView2**; browser assets are JavaScript built with **Vite 8.1.6**. This describes the native desktop frontend; Station has a separate React operator, specified below or in its product manual. Canonical business workflows use bundled **CPython 3.13.5, FastAPI, Pydantic, SQLAlchemy and Alembic**, with **PostgreSQL 17 / PostGIS** and managed original files. The installed runtime tested here contains FastAPI 0.162.0. Package minimum Python requirements can differ from the bundled executable; the metadata reference preserves both. No stack rewrite is implied by the beta label.
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -e ".[dev]"
-python -m pytest -q
-bash scripts/verify-release.sh
+The native transport is fixed to loopback `127.0.0.1:15480`; PostgreSQL uses the configured local runtime port (default `15432`). Optional local model service defaults to `127.0.0.1:15434`. Those are deployment defaults, not internet endpoints. The runtime has health, module and readiness endpoints; readiness is stronger than process existence. The task queue is the existing local Core task infrastructure, not an assertion that a separate Redis service is required for this desktop composition.
+
+The default native profile is `%LOCALAPPDATA%\CivicSuite`; the historical directory name remains part of compatibility. Do not rename it to Townlight. A configured `TOWNLIGHT_PROFILE_ROOT` must be absolute. Local configuration and secrets live under that profile; protected managed files and database state must be backed up coherently. Source/runtime identity is distinct from a product’s display label.
+
+### Data and consistency
+
+GeoJSON import datasets; parcels and zone/overlay context; cited rules; questions and answers; review events; selected Meetings history; immutable snapshots.
+
+Versioned saves use expected prior revision identifiers where defined. Reopen and reconcile on conflict. Exact exports and handoffs use source IDs, current visibility, revision and SHA256. Review belongs to the saved revision and does not transfer silently to edited text. Database changes use the owning product’s migrations; a request or readiness check is not an authorization to mutate schema.
+
+### Capacity and platform statements
+
+This beta has synthetic single-profile workflow evidence. It does not have a published benchmark for concurrent staff capacity, minimum RAM/CPU, large-source limits or a field SLA. Do not turn a developer machine’s specification into a supported minimum. Installer size is 2,092,122,112 bytes before installation; allow additional disk for extracted runtime, database, originals, exports, media and backups. Select equipment/storage after sizing those actual workloads.
+
+The exact [runtime payload lock](docs/beta-1/reference/runtime-payload-lock.json) records pinned files, sizes and hashes. The [component metadata](docs/beta-1/reference/component-metadata.json) records shipped dependency declarations. These references are more precise than a manually copied dependency list. Third-party and historical license notices must accompany their matching payloads.
+
+
+| Data contract | Description |
+| --- | --- |
+| Input | A supported EPSG:4326 GeoJSON envelope, jurisdiction and dataset metadata, public Code authority and permitted meeting evidence. |
+| Retained records | GeoJSON import datasets; parcels and zone/overlay context; cited rules; questions and answers; review events; selected Meetings history; immutable snapshots. |
+| Output | Source-backed parcel context, informational answers, recorded human corrections and reviewed snapshots with stable hashes. |
+| Connections | Consumes Code authority and permitted Meetings evidence. Supplies permitted snapshots to Records and context to Planning and Permitting. |
+
+
+## Setup and operation
+
+1. Obtain the identified signed private candidate and its corresponding-source companion from the beta coordinator. The landing pages in this documentation are not an installer download service.
+2. On the intended fresh Windows test installation, verify the MSI hash and publisher signature before installing. Preserve unrelated profiles and recovery material. This candidate has fresh-install acceptance; historical in-place upgrades are unverified.
+3. Launch Townlight under the intended named Windows account. Choose the storage folders. Select **Townlight Inspections candidate** (`inspections-preview`) for all eight desktop products. A narrower default selection will not expose all workspaces.
+4. Enter the city profile, time zone and contacts. Create the first named local administrator, sign in and choose protected backup storage. **Continue without local AI** is valid for the deterministic workflows.
+5. Run Health Check and wait for readiness. Open Townlight. In System Health select **Finish Records Migration** to activate the canonical Python/PostgreSQL runtime. Do not fabricate migration receipts or seed accounts.
+6. Create named staff through Settings. Import authorized sources using each product’s source library. All examples in this package are synthetic; they are not municipal authority.
+7. Provision Station separately if it is part of the beta exercise. Selecting the desktop composition does not start or configure Station. Configure vision explicitly only if automatic photo drafting is selected.
+
+## Configuration
+### Native deployment configuration
+
+Use Setup, Settings and System Health for supported staff operation. Administrators provision folders, backup storage, named accounts and the city profile. Select `inspections-preview` for the full eight-workspace desktop. Station remains a separate service boundary. Do not use a standalone product’s demo server as a substitute for the installed workspace.
+
+Technical deployments use `TOWNLIGHT_PRODUCT_PROFILE`, `TOWNLIGHT_PROFILE_ROOT`, `DATABASE_URL`, `CIVICSUITE_RUNTIME_PORT`, `PORTAL_MODE` and the runtime-managed secret files. Treat database URLs and native session proofs as secrets. The installed native domain runtime explicitly refuses non-loopback binding. `PORTAL_MODE=private` is the accepted posture; changing it does not by itself commission an internet portal, authentication provider or reverse proxy.
+
+The isolated documentation exporter sets a fictional profile and unusable synthetic database origin only to read schemas; those values are not deployment configuration. Keep deployment values in the intended process/account scope. An already-running process does not automatically inherit later environment edits.
+
+## API usage
+### Native command example
+
+The following JavaScript belongs in the existing trusted Townlight frontend/development environment with `invoke` imported from `@tauri-apps/api/core`. It is not a command for an arbitrary web page or an instruction for nontechnical staff. IDs must come from records created in an isolated synthetic exercise.
+
+```javascript
+import { invoke } from '@tauri-apps/api/core';
+const result = await invoke('zoning_domain_request', {request: {operation: 'history', id: questionId}});
+console.log(result);
 ```
 
-## API Foundation
+### Trusted local HTTP example
 
-- `GET /` returns current module status and operator next step.
-- `GET /health` returns package and Townlight Core version information.
-- `GET /civiczone` returns the accessible resident lookup UI.
-- `GET /civiczone/staff` returns the staff workflow shell; staff API actions require trusted municipal access headers from an approved proxy/source.
-- `POST /api/v1/civiczone/parcels/lookup` returns sample parcel zone context for `100-200-300` / `123 Main St`.
-- `POST /api/v1/civiczone/rules/use` returns sample use status with citation.
-- `POST /api/v1/civiczone/rules/dimensional` returns sample dimensional rule values with citation.
-- `POST /api/v1/civiczone/questions/answer` answers sample resident questions only when citations are available and records a local question-ledger row when `CIVICZONE_PARCEL_RULE_DB_URL` is configured.
-- `POST /api/v1/civiczone/planner-review/classify` identifies sample discretionary-review triggers.
-- `GET /api/v1/civiczone/staff/precedents/{precedent_id}` returns staff-only sample precedent context.
-- `POST /api/v1/civiczone/staff/questions/answer` gives staff Q&A with citations and informational boundaries.
-- `POST /api/v1/civiczone/staff/ambiguity-reviews` creates planner review queue items.
-- `GET /api/v1/civiczone/staff/questions/analytics` returns high-volume question analytics.
-- `POST /api/v1/civiczone/staff/reports/outline` creates cited staff-report outline support.
-- `POST /api/v1/civiczone/staff/flagged-answers` and `/improve` support staff review and improvement of flagged answers.
+An administrator/developer can inspect an already-configured isolated runtime from a trusted local process. This PowerShell example reads the signed-in synthetic profile’s existing proof into memory; it does not create a user, seed a session, reveal the proof in output or bypass a permission check. Do not use real city data in development examples. A read response does not prove approval or publication.
 
-Resident question text is stored only when `CIVICZONE_PARCEL_RULE_DB_URL` is configured. Cities should treat those rows as operational records, avoid entering sensitive personal details into sample Q&A, and apply local retention/privacy policy before exposing the ledger outside staff operations.
+```powershell
+$profilePath = Join-Path $env:LOCALAPPDATA 'CivicSuite'
+$sessionPath = Join-Path $profilePath 'config\local-session.json'
+$session = Get-Content -LiteralPath $sessionPath -Raw | ConvertFrom-Json
+$headers = @{ 'X-Townlight-Session' = $session.session_hash }
+Invoke-RestMethod -Uri 'http://127.0.0.1:15480/desktop/v1/zoning/workspace' -Headers $headers
+Remove-Variable session, headers
+```
 
-Set `CIVICZONE_PARCEL_RULE_DB_URL` to enable persistent parcel, use-rule, dimensional-rule, resident-question ledger, and staff workflow records. When unset, Townlight Zoning uses deterministic in-memory sample data and does not persist question or staff workflow rows.
+### Complete synthetic source bundle
 
-Staff workflow endpoints require trusted municipal access headers from a configured trusted proxy/source. Local development accepts loopback by default. Shared deployments should set `CIVICZONE_STAFF_TRUSTED_PROXY_CIDRS` and strip client-supplied staff headers before requests reach Townlight Zoning.
+The [synthetic Zoning bundle](docs/beta-1/reference/examples/synthetic-geo-bundle.json) is the retained fixture used by the beta staff exercise. It includes the complete supported source envelope rather than a shortened pseudo-payload. Keep its fictional source labels. For Planning, wrap it as `{"bundle": BUNDLE, "expected_previous_revision": null}`; for Permitting use `{"bundle": BUNDLE, "expected_revision": null}`. Code and Zoning take their own complete import envelopes. Replace null with the current expected revision when revising an existing source, as the applicable schema requires. These are import examples, not legal authority or permission to load them into a live city profile.
 
-- `X-CivicZone-Principal`
-- `X-CivicZone-Role: planner`, `staff`, or `zoning_admin`
+### A synthetic write with subsequent readback
 
-## License
+This example demonstrates the existing Meetings HTTP contract in an isolated exercise. It is intentionally fictional. It does not start a service. Its authentication setup is included so it can be run independently under the signed-in synthetic account. If a write times out, inspect current records before repeating it.
 
-Code: AGPL-3.0-only, with the TownLight Public Institution Exception for qualifying deployments. See [LICENSE](LICENSE) and [LICENSE-EXCEPTION.md](LICENSE-EXCEPTION.md).
-Documentation: CC BY 4.0 ([LICENSE-DOCS](LICENSE-DOCS)).
+```powershell
+$profilePath = Join-Path $env:LOCALAPPDATA 'CivicSuite'
+$sessionPath = Join-Path $profilePath 'config/local-session.json'
+$session = Get-Content -LiteralPath $sessionPath -Raw | ConvertFrom-Json
+$headers = @{ 'X-Townlight-Session' = $session.session_hash }
+$body = @{
+  title = 'Synthetic documentation exercise'
+  scheduled_start = '2026-11-05T18:00:00-07:00'
+  location = 'Synthetic room'
+  meeting_type = 'regular'
+} | ConvertTo-Json
+$meeting = Invoke-RestMethod -Method Post `
+  -Uri 'http://127.0.0.1:15480/desktop/v1/meetings/meetings' `
+  -Headers $headers -ContentType 'application/json' -Body $body
+Invoke-RestMethod `
+  -Uri ('http://127.0.0.1:15480/desktop/v1/meetings/meetings/' + $meeting.id) `
+  -Headers $headers
+Remove-Variable session, headers
+```
 
-## Unreleased connected Zoning Z2
+This write requires Meetings to be enabled and the signed-in staff role to permit it. It is a cross-suite integration example; for this product’s request models, use the complete technical reference below.
 
-The local development branch adds parcel-scoped allowed/conditional/prohibited-use
-and dimensional answers bound to actual Townlight Code section, version, effective
-date and source identities. Unsupported, conflicting or stale bindings are shown
-as needing planner attention, not invented determinations. This is structured
-staff-configured lookup, not AI interpretation or legal advice.
+## MCP status
 
-The separate Zoning desktop component has resident lookup/question controls and
-an authenticated staff workspace: cited rule registration, persisted question
-history, planner queue, corrections, basic counts/repeated questions and draft
-report outlines. Human corrections do not require an earlier automated flag,
-nonempty justification or an extra approval. Original answers and audit history
-remain intact. Staff notes/reviews are not included in resident responses.
+No direct product MCP server is exposed by the accepted Townlight desktop or Station boundary. Do not configure an invented `townlight mcp` command or assume an AI client has staff permissions. The integration surfaces for this beta are native IPC, the documented HTTP APIs, source bundle imports, exact exports and the existing Station CLI.
 
-This is not a released or installed Zoning candidate. The published
-Records–Meetings–Code 1.3.0-beta.1 is unchanged. The Z2 operator guide is
-zone/docs/Z2-CITED-WORKFLOWS.md.
+The bundled transcription code includes a **TextFlowKit MCP adapter** as a separate source capability. It offers job-based `transcribe_media`, `get_transcript`, `list_jobs`, `get_job_status` and `export_transcript`, and additional tools declared in that adapter. It uses stdio first and optional Streamable HTTP, with the MCP SDK as an optional extra. It is not automatically launched, authenticated as Townlight staff or accepted as a Townlight product MCP deployment. This documentation does not add such a service.
 
-## Unreleased connected Zoning Z3
+For a transcription client already provisioned separately, an illustrative tool call is:
 
-Authorized staff can explicitly link a permitted public Meetings archive document
-to a Zoning question as hearing context, context or precedent. This is historical
-context, not a Code amendment or binding determination. Links retain source IDs,
-archive/version identities, content hashes and actor history.
+```json
+{"name":"get_job_status","arguments":{"job_id":"synthetic-existing-job-id"}}
+```
 
-Staff can create a separate immutable Zoning source snapshot and select eligible
-snapshots from Records. Staff-only snapshots and private review notes are not
-offered as public Records sources. Permissions and content hashes are rechecked
-when retrieving or attaching sources; a saved link does not bypass later access
-restrictions. Existing stored evidence is preserved rather than rewritten.
+Use a job ID returned by that transcription service. This example does not create a Townlight record or bypass its review/Records handoff. The exact optional adapter tool signatures are supplied in the [MCP source reference](docs/beta-1/reference/mcp.html). Station meeting capture does not become live speech recognition because this optional donor adapter exists.
 
-Creating or attaching a snapshot does not approve a response or publish anything.
-Human corrections remain available without an automatic flag or mandatory
-justification. Packaged/installed acceptance and opt-in profile delivery remain
-Z4. See zone/docs/Z3-CONNECTED-SOURCES.md. No new public release is claimed.
+## Verification and known limits
+
+| Product | Recorded result | Precisely exercised |
+| --- | --- | --- |
+| Zoning | PASS | GeoJSON/PostGIS import, cited dimensional rule, parcel answer, staff review/history/snapshot and native workspace. |
+
+
+These results come from the identified signed candidate’s fresh normal-profile Sandbox exercise: real native IPC/HTTP/PostgreSQL and selected headless controls. All accounts, source bundles and media were synthetic. The guest install/uninstall and recovery passed, and the owned Sandbox stopped. No host installed application or standalone CivicCast was changed. This documentation task reuses those receipts; it does not claim a new software acceptance run.
+
+The [workflow matrix](docs/beta-1/reference/workflow-matrix.json) identifies raw receipt filenames. The [evidence index](docs/beta-1/reference/sandbox-evidence-index.json) retains their original hashes; raw receipts remain in the private beta handoff rather than being silently republished with the documentation site.
+
+The limits remain: actual city field acceptance and equipment/network commissioning; Station automatic provisioning/SCM commissioning; every UI/role combination; field recognition accuracy; and historical in-place upgrades are not certified. They are not five invented feature requirements. Fresh-install controlled beta handoff remains the accepted scope. This package makes no city-deployment, publication or general-availability claim.
+
+The accepted path is local GeoJSON/PostGIS. It does not establish every ArcGIS, assessor or CKAN connector. Answers and process explanations are informational and do not issue an entitlement or an official zoning determination.
+
+## Development and repository map
+
+Use the corresponding source for the candidate rather than assuming the public default branch matches it. The source companion contains `installed-owned-source`, product build inputs, desktop Rust/browser sources, locks and `BUILD.md`. It excludes credentials and third-party binary/model payloads. Use the recorded runtime lock when reproducing packaging.
+
+Relevant source contracts:
+
+- `civiczone/geo_import.py`
+- `civiczone/discretionary.py`
+- `civicsuite_runtime/zoning_bridge.py`
+- `civicsuite_runtime/zoning_records.py`
+
+The desktop package defines `npm run build`, `npm test`, `npm run test:browser` and its Tauri command. Python products retain their own `pyproject.toml`, tests and migrations; use the matching checkout’s declared dependencies and test configuration. Do not run a sample server against a production profile. This documentation build validates documentation only and reuses the separately identified installed acceptance; it does not claim a new complete application CI run.
+
+## Recovery and support
+
+Save work and use Core’s canonical **Backup Now** before maintenance. That operation stops writers. Preserve the coherent profile/database/document backup and its receipt, then use **Start** to resume. A source export is not a full backup.
+
+Use **Restore Latest Backup** through the supported controls. If the result says **Restore needs service start**, use **Start**, then **Check**, and reopen a known record. Do not repeat restore merely because services need to start. The fresh-profile acceptance verified that a fulfilled request survived restore and a post-backup marker did not.
+
+Keep Station’s dedicated database and media evidence together in its own backup. Core’s native-profile backup must not be assumed to include an external Station data directory. Stop writers during a coordinated backup. Preserve failed media attempts and logs.
+
+On failure, record the time, selected composition, component/installer versions and exact message. Check System Health for stopped, starting, ready or failed dependencies. Use the existing Retry control after readiness; do not create duplicate business records to refresh a stale view. Share only a redacted diagnostic bundle. Preserve secrets, original evidence, recovery material and unrelated installations.
+
+## License and responsible use
+
+Current owned code is AGPL-3.0-only. Preserve full license, matching corresponding source, dependency notices and historical grants. Terms of use do not remove license rights. Source imports do not confer permission to publish third-party material. Review all automatic drafts and use the separate owning-product decision before official action. CivicCast remains independent.
+
+## Earlier documentation
+
+Previous editions are retained under `docs/history/pre-townlight-beta-1/`. They describe their original software and license grants. Use the current Townlight Beta 1 manual for this candidate.
