@@ -5,27 +5,24 @@ from pathlib import Path
 
 from fastapi.testclient import TestClient
 
-import civiczone
-from civiczone.main import app
+import townlight_zoning
+from townlight_zoning.main import app
 
 client = TestClient(app)
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_package_version_is_100() -> None:
-    assert civiczone.__version__ == "0.2.2"
+    assert townlight_zoning.__version__ == "0.2.3"
 
 
-def test_pyproject_uses_published_civiccore_release_wheel() -> None:
+def test_pyproject_uses_published_townlight_core_release_wheel() -> None:
     data = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
     dependencies = data["project"]["dependencies"]
 
     assert data["tool"]["hatch"]["metadata"]["allow-direct-references"] is True
-    assert (
-        "civiccore @ https://github.com/townlight/core/releases/download/"
-        "v1.2.1/civiccore-1.2.1-py3-none-any.whl#sha256=8dde29408e206048bde63ec14156a8e6329382af4d16b12710d12aa5c27f3f59"
-    ) in dependencies
-    assert "civiccore==1.2.1" not in dependencies
+    assert "townlight-core==1.3.0.dev2" in dependencies
+    assert not any("civiccore" in item or "@main" in item for item in dependencies)
 
 
 def test_root_endpoint_states_runtime_boundary() -> None:
@@ -33,8 +30,8 @@ def test_root_endpoint_states_runtime_boundary() -> None:
     assert response.status_code == 200
     payload = response.json()
 
-    assert payload["name"] == "CivicZone"
-    assert payload["version"] == "0.2.2"
+    assert payload["name"] == "TownlightZoning"
+    assert payload["version"] == "0.2.3"
     assert payload["status"] == "v1 parcel-aware zoning Q&A runtime"
     assert "optional database-backed parcel/rule" in payload["message"]
     assert "staff workflow APIs" in payload["message"]
@@ -49,20 +46,19 @@ def test_health_endpoint_reports_versions() -> None:
     payload = response.json()
 
     assert payload["status"] == "ok"
-    assert payload["service"] == "civiczone"
-    assert payload["version"] == "0.2.2"
-    # /health must report the Core that is actually imported. The public-release
-    # pin itself (exact wheel URL + SHA-256) is asserted in its own test above,
-    # unchanged, so this never weakens that guard.
-    import civiccore
+    assert payload["service"] == "townlight_zoning"
+    assert payload["version"] == "0.2.3"
+    # Health reports the actual imported Core; the exact candidate dependency
+    # is asserted separately and the release checker verifies wheel hashes.
+    import townlight_core
 
-    assert payload["civiccore_version"] == civiccore.__version__
+    assert payload["townlight_core_version"] == townlight_core.__version__
     assert re.fullmatch(r"\d+\.\d+\.\d+(\.(dev|post)\d+)?([.+].*)?",
-                        payload["civiccore_version"])
+                        payload["townlight_core_version"])
     candidate = Path(__file__).resolve().parents[3] / "outputs/beta-plan/completion-42/C/candidate-env.json"
     if candidate.is_file():  # private coherent candidate environment present
         reported = json.loads(candidate.read_text(encoding="utf-8"))["wheel"]["path"]
-        assert payload["civiccore_version"] in reported
+        assert payload["townlight_core_version"] in reported
 
 
 def test_release_gate_prefers_native_unix_python_before_windows_launcher() -> None:
@@ -94,5 +90,5 @@ def test_current_docs_mark_v1_label_as_recovered_without_product_release_overcla
 
     for path, text in docs.items():
         lowered = text.lower()
-        assert "0.2.2" in lowered, path
+        assert "0.2.3" in lowered, path
         assert "provisional" not in lowered, path

@@ -7,7 +7,7 @@ from pathlib import Path
 import pytest
 from sqlalchemy import create_engine, text
 
-from civiczone.geo_import import (
+from townlight_zoning.geo_import import (
     GeoImportError,
     import_geojson,
     lookup_parcel,
@@ -15,10 +15,10 @@ from civiczone.geo_import import (
 )
 
 FIXTURE = Path(__file__).parent / "fixtures" / "z1-town.json"
-DB_URL = os.environ.get("CIVICZONE_TEST_DATABASE_URL")
+DB_URL = os.environ.get("TOWNLIGHT_ZONING_TEST_DATABASE_URL")
 
 pytestmark = pytest.mark.skipif(
-    not DB_URL, reason="CIVICZONE_TEST_DATABASE_URL is not set; skipping real-DB tests"
+    not DB_URL, reason="TOWNLIGHT_ZONING_TEST_DATABASE_URL is not set; skipping real-DB tests"
 )
 
 BOWTIE = [
@@ -59,14 +59,14 @@ def setup_jur(engine):
         for j in created:
             conn.execute(
                 text(
-                    "DELETE FROM civiczone.parcels p USING civiczone.zones z "
+                    "DELETE FROM townlight_zoning.parcels p USING townlight_zoning.zones z "
                     "WHERE p.zone_id=z.id AND z.jurisdiction=:j"
                 ),
                 {"j": j},
             )
             for tbl in ("zones", "overlays", "geo_imports"):
                 conn.execute(
-                    text(f"DELETE FROM civiczone.{tbl} WHERE jurisdiction=:j"),
+                    text(f"DELETE FROM townlight_zoning.{tbl} WHERE jurisdiction=:j"),
                     {"j": j},
                 )
 
@@ -98,7 +98,7 @@ def test_import_lookup_roundtrip(engine, setup_jur):
 
     with engine.connect() as conn:
         stored = conn.execute(
-            text("SELECT actor_id FROM civiczone.geo_imports WHERE id=:i"),
+            text("SELECT actor_id FROM townlight_zoning.geo_imports WHERE id=:i"),
             {"i": r["id"]},
         ).scalar_one()
     assert str(stored) == actor
@@ -133,12 +133,12 @@ def test_rejects_changed_identity_and_bowtie(engine, setup_jur):
 
     with engine.connect() as conn:
         n = conn.execute(
-            text("SELECT count(*) FROM civiczone.geo_imports WHERE jurisdiction=:j"),
+            text("SELECT count(*) FROM townlight_zoning.geo_imports WHERE jurisdiction=:j"),
             {"j": j},
         ).scalar_one()
         cur = conn.execute(
             text(
-                "SELECT version FROM civiczone.geo_imports "
+                "SELECT version FROM townlight_zoning.geo_imports "
                 "WHERE jurisdiction=:j AND is_current"
             ),
             {"j": j},
@@ -167,18 +167,18 @@ def test_version2_archives_and_replay_no_rollback(engine, setup_jur):
     with engine.connect() as conn:
         row = conn.execute(
             text(
-                "SELECT is_active FROM civiczone.parcels "
+                "SELECT is_active FROM townlight_zoning.parcels "
                 "WHERE id=:p"
             ),
             {"p": p2_id},
         ).mappings().one()
         old_payload = conn.execute(
-            text("SELECT payload FROM civiczone.geo_imports WHERE id=:i"),
+            text("SELECT payload FROM townlight_zoning.geo_imports WHERE id=:i"),
             {"i": r1["id"]},
         ).scalar_one()
         cur_ver = conn.execute(
             text(
-                "SELECT version FROM civiczone.geo_imports "
+                "SELECT version FROM townlight_zoning.geo_imports "
                 "WHERE jurisdiction=:j AND is_current"
             ),
             {"j": j},
@@ -194,7 +194,7 @@ def test_version2_archives_and_replay_no_rollback(engine, setup_jur):
     with engine.connect() as conn:
         still = conn.execute(
             text(
-                "SELECT version FROM civiczone.geo_imports "
+                "SELECT version FROM townlight_zoning.geo_imports "
                 "WHERE jurisdiction=:j AND is_current"
             ),
             {"j": j},
@@ -279,7 +279,7 @@ def test_rejects_without_import_rows(engine, setup_jur, mutator):
         import_geojson(engine, payload, str(uuid.uuid4()))
     with engine.connect() as conn:
         n = conn.execute(
-            text("SELECT count(*) FROM civiczone.geo_imports WHERE jurisdiction=:j"),
+            text("SELECT count(*) FROM townlight_zoning.geo_imports WHERE jurisdiction=:j"),
             {"j": j},
         ).scalar_one()
     assert n == 0

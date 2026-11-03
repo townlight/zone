@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 
-from civiczone.main import app
-from civiczone.parcel_lookup import ParcelLookupError, ParcelLookupResult, lookup_parcel
+from townlight_zoning.main import app
+from townlight_zoning.parcel_lookup import ParcelLookupError, ParcelLookupResult, lookup_parcel
 
 client = TestClient(app)
 
@@ -31,7 +31,7 @@ def test_lookup_unknown_parcel_returns_actionable_error() -> None:
 
 
 def test_api_lookup_success_shape() -> None:
-    response = client.post("/api/v1/civiczone/parcels/lookup", json={"parcel_number": "100-200-300"})
+    response = client.post("/api/v1/townlight_zoning/parcels/lookup", json={"parcel_number": "100-200-300"})
 
     assert response.status_code == 200
     payload = response.json()
@@ -42,16 +42,16 @@ def test_api_lookup_success_shape() -> None:
 
 
 def test_api_lookup_requires_identifier() -> None:
-    response = client.post("/api/v1/civiczone/parcels/lookup", json={})
+    response = client.post("/api/v1/townlight_zoning/parcels/lookup", json={})
 
     assert response.status_code == 422
     assert response.json()["detail"]["fix"].startswith("Send parcel_number")
 
 
 def test_api_lookup_unknown_parcel_is_actionable_404() -> None:
-    response = client.post("/api/v1/civiczone/parcels/lookup", json={"address": "999 Nowhere"})
+    response = client.post("/api/v1/townlight_zoning/parcels/lookup", json={"address": "999 Nowhere"})
 
     assert response.status_code == 404
     detail = response.json()["detail"]
     assert detail["message"] == "Parcel not found in the Townlight Zoning sample dataset."
-    assert "CIVICZONE_PARCEL_RULE_DB_URL" in detail["fix"]
+    assert "TOWNLIGHT_ZONING_PARCEL_RULE_DB_URL" in detail["fix"]

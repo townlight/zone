@@ -1,8 +1,8 @@
 from fastapi.testclient import TestClient
 
-from civiczone.main import app
-from civiczone.qa import answer_zoning_question
-from civiczone.staff_context import classify_for_planner_review, get_staff_precedent
+from townlight_zoning.main import app
+from townlight_zoning.qa import answer_zoning_question
+from townlight_zoning.staff_context import classify_for_planner_review, get_staff_precedent
 
 client = TestClient(app, client=("127.0.0.1", 50000))
 
@@ -36,7 +36,7 @@ def test_resident_answer_never_exposes_staff_precedent() -> None:
 
 def test_planner_review_api_success_shape() -> None:
     response = client.post(
-        "/api/v1/civiczone/planner-review/classify",
+        "/api/v1/townlight_zoning/planner-review/classify",
         json={"question": "Do I need a CUP for this use?"},
     )
 
@@ -45,7 +45,7 @@ def test_planner_review_api_success_shape() -> None:
 
 
 def test_staff_precedent_api_is_explicitly_staff_only() -> None:
-    response = client.get("/api/v1/civiczone/staff/precedents/historic-adu")
+    response = client.get("/api/v1/townlight_zoning/staff/precedents/historic-adu")
 
     assert response.status_code == 401
     assert "Trusted identity header missing" in response.json()["detail"]["message"]
@@ -53,8 +53,8 @@ def test_staff_precedent_api_is_explicitly_staff_only() -> None:
 
 def test_staff_precedent_api_allows_staff_header() -> None:
     response = client.get(
-        "/api/v1/civiczone/staff/precedents/historic-adu",
-        headers={"X-CivicZone-Principal": "planner@example.gov", "X-CivicZone-Role": "staff"},
+        "/api/v1/townlight_zoning/staff/precedents/historic-adu",
+        headers={"X-Townlight-Zoning-Principal": "planner@example.gov", "X-Townlight-Zoning-Role": "staff"},
     )
 
     assert response.status_code == 200

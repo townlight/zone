@@ -1,12 +1,12 @@
 from fastapi.testclient import TestClient
 
-from civiczone.main import app
+from townlight_zoning.main import app
 
 client = TestClient(app)
 
 
 def test_public_ui_route_returns_accessible_html() -> None:
-    response = client.get("/civiczone")
+    response = client.get("/townlight_zoning")
 
     assert response.status_code == 200
     assert "text/html" in response.headers["content-type"]
@@ -21,7 +21,7 @@ def test_public_ui_route_returns_accessible_html() -> None:
 
 
 def test_public_ui_shows_real_api_workflow_bindings() -> None:
-    response = client.get("/civiczone")
+    response = client.get("/townlight_zoning")
     text = response.text
 
     assert "123 Main St" in text
@@ -31,12 +31,12 @@ def test_public_ui_shows_real_api_workflow_bindings() -> None:
     assert "ADU" in text
     assert "Ã‚Â§" not in text
     assert "fetch(" in text
-    assert "/api/v1/civiczone/parcels/lookup" in text
-    assert "/api/v1/civiczone/questions/answer" in text
+    assert "/api/v1/townlight_zoning/parcels/lookup" in text
+    assert "/api/v1/townlight_zoning/questions/answer" in text
 
 
 def test_public_ui_keeps_boundaries_actionable_and_honest() -> None:
-    response = client.get("/civiczone")
+    response = client.get("/townlight_zoning")
     text = response.text
 
     assert "does not provide legal advice" in text
@@ -50,12 +50,12 @@ def test_public_ui_keeps_boundaries_actionable_and_honest() -> None:
 
 
 def test_staff_ui_route_returns_browser_shell_without_embedded_staff_data() -> None:
-    response = client.get("/civiczone/staff")
+    response = client.get("/townlight_zoning/staff")
     text = response.text
 
     assert response.status_code == 200
     assert "Townlight Zoning staff workspace" in text
-    assert "X-CivicZone-Principal" in text
-    assert "X-CivicZone-Role" in text
-    assert "/api/v1/civiczone/staff/questions/answer" in text
+    assert "X-Townlight-Zoning-Principal" in text
+    assert "X-Townlight-Zoning-Role" in text
+    assert "/api/v1/townlight_zoning/staff/questions/answer" in text
     assert "staff_only" not in text

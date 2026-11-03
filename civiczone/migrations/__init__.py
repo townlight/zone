@@ -1,1 +1,0 @@
-"""CivicZone Alembic migrations."""

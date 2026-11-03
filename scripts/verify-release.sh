@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-VERSION="0.2.2"
+VERSION="0.2.3"
 
 find_python() {
   local candidates=()
-  if [[ -n "${CIVICZONE_RELEASE_PYTHON:-}" ]]; then
-    candidates+=("${CIVICZONE_RELEASE_PYTHON}")
+  if [[ -n "${TOWNLIGHT_ZONING_RELEASE_PYTHON:-}" ]]; then
+    candidates+=("${TOWNLIGHT_ZONING_RELEASE_PYTHON}")
   fi
   command -v python3 >/dev/null 2>&1 && candidates+=("$(command -v python3)")
   command -v python >/dev/null 2>&1 && candidates+=("$(command -v python)")
@@ -40,12 +40,12 @@ ${PYTHON_BIN} - <<'PY'
 from pathlib import Path
 import tomllib
 
-version = "0.2.2"
+version = "0.2.3"
 root = Path(".")
 pyproject = tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))
 assert pyproject["project"]["version"] == version, pyproject["project"]["version"]
 namespace: dict[str, str] = {}
-exec((root / "civiczone" / "__init__.py").read_text(encoding="utf-8"), namespace)
+exec((root / "townlight_zoning" / "__init__.py").read_text(encoding="utf-8"), namespace)
 assert namespace["__version__"] == version, namespace["__version__"]
 for path in [
     "README.md",
@@ -56,7 +56,7 @@ for path in [
     "SECURITY.md",
 ]:
     text = (root / path).read_text(encoding="utf-8")
-    assert "0.2.2" in text, f"missing release version in {path}"
+    assert "0.2.3" in text, f"missing release version in {path}"
     assert "0.1.0.dev0" not in text, f"stale dev version in {path}"
 print("PASS: version surfaces synchronized")
 PY
@@ -68,7 +68,7 @@ echo "==> Documentation gate"
 bash scripts/verify-docs.sh
 
 echo "==> Placeholder import gate"
-${PYTHON_BIN} scripts/check-civiccore-placeholder-imports.py
+${PYTHON_BIN} scripts/check-townlight_core-placeholder-imports.py
 
 echo "==> Ruff"
 ${PYTHON_BIN} -m ruff check .
@@ -81,8 +81,8 @@ from pathlib import Path
 import hashlib
 
 dist = Path("dist")
-wheel = dist / "civiczone-0.2.2-py3-none-any.whl"
-sdist = dist / "civiczone-0.2.2.tar.gz"
+wheel = dist / "townlight_zoning-0.2.3-py3-none-any.whl"
+sdist = dist / "townlight_zoning-0.2.3.tar.gz"
 assert wheel.exists(), f"missing {wheel}"
 assert sdist.exists(), f"missing {sdist}"
 lines = []

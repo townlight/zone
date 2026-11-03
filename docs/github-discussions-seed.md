@@ -1,12 +1,12 @@
 # GitHub Discussion Seed Posts
 
-<a id="welcome-to-civiczone"></a>
+<a id="welcome-to-townlight_zoning"></a>
 
 ## Welcome To Townlight Zoning
 
 Townlight Zoning is the planned Townlight zoning and land-use module. It is being built as open-source municipal software for resident zoning questions and planner support.
 
-<a id="what-civiczone-will-not-do"></a>
+<a id="what-townlight_zoning-will-not-do"></a>
 
 ## What Townlight Zoning Will Not Do
 

@@ -1,19 +1,19 @@
 from datetime import UTC, datetime
 
-from civiczone.integration_mocks import (
-    CivicZoneIntegrationMockLayer,
+from townlight_zoning.integration_mocks import (
+    TownlightZoningIntegrationMockLayer,
     IntegrationError,
     IntegrationResult,
 )
 
 
 def test_all_v1_mock_integrations_return_local_contract_records() -> None:
-    layer = CivicZoneIntegrationMockLayer(
+    layer = TownlightZoningIntegrationMockLayer(
         dependency_state={
-            "civicaccess": True,
-            "civicclerk": True,
-            "civiccode": True,
-            "civicplan": True,
+            "townlight_access": True,
+            "townlight_meetings": True,
+            "townlight_code": True,
+            "townlight_planning": True,
         }
     )
 
@@ -42,21 +42,21 @@ def test_all_v1_mock_integrations_return_local_contract_records() -> None:
                 }
             ],
         },
-        "civiccode_section_resolution": {
-            "provider": "civiccode_section_resolution",
+        "townlight_code_section_resolution": {
+            "provider": "townlight_code_section_resolution",
             "section_id": "18.20.020",
             "sections": {"18.20.020": {"citation": "CMC 18.20.020", "text": "R-2 uses table."}},
         },
-        "civicclerk_precedent_minutes": {
-            "provider": "civicclerk_precedent_minutes",
+        "townlight_meetings_precedent_minutes": {
+            "provider": "townlight_meetings_precedent_minutes",
             "minutes": [{"minute_id": "M-1", "summary": "Historic overlay ADU review noted."}],
         },
-        "civicplan_policy_context": {
-            "provider": "civicplan_policy_context",
+        "townlight_planning_policy_context": {
+            "provider": "townlight_planning_policy_context",
             "policies": [{"policy_id": "LU-1", "context": "Encourage infill near services."}],
         },
-        "civicaccess_plain_language_rewrite": {
-            "provider": "civicaccess_plain_language_rewrite",
+        "townlight_access_plain_language_rewrite": {
+            "provider": "townlight_access_plain_language_rewrite",
             "text": "Applicants shall comply pursuant to CMC 18.20.020.",
         },
         "county_assessor_import": {
@@ -79,7 +79,7 @@ def test_all_v1_mock_integrations_return_local_contract_records() -> None:
 
 
 def test_malformed_arcgis_payload_returns_actionable_error_without_fallback() -> None:
-    layer = CivicZoneIntegrationMockLayer()
+    layer = TownlightZoningIntegrationMockLayer()
 
     result = layer.run("esri_arcgis_rest", {"provider": "esri_arcgis_rest", "features": [{}]})
 
@@ -90,24 +90,24 @@ def test_malformed_arcgis_payload_returns_actionable_error_without_fallback() ->
 
 
 def test_unavailable_dependency_blocks_local_adapter_with_fix_path() -> None:
-    layer = CivicZoneIntegrationMockLayer(dependency_state={"civicplan": False})
+    layer = TownlightZoningIntegrationMockLayer(dependency_state={"townlight_planning": False})
 
     result = layer.run(
-        "civicplan_policy_context",
+        "townlight_planning_policy_context",
         {
-            "provider": "civicplan_policy_context",
+            "provider": "townlight_planning_policy_context",
             "policies": [{"policy_id": "LU-1", "context": "Encourage infill."}],
         },
     )
 
     assert isinstance(result, IntegrationError)
     assert result.code == "dependency_unavailable"
-    assert "civicplan dependency is unavailable" in result.message
+    assert "townlight_planning dependency is unavailable" in result.message
     assert "fixture payload" in result.fix
 
 
 def test_spoofed_or_unsupported_provider_is_rejected_before_processing() -> None:
-    layer = CivicZoneIntegrationMockLayer()
+    layer = TownlightZoningIntegrationMockLayer()
 
     spoofed = layer.run(
         "geojson_fallback",
@@ -126,7 +126,7 @@ def test_spoofed_or_unsupported_provider_is_rejected_before_processing() -> None
 
 
 def test_stale_data_is_flagged_but_local_records_are_preserved() -> None:
-    layer = CivicZoneIntegrationMockLayer(now=datetime(2026, 5, 7, tzinfo=UTC))
+    layer = TownlightZoningIntegrationMockLayer(now=datetime(2026, 5, 7, tzinfo=UTC))
 
     result = layer.run(
         "county_assessor_import",
@@ -144,7 +144,7 @@ def test_stale_data_is_flagged_but_local_records_are_preserved() -> None:
 
 
 def test_air_gap_rejects_live_endpoints_before_adapter_logic() -> None:
-    layer = CivicZoneIntegrationMockLayer()
+    layer = TownlightZoningIntegrationMockLayer()
 
     result = layer.run(
         "esri_arcgis_rest",
@@ -162,7 +162,7 @@ def test_air_gap_rejects_live_endpoints_before_adapter_logic() -> None:
 
 
 def test_ckan_export_rejects_non_anonymized_trend_fields() -> None:
-    layer = CivicZoneIntegrationMockLayer()
+    layer = TownlightZoningIntegrationMockLayer()
 
     result = layer.run(
         "ckan_anonymized_trend_export",

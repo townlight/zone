@@ -3,10 +3,10 @@ from __future__ import annotations
 import sqlalchemy as sa
 from fastapi.testclient import TestClient
 
-import civiczone.main as main_module
-from civiczone.main import app
-from civiczone.question_ledger import ZoneQuestionLedgerRepository
-from civiczone.rule_lookup import (
+import townlight_zoning.main as main_module
+from townlight_zoning.main import app
+from townlight_zoning.question_ledger import ZoneQuestionLedgerRepository
+from townlight_zoning.rule_lookup import (
     RuleLookupRepository,
     UseRuleResult,
     dimensional_rule_lookup_records,
@@ -44,11 +44,11 @@ def test_question_api_uses_configured_rule_database_and_records_ledger(monkeypat
         ]
     )
     rules.engine.dispose()
-    monkeypatch.setenv("CIVICZONE_PARCEL_RULE_DB_URL", db_url)
+    monkeypatch.setenv("TOWNLIGHT_ZONING_PARCEL_RULE_DB_URL", db_url)
 
     try:
         response = client.post(
-            "/api/v1/civiczone/questions/answer",
+            "/api/v1/townlight_zoning/questions/answer",
             json={"zone_code": "MX-1", "question": "Can I build an ADU?"},
         )
     finally:
@@ -73,11 +73,11 @@ def test_question_api_uses_configured_rule_database_and_records_ledger(monkeypat
 def test_question_ledger_records_refusals_with_actionable_reason(monkeypatch, tmp_path) -> None:
     db_url = f"sqlite:///{tmp_path / 'question-refusal-ledger.db'}"
     RuleLookupRepository(db_url=db_url, seed_defaults=False).engine.dispose()
-    monkeypatch.setenv("CIVICZONE_PARCEL_RULE_DB_URL", db_url)
+    monkeypatch.setenv("TOWNLIGHT_ZONING_PARCEL_RULE_DB_URL", db_url)
 
     try:
         response = client.post(
-            "/api/v1/civiczone/questions/answer",
+            "/api/v1/townlight_zoning/questions/answer",
             json={"zone_code": "MX-1", "question": "Can I build an ADU?"},
         )
     finally:
@@ -86,7 +86,7 @@ def test_question_ledger_records_refusals_with_actionable_reason(monkeypatch, tm
     assert response.status_code == 200
     payload = response.json()
     assert payload["status"] == "refused"
-    assert "Load use rules into CIVICZONE_PARCEL_RULE_DB_URL" in payload["answer"]
+    assert "Load use rules into TOWNLIGHT_ZONING_PARCEL_RULE_DB_URL" in payload["answer"]
 
     ledger = ZoneQuestionLedgerRepository(db_url=db_url)
     records = ledger.list_records()
@@ -94,20 +94,20 @@ def test_question_ledger_records_refusals_with_actionable_reason(monkeypatch, tm
     assert records[0].status == "refused"
     assert records[0].citation_payload == ()
     assert records[0].escalation_reason == (
-        "Load use rules into CIVICZONE_PARCEL_RULE_DB_URL or try the sample R-2 ADU rule."
+        "Load use rules into TOWNLIGHT_ZONING_PARCEL_RULE_DB_URL or try the sample R-2 ADU rule."
     )
     ledger.engine.dispose()
 
 
 def test_question_ledger_migration_declares_runtime_table() -> None:
     migration_path = (
-        "civiczone/migrations/versions/civiczone_0003_question_ledger.py"
+        "townlight_zoning/migrations/versions/townlight_zoning_0003_question_ledger.py"
     )
     with open(migration_path, encoding="utf-8") as handle:
         text = handle.read()
 
-    assert 'revision = "civiczone_0003_question_ledger"' in text
-    assert 'down_revision = "civiczone_0002_parcel_rules"' in text
+    assert 'revision = "townlight_zoning_0003"' in text
+    assert 'down_revision = "townlight_zoning_0002"' in text
     assert '"zone_question_ledger_records"' in text
     assert '"citation_payload"' in text
     assert "postgresql.JSONB()" in text
@@ -128,10 +128,10 @@ def test_repository_cache_resets_question_ledger_when_database_url_changes(monke
     second_db_url = f"sqlite:///{tmp_path / 'second-question.db'}"
 
     try:
-        monkeypatch.setenv("CIVICZONE_PARCEL_RULE_DB_URL", first_db_url)
+        monkeypatch.setenv("TOWNLIGHT_ZONING_PARCEL_RULE_DB_URL", first_db_url)
         first_ledger = main_module._get_question_ledger_repository()
 
-        monkeypatch.setenv("CIVICZONE_PARCEL_RULE_DB_URL", second_db_url)
+        monkeypatch.setenv("TOWNLIGHT_ZONING_PARCEL_RULE_DB_URL", second_db_url)
         second_rules = main_module._get_rule_repository()
 
         assert first_ledger is not None
@@ -144,7 +144,7 @@ def test_repository_cache_resets_question_ledger_when_database_url_changes(monke
 
 def test_same_database_repositories_can_coexist(monkeypatch, tmp_path) -> None:
     db_url = f"sqlite:///{tmp_path / 'coexisting-repositories.db'}"
-    monkeypatch.setenv("CIVICZONE_PARCEL_RULE_DB_URL", db_url)
+    monkeypatch.setenv("TOWNLIGHT_ZONING_PARCEL_RULE_DB_URL", db_url)
 
     try:
         parcel_repository = main_module._get_parcel_repository()
@@ -161,11 +161,11 @@ def test_same_database_repositories_can_coexist(monkeypatch, tmp_path) -> None:
 def test_configured_question_lookup_does_not_seed_sample_rules(monkeypatch, tmp_path) -> None:
     db_url = f"sqlite:///{tmp_path / 'no-sample-seed.db'}"
     RuleLookupRepository(db_url=db_url, seed_defaults=False).engine.dispose()
-    monkeypatch.setenv("CIVICZONE_PARCEL_RULE_DB_URL", db_url)
+    monkeypatch.setenv("TOWNLIGHT_ZONING_PARCEL_RULE_DB_URL", db_url)
 
     try:
         response = client.post(
-            "/api/v1/civiczone/questions/answer",
+            "/api/v1/townlight_zoning/questions/answer",
             json={"zone_code": "MX-1", "question": "Can I build an ADU?"},
         )
     finally:

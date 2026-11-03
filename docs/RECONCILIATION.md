@@ -1,4 +1,4 @@
-<a id="civiczone-reconciliation"></a>
+<a id="townlight_zoning-reconciliation"></a>
 
 # Townlight Zoning Reconciliation
 
@@ -6,11 +6,11 @@ Milestone 0 compares this new repository against the Townlight unified spec and 
 
 | File path | Current text | Required correction | Driver |
 |---|---|---|---|
-| `README.md` | `# civiczone` | Replace generated GitHub stub with professional module README. | Unified spec section 10 |
-| `README.md` | `CivicZone: parcel-aware zoning and land-use Q&A module for CivicSuite.` | Add shipped/planned boundary and installation/testing instructions. | Suite documentation standard |
+| `README.md` | `# townlight_zoning` | Replace generated GitHub stub with professional module README. | Unified spec section 10 |
+| `README.md` | `Townlight Zoning: parcel-aware zoning and land-use Q&A module for Townlight.` | Add shipped/planned boundary and installation/testing instructions. | Suite documentation standard |
 | missing | `CHANGELOG.md` absent | Add Keep a Changelog file with `0.1.0.dev0` scaffold/runtime-foundation entry. | Suite release convention |
 | missing | `pyproject.toml` absent | Add Python package metadata and a released Townlight Core pin; current compatibility is tracked in `pyproject.toml` and `/health`. | Townlight Core compatibility rule |
-| missing | `civiczone/main.py` absent | Add root and health endpoints only; no zoning-answer behavior. | Milestone 1 runtime foundation |
+| missing | `townlight_zoning/main.py` absent | Add root and health endpoints only; no zoning-answer behavior. | Milestone 1 runtime foundation |
 | missing | `scripts/verify-docs.sh` absent | Add documentation artifact and stale-claim gate. | Suite QA standard |
 | missing | `scripts/verify-release.sh` absent | Add automated release gate. | Suite QA standard |
 | missing | `docs/index.html` absent | Add honest landing page. | Professional product docs requirement |
