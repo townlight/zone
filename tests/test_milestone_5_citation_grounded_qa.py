@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 
-from civiczone.main import app
-from civiczone.qa import answer_zoning_question
+from townlight_zoning.main import app
+from townlight_zoning.qa import answer_zoning_question
 
 client = TestClient(app)
 
@@ -63,7 +63,7 @@ def test_unknown_question_refuses_uncited_answer() -> None:
 
 def test_question_api_success_shape() -> None:
     response = client.post(
-        "/api/v1/civiczone/questions/answer",
+        "/api/v1/townlight_zoning/questions/answer",
         json={"zone_code": "R-2", "question": "Can I build an ADU?"},
     )
 
@@ -79,7 +79,7 @@ def test_question_api_success_shape() -> None:
 
 
 def test_question_api_validation_error_is_actionable() -> None:
-    response = client.post("/api/v1/civiczone/questions/answer", json={})
+    response = client.post("/api/v1/townlight_zoning/questions/answer", json={})
 
     assert response.status_code == 422
     detail = response.json()["detail"]

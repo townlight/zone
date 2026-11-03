@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 
-from civiczone.main import app
-from civiczone.rule_lookup import (
+from townlight_zoning.main import app
+from townlight_zoning.rule_lookup import (
     DimensionalRuleResult,
     RuleLookupError,
     UseRuleResult,
@@ -38,7 +38,7 @@ def test_dimensional_rule_lookup_returns_citation() -> None:
 
 
 def test_use_rule_api_success_shape() -> None:
-    response = client.post("/api/v1/civiczone/rules/use", json={"zone_code": "R-2", "use": "restaurant"})
+    response = client.post("/api/v1/townlight_zoning/rules/use", json={"zone_code": "R-2", "use": "restaurant"})
 
     assert response.status_code == 200
     payload = response.json()
@@ -50,7 +50,7 @@ def test_use_rule_api_success_shape() -> None:
 
 def test_dimensional_rule_api_success_shape() -> None:
     response = client.post(
-        "/api/v1/civiczone/rules/dimensional",
+        "/api/v1/townlight_zoning/rules/dimensional",
         json={"zone_code": "R-2", "rule_type": "front_setback"},
     )
 
@@ -61,7 +61,7 @@ def test_dimensional_rule_api_success_shape() -> None:
 
 
 def test_rule_apis_return_actionable_404() -> None:
-    response = client.post("/api/v1/civiczone/rules/use", json={"zone_code": "R-2", "use": "airport"})
+    response = client.post("/api/v1/townlight_zoning/rules/use", json={"zone_code": "R-2", "use": "airport"})
 
     assert response.status_code == 404
     assert "Try zone_code" in response.json()["detail"]["fix"]

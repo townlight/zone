@@ -7,16 +7,16 @@ lookups. Adds no schema, no GIS service and no vendor. Idempotent.
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-PKG = HERE / 'civiczone'
+PKG = HERE / 'townlight_zoning'
 
 # --- main.py: imports, route, page call -------------------------------------
 target = PKG / 'main.py'
 text = target.read_text(encoding='utf-8')
 if 'discretionary_explanation' not in text:
     text = text.replace(
-        'from civiczone.staff_context import classify_for_planner_review, get_staff_precedent',
-        'from civiczone.discretionary import (Unavailable, explain, nonconformity_review_note)\n'
-        'from civiczone.staff_context import classify_for_planner_review, get_staff_precedent')
+        'from townlight_zoning.staff_context import classify_for_planner_review, get_staff_precedent',
+        'from townlight_zoning.discretionary import (Unavailable, explain, nonconformity_review_note)\n'
+        'from townlight_zoning.staff_context import classify_for_planner_review, get_staff_precedent')
 
     route = '''
 
@@ -27,7 +27,7 @@ class DiscretionaryExplanationRequest(BaseModel):
     observed: dict[str, str] = Field(default_factory=dict)
 
 
-@app.post("/api/v1/civiczone/standards/process-explanation")
+@app.post("/api/v1/townlight_zoning/standards/process-explanation")
 def discretionary_explanation(request: DiscretionaryExplanationRequest) -> dict[str, object]:
     """Explain the variance/CUP process a question is about, with citations.
 
@@ -80,7 +80,7 @@ def _rules_for_explanation():
 
     return _Adapter()
 '''
-    anchor = '\n\n@app.post("/api/v1/civiczone/questions/answer")'
+    anchor = '\n\n@app.post("/api/v1/townlight_zoning/questions/answer")'
     if anchor not in text:
         raise SystemExit('anchor not found')
     text = text.replace(anchor, route + anchor, 1)

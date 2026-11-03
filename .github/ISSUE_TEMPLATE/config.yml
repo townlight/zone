@@ -1,5 +1,5 @@
 blank_issues_enabled: true
 contact_links:
   - name: Security reports
-    url: https://github.com/CivicSuite/civiczone/security/policy
+    url: https://github.com/Townlight/townlight_zoning/security/policy
     about: Report vulnerabilities privately.

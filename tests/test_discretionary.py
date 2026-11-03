@@ -10,23 +10,23 @@ Synthetic fixture rules only (the package's own sample dataset).
 """
 from fastapi.testclient import TestClient
 import pytest
-from civiczone.main import app
+from townlight_zoning.main import app
 
 
 @pytest.fixture
 def client(tmp_path, monkeypatch):
     # A file-backed SQLite rule dataset: real persistence, no city data.
     url = f"sqlite:///{tmp_path / 'rules.db'}"
-    monkeypatch.setenv("CIVICZONE_PARCEL_RULE_DB_URL", url)
+    monkeypatch.setenv("TOWNLIGHT_ZONING_PARCEL_RULE_DB_URL", url)
     # A configured rule database starts EMPTY on purpose: rules are loaded
     # explicitly and never invented. Seed the package's own sample dataset so the
     # cited-standard path can be exercised against real persistence.
-    from civiczone.rule_lookup import RuleLookupRepository
+    from townlight_zoning.rule_lookup import RuleLookupRepository
     RuleLookupRepository(db_url=url, seed_defaults=True).engine.dispose()
-    for name in ("CIVICZONE_PARCEL_DB_URL", "CIVICZONE_QUESTION_LEDGER_DB_URL",
-                 "CIVICZONE_STAFF_WORKFLOW_DB_URL"):
+    for name in ("TOWNLIGHT_ZONING_PARCEL_DB_URL", "TOWNLIGHT_ZONING_QUESTION_LEDGER_DB_URL",
+                 "TOWNLIGHT_ZONING_STAFF_WORKFLOW_DB_URL"):
         monkeypatch.delenv(name, raising=False)
-    from civiczone import main
+    from townlight_zoning import main
     def source(section):
         if section == 'synthetic-variance':
             return {'status':'ok','citation':{'section_number':'CMC 18.60 (synthetic)',
@@ -42,7 +42,7 @@ def client(tmp_path, monkeypatch):
 
 def explain(client, **body):
     body.setdefault('process_section', 'synthetic-cup' if 'conditional use' in body.get('question','') else 'synthetic-variance')
-    response = client.post("/api/v1/civiczone/standards/process-explanation", json=body)
+    response = client.post("/api/v1/townlight_zoning/standards/process-explanation", json=body)
     assert response.status_code == 200, response.text
     return response.json()
 
@@ -123,26 +123,26 @@ def test_no_zone_code_states_that_no_standard_could_be_cited(client):
 
 
 def test_existing_rules_and_parcel_endpoints_still_answer(client):
-    use = client.post("/api/v1/civiczone/rules/use",
+    use = client.post("/api/v1/townlight_zoning/rules/use",
                       json={"zone_code": "R-2", "use": "adu"})
     assert use.status_code == 200, use.text
     assert use.json()["citation"].startswith("CMC")
-    dim = client.post("/api/v1/civiczone/rules/dimensional",
+    dim = client.post("/api/v1/townlight_zoning/rules/dimensional",
                       json={"zone_code": "R-2", "rule_type": "front_setback"})
     assert dim.status_code == 200, dim.text
     assert dim.json()["value"] == "20 feet minimum"
-    parcel = client.post("/api/v1/civiczone/parcels/lookup",
+    parcel = client.post("/api/v1/townlight_zoning/parcels/lookup",
                          json={"parcel_number": "100-200-300"})
     assert parcel.status_code == 200, parcel.text
     # The shipped parcel contract nests zone context: {"zone": {"code", "name"}}.
     assert parcel.json()["zone"]["code"] == "R-2"
-    missing = client.post("/api/v1/civiczone/parcels/lookup",
+    missing = client.post("/api/v1/townlight_zoning/parcels/lookup",
                           json={"parcel_number": "999-999-999"})
     assert missing.status_code == 404
 
 
 def test_public_page_states_the_process_boundary(client):
-    page = client.get("/civiczone")
+    page = client.get("/townlight_zoning")
     assert page.status_code == 200
     text = page.text
     assert "Variance, conditional use and nonconformity" in text
@@ -152,13 +152,13 @@ def test_public_page_states_the_process_boundary(client):
 
 
 def test_process_source_is_required_even_without_dimensional_rules():
-    from civiczone.discretionary import explain as domain_explain, Unavailable
+    from townlight_zoning.discretionary import explain as domain_explain, Unavailable
     result=domain_explain('variance',repository=None,zone_code='AUDIT-ZONE')
     assert isinstance(result,Unavailable)
 
 
 def test_two_jurisdictions_changed_missing_and_unrelated_process_sources():
-    from civiczone.discretionary import explain as domain_explain, Unavailable
+    from townlight_zoning.discretionary import explain as domain_explain, Unavailable
     for section,text in [('A 6','Variance review by the synthetic A board.'),('B 9','Variance review by the synthetic B council.')]:
         result=domain_explain('variance',repository=None,process_source={
             'status':'ok','citation':{'section_number':section,'body_text':text}})

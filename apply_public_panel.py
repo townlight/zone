@@ -10,7 +10,7 @@ Idempotent; retained as the record of this edit.
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-page = HERE / 'civiczone/public_ui.py'
+page = HERE / 'townlight_zoning/public_ui.py'
 text = page.read_text(encoding='utf-8')
 marker = '  <aside class="panel" aria-labelledby="states-title">'
 section = '''  <section class="panel" aria-labelledby="process-title">

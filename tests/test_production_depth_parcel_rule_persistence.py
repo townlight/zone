@@ -2,10 +2,10 @@ from __future__ import annotations
 
 from fastapi.testclient import TestClient
 
-import civiczone.main as main_module
-from civiczone.main import app
-from civiczone.parcel_lookup import ParcelLookupRepository
-from civiczone.rule_lookup import DIMENSIONAL_RULES, USE_RULES, RuleLookupRepository
+import townlight_zoning.main as main_module
+from townlight_zoning.main import app
+from townlight_zoning.parcel_lookup import ParcelLookupRepository
+from townlight_zoning.rule_lookup import DIMENSIONAL_RULES, USE_RULES, RuleLookupRepository
 
 client = TestClient(app)
 
@@ -34,19 +34,19 @@ def test_api_uses_configured_parcel_rule_database(monkeypatch, tmp_path) -> None
     seed_rules.seed_use_rules(USE_RULES.values())
     seed_rules.seed_dimensional_rules(DIMENSIONAL_RULES.values())
     seed_rules.engine.dispose()
-    monkeypatch.setenv("CIVICZONE_PARCEL_RULE_DB_URL", db_url)
+    monkeypatch.setenv("TOWNLIGHT_ZONING_PARCEL_RULE_DB_URL", db_url)
 
     try:
         parcel_response = client.post(
-            "/api/v1/civiczone/parcels/lookup",
+            "/api/v1/townlight_zoning/parcels/lookup",
             json={"address": "123 main st"},
         )
         use_response = client.post(
-            "/api/v1/civiczone/rules/use",
+            "/api/v1/townlight_zoning/rules/use",
             json={"zone_code": "r-2", "use": "ADU"},
         )
         dimensional_response = client.post(
-            "/api/v1/civiczone/rules/dimensional",
+            "/api/v1/townlight_zoning/rules/dimensional",
             json={"zone_code": "R-2", "rule_type": "height"},
         )
     finally:
@@ -75,10 +75,10 @@ def test_repository_cache_resets_when_database_url_changes(monkeypatch, tmp_path
     second_db_url = f"sqlite:///{tmp_path / 'second.db'}"
 
     try:
-        monkeypatch.setenv("CIVICZONE_PARCEL_RULE_DB_URL", first_db_url)
+        monkeypatch.setenv("TOWNLIGHT_ZONING_PARCEL_RULE_DB_URL", first_db_url)
         first_parcels = main_module._get_parcel_repository()
 
-        monkeypatch.setenv("CIVICZONE_PARCEL_RULE_DB_URL", second_db_url)
+        monkeypatch.setenv("TOWNLIGHT_ZONING_PARCEL_RULE_DB_URL", second_db_url)
         second_rules = main_module._get_rule_repository()
 
         assert first_parcels is not None

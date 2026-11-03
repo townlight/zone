@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.3] - Unreleased naming candidate
+
+- Rename the principal distribution/import to the Townlight Zoning identities and pair with Townlight Core 1.3.0.dev2.
+- Update renamed cross-product consumers and fresh-install schema identities.
+- Fresh-install candidate only; no legacy database upgrade or import shim. Existing data and historical release identities are preserved.
+- Signed Windows installer acceptance and publication remain pending; source implementation is not installed verification.
+
+
 ## Unreleased — Townlight Zoning Z3
 
 - Persist explicit permitted Meetings source links as append-only question events.

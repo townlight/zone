@@ -1,6 +1,6 @@
 # Townlight Zoning Z1 — offline import and access contract
 
-Unreleased developer integration. Legacy package/schema names remain `civiczone`.
+Unreleased developer integration. Legacy package/schema names remain `townlight_zoning`.
 This document does not announce a public Zoning release.
 
 ## Runtime and access
@@ -21,7 +21,7 @@ preparation and installed acceptance remain Z4 work.
   module import is not domain readiness.
 - `/ready` includes Zoning schema/PostGIS readiness for this profile.
 
-The legacy `civiczone.main` sample app is not mounted. No new Rust domain
+The legacy `townlight_zoning.main` sample app is not mounted. No new Rust domain
 implementation, second database or sample fallback is used.
 
 ## Import envelope

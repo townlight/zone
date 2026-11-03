@@ -2,7 +2,7 @@
 
 Z2 extends Z1 in the shared Python/PostgreSQL runtime. It does not mount the
 standalone sample app or populate sample rules. Run the canonical migration
-chain through civiczone_0006_cited_questions. Zoning remains an internal
+chain through townlight_zoning_0006_cited_questions. Zoning remains an internal
 zoning-beta development profile; no installer default is changed.
 
 ## Staff workflow
@@ -35,7 +35,7 @@ Authenticated native routes: /desktop/v1/zoning/rules, /questions,
 Existing native parcel/import routes remain. Identity comes from the mapped
 native session, not a client-supplied actor field.
 
-Resident routes /civiczone/parcels/lookup and /civiczone/questions expose only
+Resident routes /townlight_zoning/parcels/lookup and /townlight_zoning/questions expose only
 informational results. There is no resident workspace/review route. Staff notes
 and review history are not returned through resident answers. The desktop
 public transport rejects staff operations independently of hidden controls.
