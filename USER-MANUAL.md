@@ -1,28 +1,54 @@
+Windows x64 Beta 1 · MSI 1.7.0.1
+
+The signed [Windows x64 beta 1.7.0.1](https://github.com/townlight/townlight/releases/tag/townlight-beta-1-windows-1.7.0.1) passed the documented fresh Windows Sandbox checks with synthetic data.
+
+- <a href="https://townlight.github.io/manuals/zoning.html#townlight-zoning-manual" id="toc-townlight-zoning-manual">Townlight Zoning Manual</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#contents" id="toc-contents">Contents</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#using-this-manual" id="toc-using-this-manual">Using this manual</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#beta-identity" id="toc-beta-identity">Beta identity</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#first-run" id="toc-first-run">First run</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#daily-workflow" id="toc-daily-workflow">Daily workflow</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#connected-workflows" id="toc-connected-workflows">Connected workflows</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#architecture" id="toc-architecture">Architecture</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#discretionary-processes-and-staff-review" id="toc-discretionary-processes-and-staff-review">Discretionary processes and staff review</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#technical-specifications" id="toc-technical-specifications">Technical specifications</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#configuration-and-administration" id="toc-configuration-and-administration">Configuration and administration</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#api-and-integration-examples" id="toc-api-and-integration-examples">API and integration examples</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#mcp-and-automation-boundary" id="toc-mcp-and-automation-boundary">MCP and automation boundary</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#security-and-permissions" id="toc-security-and-permissions">Security and permissions</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#backup-recovery-and-maintenance" id="toc-backup-recovery-and-maintenance">Backup recovery and maintenance</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#troubleshooting" id="toc-troubleshooting">Troubleshooting</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#verified-workflows-and-limits" id="toc-verified-workflows-and-limits">Verified workflows and limits</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#terms-of-service-and-license" id="toc-terms-of-service-and-license">Terms of service and license</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#glossary" id="toc-glossary">Glossary</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#alphabetical-subject-index" id="toc-alphabetical-subject-index">Alphabetical subject index</a>
+  - <a href="https://townlight.github.io/manuals/zoning.html#source-and-document-control" id="toc-source-and-document-control">Source and document control</a>
+
 # Townlight Zoning Manual
 
 **Townlight Beta 1** · Naming candidate documentation edition 2 November 2026
 
 ## Contents
 
-- [Using this manual](#using-this-manual)
-- [Beta identity](#beta-identity)
-- [First run](#first-run)
-- [Daily workflow](#daily-workflow)
-- [Connected workflows](#connected-workflows)
-- [Architecture](#architecture)
-- [Discretionary processes and staff review](#discretionary-processes-and-staff-review)
-- [Technical specifications](#technical-specifications)
-- [Configuration and administration](#configuration-and-administration)
-- [API and integration examples](#api-and-integration-examples)
-- [MCP and automation boundary](#mcp-and-automation-boundary)
-- [Security and permissions](#security-and-permissions)
-- [Backup recovery and maintenance](#backup-recovery-and-maintenance)
-- [Troubleshooting](#troubleshooting)
-- [Verified workflows and limits](#verified-workflows-and-limits)
-- [Terms of service and license](#terms-of-service-and-license)
-- [Glossary](#glossary)
-- [Alphabetical subject index](#alphabetical-subject-index)
-- [Source and document control](#source-and-document-control)
+- [Using this manual](https://townlight.github.io/manuals/zoning.html#using-this-manual)
+- [Beta identity](https://townlight.github.io/manuals/zoning.html#beta-identity)
+- [First run](https://townlight.github.io/manuals/zoning.html#first-run)
+- [Daily workflow](https://townlight.github.io/manuals/zoning.html#daily-workflow)
+- [Connected workflows](https://townlight.github.io/manuals/zoning.html#connected-workflows)
+- [Architecture](https://townlight.github.io/manuals/zoning.html#architecture)
+- [Discretionary processes and staff review](https://townlight.github.io/manuals/zoning.html#discretionary-processes-and-staff-review)
+- [Technical specifications](https://townlight.github.io/manuals/zoning.html#technical-specifications)
+- [Configuration and administration](https://townlight.github.io/manuals/zoning.html#configuration-and-administration)
+- [API and integration examples](https://townlight.github.io/manuals/zoning.html#api-and-integration-examples)
+- [MCP and automation boundary](https://townlight.github.io/manuals/zoning.html#mcp-and-automation-boundary)
+- [Security and permissions](https://townlight.github.io/manuals/zoning.html#security-and-permissions)
+- [Backup recovery and maintenance](https://townlight.github.io/manuals/zoning.html#backup-recovery-and-maintenance)
+- [Troubleshooting](https://townlight.github.io/manuals/zoning.html#troubleshooting)
+- [Verified workflows and limits](https://townlight.github.io/manuals/zoning.html#verified-workflows-and-limits)
+- [Terms of service and license](https://townlight.github.io/manuals/zoning.html#terms-of-service-and-license)
+- [Glossary](https://townlight.github.io/manuals/zoning.html#glossary)
+- [Alphabetical subject index](https://townlight.github.io/manuals/zoning.html#alphabetical-subject-index)
+- [Source and document control](https://townlight.github.io/manuals/zoning.html#source-and-document-control)
 
 ## Using this manual
 
@@ -33,67 +59,67 @@ Staff should begin with First run and Daily workflow. Administrators should also
 ## Beta identity
 
 | Identity | Value |
-| --- | --- |
+|----|----|
 | Documentation | Townlight Beta 1 naming, Access and Notice candidate |
-| Intended installer version | 1.7.0.1; build and acceptance pending |
+| Intended installer version | 1.7.0.1 |
 | Product component | townlight-zoning 0.2.3 |
 | Principal import package | townlight_zoning |
 | Native desktop source version | 1.7.0-1 |
-| Candidate hashes | Pending candidate build, signing and installed acceptance |
+| Candidate hashes | [SHA-256 checksums](https://github.com/townlight/townlight/releases/download/townlight-beta-1-windows-1.7.0.1/SHA256SUMS-Windows-1.7.0.1.txt) and [Windows acceptance summary](https://github.com/townlight/townlight/releases/download/townlight-beta-1-windows-1.7.0.1/ACCEPTANCE-Windows-1.7.0.1.md) |
 | Current owned software license | AGPL-3.0-only |
 | Acceptance composition | Fresh Windows x64 profile; inspections-preview; Station configured separately |
 
-The naming change advances this package's version and requires a new signed installer and installed acceptance. Those steps and publication remain pending. Historical tags, receipts and archived manuals keep their original names and certify only their identified artifacts. Use an empty database and fresh profile; no in-place legacy upgrade is supported. The approved Windows profile path remains `%LOCALAPPDATA%\CivicSuite`. Preserve existing profiles, data and recovery material.
+Use an empty database and fresh Windows profile. The installer refuses legacy profile initialization. The approved profile path is `%LOCALAPPDATA%\CivicSuite`. Keep existing profiles and backups.
 
 ## First run
 
-1. Obtain the identified signed private candidate and its corresponding-source companion from the beta coordinator. The landing pages in this documentation are not an installer download service.
-2. On the intended fresh Windows test installation, verify the MSI hash and publisher signature before installing. Preserve unrelated profiles and recovery material. Installed acceptance for this source candidate remains pending; no in-place legacy upgrade is supported.
-3. Launch Townlight under the intended named Windows account. Choose the storage folders. Select **Townlight Inspections candidate** (`inspections-preview`) for the bounded desktop composition, including Access and Notice. A narrower default selection will not expose all workspaces.
-4. Enter the city profile, time zone and contacts. Create the first named local administrator, sign in and choose protected backup storage. **Continue without local AI** is valid for the deterministic workflows.
-5. Run Health Check and wait for readiness. Open Townlight. In System Health select **Finish Records Migration** to activate the canonical Python/PostgreSQL runtime. Do not fabricate migration receipts or seed accounts.
-6. Create named staff through Settings. Import authorized sources using each product’s source library. All examples in this package are synthetic; they are not municipal authority.
-7. Provision Station separately if it is part of the beta exercise. Selecting the desktop composition does not start or configure Station. Configure vision explicitly only if automatic photo drafting is selected.
+1.  Download the signed MSI, matching source companion and checksums from the [public Windows release](https://github.com/townlight/townlight/releases/tag/townlight-beta-1-windows-1.7.0.1).
+2.  Verify the MSI hash and Authenticode publisher before installing on a fresh Windows profile. See the [Windows acceptance summary](https://github.com/townlight/townlight/releases/download/townlight-beta-1-windows-1.7.0.1/ACCEPTANCE-Windows-1.7.0.1.md) for the tested setup.
+3.  Launch Townlight under the intended named Windows account. Choose the storage folders. Select **Townlight Inspections candidate** (`inspections-preview`) for the bounded desktop composition, including Access and Notice. A narrower default selection will not expose all workspaces.
+4.  Enter the city profile, time zone and contacts. Create the first named local administrator, sign in and choose protected backup storage. **Continue without local AI** is valid for the deterministic workflows.
+5.  Run Health Check and wait for readiness. Open Townlight. In System Health select **Finish Records Migration** to activate the canonical Python/PostgreSQL runtime. Do not fabricate migration receipts or seed accounts.
+6.  Create named staff through Settings. Import authorized sources using each product’s source library. All examples in this package are synthetic; they are not municipal authority.
+7.  Provision Station separately if it is part of the beta exercise. Selecting the desktop composition does not start or configure Station. Configure vision explicitly only if automatic photo drafting is selected.
 
 ## Daily workflow
 
-<a name="workflow-1"></a>
+<span id="workflow-1"></span>
 
 ### 1. Prepare parcel data
 
 Use the complete supported bundle, including jurisdiction, dataset metadata and original hashes. The coordinates must be EPSG:4326. A loose geometry file is not the full source envelope.
 
-<a name="workflow-2"></a>
+<span id="workflow-2"></span>
 
 ### 2. Import and inspect
 
 Check the complete source envelope before selecting Import parcel dataset. That control submits directly; inspect the saved validation/provenance result afterward. Correct a refused source bundle and preserve the evidence. Do not force acceptance by editing SQL.
 
-<a name="workflow-3"></a>
+<span id="workflow-3"></span>
 
 ### 3. Register cited rules
 
 Associate the zone, rule kind/key and value with the relevant public Code section. Inspect overlays and effective context. Leave missing authority visible for planner review.
 
-<a name="workflow-4"></a>
+<span id="workflow-4"></span>
 
 ### 4. Ask a parcel question
 
 Look up the intended parcel and ask the supported question. Read the returned citation, applicability and disclaimer. Do not present an uncertain answer as an official decision.
 
-<a name="workflow-5"></a>
+<span id="workflow-5"></span>
 
 ### 5. Record review and context
 
 Record a correction and its reason when needed. Select permitted Meetings history explicitly. Preserve the question/review history and distinguish staff-only precedent from public material.
 
-<a name="workflow-6"></a>
+<span id="workflow-6"></span>
 
 ### 6. Create a snapshot
 
 Review the audience and exact content before creating the immutable snapshot. A public snapshot must satisfy its permitted-source contract; choosing a public label does not sanitize private notes.
 
-<a name="workflow-7"></a>
+<span id="workflow-7"></span>
 
 ### 7. Use it downstream
 
@@ -113,12 +139,10 @@ Drafting, review, approval, attachment, export, fulfillment and publication are 
 
 Consumes Code authority and permitted Meetings evidence. Supplies permitted snapshots to Records and context to Planning and Permitting.
 
-
 | Direction | Material |
-| --- | --- |
+|----|----|
 | Input | A supported EPSG:4326 GeoJSON envelope, jurisdiction and dataset metadata, public Code authority and permitted meeting evidence. |
 | Output | Source-backed parcel context, informational answers, recorded human corrections and reviewed snapshots with stable hashes. |
-
 
 ### Product boundary
 
@@ -126,7 +150,10 @@ The accepted path is local GeoJSON/PostGIS. It does not establish every ArcGIS, 
 
 ## Architecture
 
-![Townlight Zoning architecture and evidence flow](docs/beta-1/assets/zoning-architecture.svg)
+<figure>
+<img src="https://townlight.github.io/assets/zoning-architecture.svg" alt="Townlight Zoning architecture and evidence flow" />
+<figcaption aria-hidden="true">Townlight Zoning architecture and evidence flow</figcaption>
+</figure>
 
 The drawing shows the principal staff/evidence path. Native commands carry trusted identity to Python business services; PostgreSQL and retained original files hold durable state. A downstream copy does not silently transfer decision authority. Station has its own configured authority/media boundary, database and mutable files. The connected-workflow text supplies the drawing’s reading order and accessibility alternative.
 
@@ -138,7 +165,7 @@ In the existing Zoning workspace, complete **Variance, conditional use or noncon
 
 The mounted API is `POST /desktop/v1/zoning/standards/process-explanation` under the normal authenticated staff session. Its equivalent request body is:
 
-```json
+``` json
 {"question":"Explain the synthetic variance process","process_section":"18.20.050","zone_code":"SYN-R","rule_types":["front_setback"],"observed":{"front_setback":"8 feet"}}
 ```
 
@@ -150,7 +177,7 @@ Check the complete JSON envelope, original hashes and EPSG:4326 geometry before 
 
 ### Use the existing specialist review contracts
 
-The standalone Zoning application's review/analytics/report routes are documented source capabilities, not extra native desktop screens. In a deployment where its actual staff authentication is already configured:
+The standalone Zoning application’s review/analytics/report routes are documented source capabilities, not extra native desktop screens. In a deployment where its actual staff authentication is already configured:
 
 - Create an ambiguity review with `zone_code`, `question` and `reason` at `/api/v1/townlight_zoning/staff/ambiguity-reviews`. Read its returned ID and list state. Update that ID with `status`, optional `assigned_to` and `resolution`; use `open`, `in_review`, `resolved` or `closed`. Resolving or closing requires a nonempty `resolution`.
 - Retain a flagged answer at `/api/v1/townlight_zoning/staff/flagged-answers` with the original question/answer, zone, flag reason and source citations. Use `/{review_id}/improve` with `improved_answer` and `improvement_notes`. Preserve the original and improvement attribution; a correction does not rewrite the imported Code source.
@@ -159,16 +186,16 @@ The standalone Zoning application's review/analytics/report routes are documente
 
 A synthetic ambiguity request is:
 
-```json
+``` json
 {"zone_code":"SYN-R","question":"Which retained setback rule applies?","reason":"Synthetic overlay ambiguity requires planner review"}
 ```
 
-Do not send invented staff-role headers or assume these standalone paths exist at the installed desktop origin. The native workspace's supported review/history/snapshot controls continue to use its fixed authenticated bridge. Use the technical supplement to distinguish the two surfaces.
+Do not send invented staff-role headers or assume these standalone paths exist at the installed desktop origin. The native workspace’s supported review/history/snapshot controls continue to use its fixed authenticated bridge. Use the technical supplement to distinguish the two surfaces.
 
 Source contracts: `townlight_runtime/zoning_bridge.py`, `townlight_zoning/main.py`, the imported rule/source models and desktop Zoning view.
 
-
 ## Technical specifications
+
 ### Runtime and storage
 
 The accepted package targets **Windows x64 fresh installation**. Its native shell uses **Rust 2021, Tauri 2 and Microsoft WebView2**; browser assets are JavaScript built with **Vite 8.1.6**. This describes the native desktop frontend; Station has a separate React operator, specified below or in its product manual. Canonical business workflows use bundled **CPython 3.13.5, FastAPI, Pydantic, SQLAlchemy and Alembic**, with **PostgreSQL 17 / PostGIS** and managed original files. The installed runtime tested here contains FastAPI 0.162.0. Package minimum Python requirements can differ from the bundled executable; the metadata reference preserves both. No stack rewrite is implied by the beta label.
@@ -185,11 +212,12 @@ Versioned saves use expected prior revision identifiers where defined. Reopen an
 
 ### Capacity and platform statements
 
-This beta has synthetic single-profile workflow evidence. It does not have a published benchmark for concurrent staff capacity, minimum RAM/CPU, large-source limits or a field SLA. Do not turn a developer machine’s specification into a supported minimum. The new installer size remains pending its build;  allow additional disk for extracted runtime, database, originals, exports, media and backups. Select equipment/storage after sizing those actual workloads.
+This beta has synthetic single-profile workflow evidence. It does not have a published benchmark for concurrent staff capacity, minimum RAM/CPU, large-source limits or a field SLA. Do not turn a developer machine’s specification into a supported minimum. The signed MSI is 2,082,697,216 bytes; allow additional disk for extracted runtime, database, originals, exports, media and backups. Select equipment/storage after sizing those actual workloads.
 
-The exact [runtime payload lock](docs/beta-1/reference/runtime-payload-lock.json) records pinned files, sizes and hashes. The [component metadata](docs/beta-1/reference/component-metadata.json) records shipped dependency declarations. These references are more precise than a manually copied dependency list. Third-party and historical license notices must accompany their matching payloads.
+The exact [runtime payload lock](https://townlight.github.io/reference/runtime-payload-lock.json) records pinned files, sizes and hashes. The [component metadata](https://townlight.github.io/reference/component-metadata.json) records shipped dependency declarations. These references are more precise than a manually copied dependency list. Third-party and historical license notices must accompany their matching payloads.
 
 ## Configuration and administration
+
 ### Native deployment configuration
 
 Use Setup, Settings and System Health for supported staff operation. Administrators provision folders, backup storage, named accounts and the city profile. Select `inspections-preview` for the bounded desktop composition, including Access and Notice. Station remains a separate service boundary. Do not use a standalone product’s demo server as a substitute for the installed workspace.
@@ -199,11 +227,12 @@ Technical deployments use `TOWNLIGHT_PRODUCT_PROFILE`, `TOWNLIGHT_PROFILE_ROOT`,
 The isolated documentation exporter sets a fictional profile and unusable synthetic database origin only to read schemas; those values are not deployment configuration. Keep deployment values in the intended process/account scope. An already-running process does not automatically inherit later environment edits.
 
 ## API and integration examples
+
 ### Native command example
 
 The following JavaScript belongs in the existing trusted Townlight frontend/development environment with `invoke` imported from `@tauri-apps/api/core`. It is not a command for an arbitrary web page or an instruction for nontechnical staff. IDs must come from records created in an isolated synthetic exercise.
 
-```javascript
+``` javascript
 import { invoke } from '@tauri-apps/api/core';
 const result = await invoke('zoning_domain_request', {request: {operation: 'history', id: questionId}});
 console.log(result);
@@ -213,7 +242,7 @@ console.log(result);
 
 An administrator/developer can inspect an already-configured isolated runtime from a trusted local process. This PowerShell example reads the signed-in synthetic profile’s existing proof into memory; it does not create a user, seed a session, reveal the proof in output or bypass a permission check. Do not use real city data in development examples. A read response does not prove approval or publication.
 
-```powershell
+``` powershell
 $profilePath = Join-Path $env:LOCALAPPDATA 'CivicSuite'
 $sessionPath = Join-Path $profilePath 'config\local-session.json'
 $session = Get-Content -LiteralPath $sessionPath -Raw | ConvertFrom-Json
@@ -224,13 +253,13 @@ Remove-Variable session, headers
 
 ### Complete synthetic source bundle
 
-The [synthetic Zoning bundle](docs/beta-1/reference/examples/synthetic-geo-bundle.json) is the retained fixture used by the beta staff exercise. It includes the complete supported source envelope rather than a shortened pseudo-payload. Keep its fictional source labels. For Planning, wrap it as `{"bundle": BUNDLE, "expected_previous_revision": null}`; for Permitting use `{"bundle": BUNDLE, "expected_revision": null}`. Code and Zoning take their own complete import envelopes. Replace null with the current expected revision when revising an existing source, as the applicable schema requires. These are import examples, not legal authority or permission to load them into a live city profile.
+The [synthetic Zoning bundle](https://townlight.github.io/reference/examples/synthetic-geo-bundle.json) is the retained fixture used by the beta staff exercise. It includes the complete supported source envelope rather than a shortened pseudo-payload. Keep its fictional source labels. For Planning, wrap it as `{"bundle": BUNDLE, "expected_previous_revision": null}`; for Permitting use `{"bundle": BUNDLE, "expected_revision": null}`. Code and Zoning take their own complete import envelopes. Replace null with the current expected revision when revising an existing source, as the applicable schema requires. These are import examples, not legal authority or permission to load them into a live city profile.
 
 ### A synthetic write with subsequent readback
 
 This example demonstrates the existing Meetings HTTP contract in an isolated exercise. It is intentionally fictional. It does not start a service. Its authentication setup is included so it can be run independently under the signed-in synthetic account. If a write times out, inspect current records before repeating it.
 
-```powershell
+``` powershell
 $profilePath = Join-Path $env:LOCALAPPDATA 'CivicSuite'
 $sessionPath = Join-Path $profilePath 'config/local-session.json'
 $session = Get-Content -LiteralPath $sessionPath -Raw | ConvertFrom-Json
@@ -254,7 +283,7 @@ This write requires Meetings to be enabled and the signed-in staff role to permi
 
 ### Complete technical contract
 
-Read the [Zoning API reference](docs/beta-1/api/zoning.html) for every documented operation, request field, constraint, response declaration and source supplement. Download the [OpenAPI JSON](docs/beta-1/api/zoning-openapi.json) for tools. For Station this is the suite-side schema only; its separate service contract is documented in the API supplement. The [reference directory](docs/beta-1/reference/index.html) includes configuration/source inventories, dependency declarations, native command contracts, MCP signatures and candidate evidence.
+Read the [Zoning API reference](https://townlight.github.io/api/zoning.html) for every documented operation, request field, constraint, response declaration and source supplement. Download the [OpenAPI JSON](https://townlight.github.io/api/zoning-openapi.json) for tools. For Station this is the suite-side schema only; its separate service contract is documented in the API supplement. The [reference directory](https://townlight.github.io/reference/index.html) includes configuration/source inventories, dependency declarations, native command contracts, MCP signatures and candidate evidence.
 
 ## MCP and automation boundary
 
@@ -264,14 +293,13 @@ The bundled transcription code includes a **TextFlowKit MCP adapter** as a separ
 
 For a transcription client already provisioned separately, an illustrative tool call is:
 
-```json
+``` json
 {"name":"get_job_status","arguments":{"job_id":"synthetic-existing-job-id"}}
 ```
 
-Use a job ID returned by that transcription service. This example does not create a Townlight record or bypass its review/Records handoff. The exact optional adapter tool signatures are supplied in the [MCP source reference](docs/beta-1/reference/mcp.html). Station meeting capture does not become live speech recognition because this optional donor adapter exists.
+Use a job ID returned by that transcription service. This example does not create a Townlight record or bypass its review/Records handoff. The exact optional adapter tool signatures are supplied in the [MCP source reference](https://townlight.github.io/reference/mcp.html). Station meeting capture does not become live speech recognition because this optional donor adapter exists.
 
 ## Security and permissions
-
 
 Use your own named account and save before leaving a screen. A saved draft is durable; unsaved form text may not be. If a write has an unknown result, reopen its record before repeating it.
 
@@ -298,7 +326,7 @@ On failure, record the time, selected composition, component/installer versions 
 ## Troubleshooting
 
 | Symptom | Likely meaning | Next action |
-| --- | --- | --- |
+|----|----|----|
 | Workspace absent | Wrong product composition or unavailable canonical runtime. | Check selected composition; activate through Finish Records Migration; wait for readiness. |
 | Cannot sign in / 401 | Missing or expired named account session. | Sign in normally; reopen a Station launch ticket if applicable. |
 | Permission denied / 403 | Account, module, source or browser-origin permission. | Ask the authorized administrator to inspect the intended permission; do not invent role headers. |
@@ -308,17 +336,15 @@ On failure, record the time, selected composition, component/installer versions 
 | Export refused | Missing exact review, approval, audience or source authorization. | Read the refusal and complete the owning product’s explicit decision. |
 | Restore needs service start | The snapshot was restored but services have not resumed. | Use Start, then Check and verify a saved record; do not blindly repeat restore. |
 
-
 ## Verified workflows and limits
 
 | Product | Recorded result | Precisely exercised |
-| --- | --- | --- |
+|----|----|----|
 | Zoning | PASS | GeoJSON/PostGIS import, cited dimensional rule, parcel answer, staff review/history/snapshot and native workspace. |
-
 
 These results come from the identified signed candidate’s fresh normal-profile Sandbox exercise: real native IPC/HTTP/PostgreSQL and selected headless controls. All accounts, source bundles and media were synthetic. The guest install/uninstall and recovery passed, and the owned Sandbox stopped. No host installed application or standalone CivicCast was changed. This documentation task reuses those receipts; it does not claim a new software acceptance run.
 
-The [workflow matrix](docs/beta-1/reference/workflow-matrix.json) identifies raw receipt filenames. The [evidence index](docs/beta-1/reference/sandbox-evidence-index.json) retains their original hashes; raw receipts remain in the private beta handoff rather than being silently republished with the documentation site.
+See the [Windows acceptance summary](https://github.com/townlight/townlight/releases/download/townlight-beta-1-windows-1.7.0.1/ACCEPTANCE-Windows-1.7.0.1.md) for this MSI. The historical [evidence index](https://townlight.github.io/reference/sandbox-evidence-index.json) applies to its original build.
 
 The limits remain: actual city field acceptance and equipment/network commissioning; Station automatic provisioning/SCM commissioning; every UI/role combination; field recognition accuracy; and historical in-place upgrades are not certified. They are not five invented feature requirements. Fresh-install controlled beta handoff remains the accepted scope. This package makes no city-deployment, publication or general-availability claim.
 
@@ -326,7 +352,7 @@ The limits remain: actual city field acceptance and equipment/network commission
 
 ### Scope and status
 
-These terms describe the Townlight Beta 1 software and this documentation package. This is a locally prepared private beta, not a hosted-service subscription, a city deployment agreement or a public release. No uptime commitment, support response time, indemnity, data-processing agreement or paid service is created by these documents. A separate signed agreement, if any, governs services it actually provides.
+These terms describe the Townlight Beta 1 software and this documentation package. This public Windows beta is for evaluation. No uptime commitment, support response time, indemnity, data-processing agreement or paid service is created by these documents. A separate signed agreement, if any, governs services it actually provides.
 
 ### Software license and rights
 
@@ -365,7 +391,7 @@ When an organization ends testing, it controls retention/export and removes acce
 ## Glossary
 
 | Term | Meaning |
-| --- | --- |
+|----|----|
 | Approval | An explicit authorized decision on the saved text/artifact. It is separate from saving or attachment. |
 | Canonical record | The owning product’s retained identity and saved version, rather than an editable copied label. |
 | Composition | The selected set of desktop modules; inspections-preview exposes the eight staff products. |
@@ -381,34 +407,33 @@ When an organization ends testing, it controls retention/export and removes acce
 | Snapshot | A fixed audience-specific copy tied to a source/reviewed revision. |
 | Station | Townlight’s separate media boundary using a pinned CivicCast-derived engine; standalone CivicCast remains separate. |
 
-
 ## Alphabetical subject index
 
-- **Accounts and authentication** — [Security and permissions](#security-and-permissions).
-- **AGPL and source** — [Terms of service and license](#terms-of-service-and-license).
-- **API contracts** — [API and integration examples](#api-and-integration-examples).
-- **Architecture** — [Architecture](#architecture).
-- **Backup** — [Backup recovery and maintenance](#backup-recovery-and-maintenance).
-- **Beta version** — [Beta identity](#beta-identity).
-- **Configuration** — [Configuration and administration](#configuration-and-administration).
-- **Evidence and acceptance** — [Verified workflows and limits](#verified-workflows-and-limits).
-- **Fees and official decisions** — [Terms of service and license](#terms-of-service-and-license).
-- **First run** — [First run](#first-run).
-- **Handoffs and audience** — [Connected workflows](#connected-workflows).
-- **MCP** — [MCP and automation boundary](#mcp-and-automation-boundary).
-- **Originals and provenance** — [Security and permissions](#security-and-permissions).
-- **Recovery** — [Backup recovery and maintenance](#backup-recovery-and-maintenance).
-- **Staff procedures** — [Daily workflow](#daily-workflow).
-- **Station configuration** — [Configuration and administration](#configuration-and-administration).
-- **Technical stack** — [Technical specifications](#technical-specifications).
-- **Troubleshooting** — [Troubleshooting](#troubleshooting).
+- **Accounts and authentication** — [Security and permissions](https://townlight.github.io/manuals/zoning.html#security-and-permissions).
+- **AGPL and source** — [Terms of service and license](https://townlight.github.io/manuals/zoning.html#terms-of-service-and-license).
+- **API contracts** — [API and integration examples](https://townlight.github.io/manuals/zoning.html#api-and-integration-examples).
+- **Architecture** — [Architecture](https://townlight.github.io/manuals/zoning.html#architecture).
+- **Backup** — [Backup recovery and maintenance](https://townlight.github.io/manuals/zoning.html#backup-recovery-and-maintenance).
+- **Beta version** — [Beta identity](https://townlight.github.io/manuals/zoning.html#beta-identity).
+- **Configuration** — [Configuration and administration](https://townlight.github.io/manuals/zoning.html#configuration-and-administration).
+- **Evidence and acceptance** — [Verified workflows and limits](https://townlight.github.io/manuals/zoning.html#verified-workflows-and-limits).
+- **Fees and official decisions** — [Terms of service and license](https://townlight.github.io/manuals/zoning.html#terms-of-service-and-license).
+- **First run** — [First run](https://townlight.github.io/manuals/zoning.html#first-run).
+- **Handoffs and audience** — [Connected workflows](https://townlight.github.io/manuals/zoning.html#connected-workflows).
+- **MCP** — [MCP and automation boundary](https://townlight.github.io/manuals/zoning.html#mcp-and-automation-boundary).
+- **Originals and provenance** — [Security and permissions](https://townlight.github.io/manuals/zoning.html#security-and-permissions).
+- **Recovery** — [Backup recovery and maintenance](https://townlight.github.io/manuals/zoning.html#backup-recovery-and-maintenance).
+- **Staff procedures** — [Daily workflow](https://townlight.github.io/manuals/zoning.html#daily-workflow).
+- **Station configuration** — [Configuration and administration](https://townlight.github.io/manuals/zoning.html#configuration-and-administration).
+- **Technical stack** — [Technical specifications](https://townlight.github.io/manuals/zoning.html#technical-specifications).
+- **Troubleshooting** — [Troubleshooting](https://townlight.github.io/manuals/zoning.html#troubleshooting).
 
 ### Operating subject links
 
-- **Discretionary processes and staff review** — [Discretionary processes and staff review](#discretionary-processes-and-staff-review).
-- **Explain the cited process** — [Explain the cited process](#explain-the-cited-process).
-- **Keep parcel import and inspection in the right order** — [Keep parcel import and inspection in the right order](#keep-parcel-import-and-inspection-in-the-right-order).
-- **Use the existing specialist review contracts** — [Use the existing specialist review contracts](#use-the-existing-specialist-review-contracts).
+- **Discretionary processes and staff review** — [Discretionary processes and staff review](https://townlight.github.io/manuals/zoning.html#discretionary-processes-and-staff-review).
+- **Explain the cited process** — [Explain the cited process](https://townlight.github.io/manuals/zoning.html#explain-the-cited-process).
+- **Keep parcel import and inspection in the right order** — [Keep parcel import and inspection in the right order](https://townlight.github.io/manuals/zoning.html#keep-parcel-import-and-inspection-in-the-right-order).
+- **Use the existing specialist review contracts** — [Use the existing specialist review contracts](https://townlight.github.io/manuals/zoning.html#use-the-existing-specialist-review-contracts).
 
 ## Source and document control
 
@@ -416,16 +441,26 @@ This edition is authored from the immutable corresponding-source companion, the 
 
 ### Workflow subject index
 
-- **Ask a parcel question** — [Daily workflow, step 4](#workflow-4).
-- **Create a snapshot** — [Daily workflow, step 6](#workflow-6).
-- **Import and inspect** — [Daily workflow, step 2](#workflow-2).
-- **Prepare parcel data** — [Daily workflow, step 1](#workflow-1).
-- **Record review and context** — [Daily workflow, step 5](#workflow-5).
-- **Register cited rules** — [Daily workflow, step 3](#workflow-3).
-- **Use it downstream** — [Daily workflow, step 7](#workflow-7).
+- **Ask a parcel question** — [Daily workflow, step 4](https://townlight.github.io/manuals/zoning.html#workflow-4).
 
-- [Source inventory and file hashes](docs/beta-1/reference/source-inventory.json)
-- [All component metadata](docs/beta-1/reference/component-metadata.json)
-- [Installed domain OpenAPI](docs/beta-1/reference/desktop-domain-openapi.json)
-- [Workflow matrix](docs/beta-1/reference/workflow-matrix.json)
-- [Full AGPL text](docs/beta-1/reference/AGPL-3.0.txt)
+- **Create a snapshot** — [Daily workflow, step 6](https://townlight.github.io/manuals/zoning.html#workflow-6).
+
+- **Import and inspect** — [Daily workflow, step 2](https://townlight.github.io/manuals/zoning.html#workflow-2).
+
+- **Prepare parcel data** — [Daily workflow, step 1](https://townlight.github.io/manuals/zoning.html#workflow-1).
+
+- **Record review and context** — [Daily workflow, step 5](https://townlight.github.io/manuals/zoning.html#workflow-5).
+
+- **Register cited rules** — [Daily workflow, step 3](https://townlight.github.io/manuals/zoning.html#workflow-3).
+
+- **Use it downstream** — [Daily workflow, step 7](https://townlight.github.io/manuals/zoning.html#workflow-7).
+
+- [Source inventory and file hashes](https://townlight.github.io/reference/source-inventory.json)
+
+- [All component metadata](https://townlight.github.io/reference/component-metadata.json)
+
+- [Installed domain OpenAPI](https://townlight.github.io/reference/desktop-domain-openapi.json)
+
+- [Workflow matrix](https://townlight.github.io/reference/workflow-matrix.json)
+
+- [Full AGPL text](https://townlight.github.io/reference/AGPL-3.0.txt)
