@@ -1,5 +1,8 @@
 # Changelog
 
+> Windows delivery: this package is included in [MSI 1.7.0.1](https://github.com/townlight/townlight/releases/tag/townlight-beta-1-windows-1.7.0.1); [installed acceptance](https://github.com/townlight/townlight/releases/download/townlight-beta-1-windows-1.7.0.1/ACCEPTANCE-Windows-1.7.0.1.md) applies only to the identified artifact. Earlier entries retain their original release context.
+
+
 ## [0.2.3] - Unreleased naming candidate
 
 - Rename the principal distribution/import to the Townlight Zoning identities and pair with Townlight Core 1.3.0.dev2.
