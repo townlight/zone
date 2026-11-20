@@ -30,6 +30,12 @@ jobs:
         working-directory: .
         shell: pwsh
         run: ./.github/scripts/prepare-windows-test-db.ps1 -WithVector -WithPostgis
+      - name: Migrate isolated geographic test database
+        shell: pwsh
+        run: |
+          $env:DATABASE_URL = $env:TOWNLIGHT_ZONING_TEST_DATABASE_URL
+          python -m alembic -c townlight_zoning/migrations/alembic.ini upgrade head
+          if ($LASTEXITCODE -ne 0) { throw 'Zoning fixture migration failed.' }
       - name: Run full Python suite on Windows
         run: python -X utf8 -m pytest tests -q -ra --junitxml=windows-contracts.xml
       - name: Preserve results
